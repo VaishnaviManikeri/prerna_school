@@ -450,49 +450,7 @@ const Admission = () => {
       </section>
 
       {/* Footer */}
-      <footer className="footer">
-        <div className="container">
-          <div className="footer-grid">
-            <div className="footer-col">
-              <div className="footer-logo">
-                <span>🎓</span>
-                <span>Prerna Shikshan Sanstha</span>
-              </div>
-              <p>Empowering minds, building futures since 2010. Located in Laxminagar, Thergaon, Pune - 33.</p>
-            </div>
-            <div className="footer-col">
-              <h4>Quick Links</h4>
-              <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#admissions">Admissions</a></li>
-                <li><a href="#contact">Contact</a></li>
-              </ul>
-            </div>
-            <div className="footer-col">
-              <h4>Resources</h4>
-              <ul>
-                <li><a href="#">Academic Calendar</a></li>
-                <li><a href="#">Fee Structure</a></li>
-                <li><a href="#">Scholarships</a></li>
-                <li><a href="#">Download Brochure</a></li>
-              </ul>
-            </div>
-            <div className="footer-col">
-              <h4>Follow Us</h4>
-              <div className="social-links">
-                <a href="#">📘 Facebook</a>
-                <a href="#">📸 Instagram</a>
-                <a href="#">🐦 Twitter</a>
-                <a href="#">▶️ YouTube</a>
-              </div>
-            </div>
-          </div>
-          <div className="footer-bottom">
-            <p>&copy; 2025 Prerna Shikshan Sanstha, Laxminagar, Thergaon, Pune - 33. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+   
     </div>
   );
 };
