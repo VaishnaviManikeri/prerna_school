@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="footer-container">
           <div className="footer-brand">
             <div className="footer-logo-row">
-              <img src="/assets/images/logo.jpeg" alt="Prerana Logo" className="footer-logo" />
+              <img src="/assets/m/l.jpeg" alt="Prerana Logo" className="footer-logo" />
               <div>
                 <h3 className="footer-title">प्रेरणा शिक्षण संस्था</h3>
                 <p className="footer-subtitle">

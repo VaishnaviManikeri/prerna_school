@@ -108,7 +108,7 @@ const Navbar = () => {
         <div className="navbar-container">
           {/* Logo Section */}
           <Link to="/" className="navbar-logo" onClick={handleLinkClick}>
-            <img src="/assets/images/logo.jpeg" alt="Prerana Logo" className="logo-img" />
+            <img src="/assets/m/l.jpeg" alt="Prerana Logo" className="logo-img" />
             <div className="logo-text">
               <span className="logo-title">उज्ज्वल भविष्यासाठी योग्य निवड!</span>
             </div>

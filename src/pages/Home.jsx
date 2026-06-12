@@ -383,7 +383,7 @@ const Home = () => {
           <div className="container">
             <div className="principal-card">
               <div className="principal-image-wrapper">
-                <img src="/assets/images/principle.png" alt="Principal Vandana Joshi - प्रेरणा शिक्षण संस्था" loading="lazy" />
+                <img src="/assets/m/principle.png" alt="Principal Vandana Joshi - प्रेरणा शिक्षण संस्था" loading="lazy" />
               </div>
               <div className="principal-msg">
                 <FaQuoteLeft className="quote-icon" />
