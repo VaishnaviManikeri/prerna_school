@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white text-gray-800 font-sans;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .ql-editor {
+    @apply min-h-[400px] text-lg leading-relaxed;
+  }
+  
+  .ql-editor p {
+    @apply mb-4;
+  }
+  
+  .ql-editor h1 {
+    @apply text-4xl font-bold my-6;
+  }
+  
+  .ql-editor h2 {
+    @apply text-2xl font-bold my-4;
+  }
+  
+  .ql-editor blockquote {
+    @apply border-l-4 border-gray-300 pl-4 my-4 italic;
+  }
+}

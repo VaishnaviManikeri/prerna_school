@@ -1,0 +1,460 @@
+/* pages/CurriculumPage.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ==================== PAGE CONTAINER ==================== */
+.curriculum-page {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  min-height: 100vh;
+}
+
+/* ==================== HERO SECTION ==================== */
+.curriculum-hero {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  padding: 4rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.curriculum-hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+}
+
+.curriculum-hero::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: -10%;
+  width: 250px;
+  height: 250px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+}
+
+.curriculum-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.curriculum-hero h1 {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+}
+
+/* ==================== MAIN CONTAINER ==================== */
+.curriculum-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+/* ==================== INFO SECTION ==================== */
+.info-section {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.info-section h2 {
+  font-size: 1.8rem;
+  color: #1e3c72;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.info-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(135deg, #e67e22, #d35400);
+  border-radius: 2px;
+}
+
+.info-section p {
+  color: #555;
+  line-height: 1.7;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+/* ==================== CURRICULUM LEVELS ==================== */
+.curriculum-levels {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.level-card {
+  background: white;
+  border-radius: 16px;
+  padding: 1.8rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.level-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(135deg, #e67e22, #d35400);
+}
+
+.level-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.level-card h3 {
+  font-size: 1.3rem;
+  color: #1e3c72;
+  margin-bottom: 0.5rem;
+}
+
+.level-card h3 span {
+  font-size: 0.9rem;
+  color: #e67e22;
+  font-weight: normal;
+}
+
+.focus-text {
+  color: #e67e22;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px dashed #eee;
+}
+
+.level-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.level-card ul li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.level-card ul li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: #e67e22;
+  font-size: 0.9rem;
+}
+
+/* ==================== SYLLABUS SECTION ==================== */
+.syllabus-section {
+  background: linear-gradient(135deg, #fff5eb 0%, #ffe8d9 100%);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  border: 1px solid rgba(230, 126, 34, 0.2);
+}
+
+.syllabus-section h2 {
+  font-size: 1.6rem;
+  color: #1e3c72;
+  margin-bottom: 1rem;
+}
+
+.syllabus-section p {
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.syllabus-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #e67e22, #d35400);
+  color: white;
+  box-shadow: 0 2px 10px rgba(230, 126, 34, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(230, 126, 34, 0.4);
+  background: linear-gradient(135deg, #f39c12, #e67e22);
+}
+
+.note {
+  font-size: 0.8rem;
+  color: #888;
+  font-style: italic;
+}
+
+/* ==================== TEACHING METHODS ==================== */
+.teaching-methods {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.teaching-methods h3 {
+  font-size: 1.5rem;
+  color: #1e3c72;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.methods-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.method-item {
+  padding: 1rem 1.2rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+  color: #333;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.method-item::before {
+  content: '✓';
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  background: linear-gradient(135deg, #e67e22, #d35400);
+  color: white;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.method-item:hover {
+  background: #fff5eb;
+  transform: translateX(5px);
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+
+/* Tablet Devices */
+@media screen and (max-width: 768px) {
+  .curriculum-hero {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .curriculum-hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .curriculum-container {
+    padding: 2rem 1.5rem;
+  }
+
+  .info-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .info-section p {
+    font-size: 0.9rem;
+  }
+
+  .curriculum-levels {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .level-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .syllabus-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+  }
+
+  .methods-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile Devices */
+@media screen and (max-width: 576px) {
+  .curriculum-hero {
+    padding: 2rem 1rem;
+  }
+
+  .curriculum-hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .curriculum-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .info-section {
+    padding: 1.5rem;
+  }
+
+  .info-section h2 {
+    font-size: 1.3rem;
+  }
+
+  .level-card {
+    padding: 1.5rem;
+  }
+
+  .level-card ul li {
+    font-size: 0.85rem;
+  }
+
+  .syllabus-section {
+    padding: 1.5rem;
+  }
+
+  .syllabus-section h2 {
+    font-size: 1.3rem;
+  }
+
+  .teaching-methods h3 {
+    font-size: 1.3rem;
+  }
+
+  .method-item {
+    font-size: 0.85rem;
+    padding: 0.8rem 1rem;
+  }
+}
+
+/* Small Mobile */
+@media screen and (max-width: 380px) {
+  .curriculum-hero h1 {
+    font-size: 1.4rem;
+  }
+
+  .level-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .level-card h3 span {
+    display: block;
+    margin-top: 0.2rem;
+  }
+}
+
+/* ==================== ANIMATIONS ==================== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.info-section,
+.level-card,
+.syllabus-section,
+.teaching-methods {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.level-card:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.level-card:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.syllabus-section {
+  animation-delay: 0.3s;
+}
+
+.teaching-methods {
+  animation-delay: 0.4s;
+}

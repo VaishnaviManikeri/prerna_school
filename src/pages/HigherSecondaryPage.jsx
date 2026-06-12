@@ -1,0 +1,945 @@
+// pages/HigherSecondaryPage.jsx
+import React, { useState } from "react";
+import {
+  FaFlask,
+  FaCalculator,
+  FaBook,
+  FaChartLine,
+  FaGraduationCap,
+  FaBriefcase,
+  FaLaptopCode,
+  FaUniversity,
+  FaCheckCircle,
+  FaArrowRight,
+  FaUserGraduate,
+  FaSchool,
+  FaAward,
+} from "react-icons/fa";
+
+const HigherSecondaryPage = () => {
+  const [selectedStream, setSelectedStream] = useState("science");
+
+  const streams = {
+    science: {
+      name: "Science Stream",
+      icon: <FaFlask />,
+      color: "#2563eb",
+      subjects: [
+        "English (Compulsory)",
+        "Marathi/Hindi (Compulsory)",
+        "Physics",
+        "Chemistry",
+        "Biology / Mathematics",
+        "Information Technology (Elective)",
+      ],
+      career:
+        "Engineering, Medical, Research, Biotechnology, Pharmacy, Defense",
+    },
+
+    commerce: {
+      name: "Commerce Stream",
+      icon: <FaChartLine />,
+      color: "#059669",
+      subjects: [
+        "English (Compulsory)",
+        "Marathi/Hindi (Compulsory)",
+        "Book Keeping & Accountancy",
+        "Economics",
+        "Organization of Commerce & Management",
+        "Mathematics / Information Technology",
+      ],
+      career:
+        "CA, CS, CMA, MBA, Banking, Finance, Marketing, Entrepreneurship",
+    },
+
+    arts: {
+      name: "Arts / Humanities Stream",
+      icon: <FaBook />,
+      color: "#9333ea",
+      subjects: [
+        "English (Compulsory)",
+        "Marathi/Hindi (Compulsory)",
+        "History",
+        "Geography",
+        "Political Science",
+        "Psychology / Sociology / Economics",
+      ],
+      career:
+        "Civil Services, Law, Journalism, Social Work, Teaching, Design",
+    },
+  };
+
+  const stats = [
+    {
+      value: "98%",
+      label: "HSC Result",
+      icon: <FaAward />,
+    },
+    {
+      value: "20+",
+      label: "Expert Faculty",
+      icon: <FaUserGraduate />,
+    },
+    {
+      value: "500+",
+      label: "Students",
+      icon: <FaSchool />,
+    },
+    {
+      value: "15+",
+      label: "Years Excellence",
+      icon: <FaUniversity />,
+    },
+  ];
+
+  return (
+    <div className="higher-page">
+      {/* HERO SECTION */}
+      <section className="hero-section">
+        <div className="hero-bg-shapes">
+          <div className="shape shape-1"></div>
+          <div className="shape shape-2"></div>
+          <div className="shape shape-3"></div>
+        </div>
+        <div className="hero-container">
+          <div className="hero-content">
+            <div className="hero-badge">
+              <FaGraduationCap />
+              Maharashtra HSC Board Affiliated
+            </div>
+
+            <h1>
+              Higher Secondary
+              <span> Education</span>
+            </h1>
+
+            <p>
+              Empowering students with quality education, stream specialization,
+              and career-focused learning for 11th & 12th standard.
+            </p>
+
+            <div className="hero-buttons">
+              <button className="primary-btn">
+                Admission Open <FaArrowRight />
+              </button>
+
+              <button className="secondary-btn">
+                Explore Streams
+              </button>
+            </div>
+
+            <div className="hero-stats">
+              {stats.map((item, index) => (
+                <div className="stat-card" key={index}>
+                  <div className="stat-icon">{item.icon}</div>
+                  <h3>{item.value}</h3>
+                  <p>{item.label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="hero-image">
+            <img
+              src="/assets/images/h11.png"
+              alt="Higher Secondary Students"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* ABOUT */}
+      <section className="about-section">
+        <div className="container">
+          <div className="section-header">
+            <span>About Junior College</span>
+            <h2>Tukaram Gujar Junior College</h2>
+            <p>
+              Our junior college provides specialized education in Science,
+              Commerce, and Arts streams as per Maharashtra HSC Board
+              curriculum.
+            </p>
+          </div>
+
+          <div className="about-grid">
+            <div className="about-card">
+              <div className="about-icon-wrapper">
+                <FaGraduationCap className="about-icon" />
+              </div>
+              <h3>Academic Excellence</h3>
+              <p>
+                Deep conceptual understanding with practical learning approach.
+              </p>
+            </div>
+
+            <div className="about-card">
+              <div className="about-icon-wrapper">
+                <FaLaptopCode className="about-icon" />
+              </div>
+              <h3>Digital Learning</h3>
+              <p>
+                Smart classrooms with modern technology and visual learning.
+              </p>
+            </div>
+
+            <div className="about-card">
+              <div className="about-icon-wrapper">
+                <FaBriefcase className="about-icon" />
+              </div>
+              <h3>Career Guidance</h3>
+              <p>
+                Expert counseling for higher education and future careers.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* STREAM SECTION */}
+      <section className="stream-section">
+        <div className="container">
+          <div className="section-header">
+            <span>Streams</span>
+            <h2>Select Your Stream</h2>
+          </div>
+
+          <div className="stream-selector">
+            {Object.keys(streams).map((stream) => (
+              <button
+                key={stream}
+                className={selectedStream === stream ? "active" : ""}
+                onClick={() => setSelectedStream(stream)}
+              >
+                <span className="stream-btn-icon">{streams[stream].icon}</span>
+                {streams[stream].name}
+              </button>
+            ))}
+          </div>
+
+          <div className="stream-card">
+            <div className="stream-top">
+              <div
+                className="stream-icon"
+                style={{
+                  background: `${streams[selectedStream].color}15`,
+                  color: streams[selectedStream].color,
+                }}
+              >
+                {streams[selectedStream].icon}
+              </div>
+
+              <div>
+                <h3>{streams[selectedStream].name}</h3>
+                <p>Professional HSC curriculum & specialization</p>
+              </div>
+            </div>
+
+            <div className="stream-grid">
+              <div className="stream-box">
+                <h4>📚 Subjects Offered</h4>
+
+                <ul>
+                  {streams[selectedStream].subjects.map((sub, idx) => (
+                    <li key={idx}>
+                      <span className="check-icon"><FaCheckCircle /></span>
+                      {sub}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="stream-box">
+                <h4>🎯 Career Pathways</h4>
+
+                <p className="career-text">
+                  {streams[selectedStream].career}
+                </p>
+
+                <h4 className="feature-title">✨ Special Features</h4>
+
+                <ul>
+                  <li>
+                    <span className="check-icon"><FaCheckCircle /></span>
+                    Competitive exam preparation
+                  </li>
+                  <li>
+                    <span className="check-icon"><FaCheckCircle /></span>
+                    Career counseling sessions
+                  </li>
+                  <li>
+                    <span className="check-icon"><FaCheckCircle /></span>
+                    Industrial visits & seminars
+                  </li>
+                  <li>
+                    <span className="check-icon"><FaCheckCircle /></span>
+                    Expert faculty guidance
+                  </li>
+                  <li>
+                    <span className="check-icon"><FaCheckCircle /></span>
+                    Advanced laboratories
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* EXAM SECTION */}
+      <section className="exam-section">
+        <div className="container">
+          <div className="section-header">
+            <span>Assessment</span>
+            <h2>HSC Examination Pattern</h2>
+          </div>
+
+          <div className="table-wrapper">
+            <table className="info-table">
+              <thead>
+                <tr>
+                  <th>Component</th>
+                  <th>Details</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>Internal Assessment</td>
+                  <td>
+                    20 marks per subject (Assignments, Projects, Oral)
+                    </td>
+                </tr>
+
+                <tr>
+                  <td>Theory Examination</td>
+                  <td>
+                    80 marks per subject conducted by Maharashtra HSC Board
+                    </td>
+                </tr>
+
+                <tr>
+                  <td>Practical Exams</td>
+                  <td>
+                    Applicable for Physics, Chemistry & Biology subjects
+                    </td>
+                </tr>
+
+                <tr>
+                  <td>Exam Season</td>
+                  <td>February – March (Final HSC Examination)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="cta-section">
+        <div className="container">
+          <div className="cta-box">
+            <h2>Start Your Bright Future Today</h2>
+
+            <p>
+              Admissions Open for 11th & 12th Standard | Limited Seats
+              Available
+            </p>
+
+            <button className="primary-btn">
+              Apply Now <FaArrowRight />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* CSS */}
+      <style jsx>{`
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+
+        .higher-page {
+          font-family: "Inter", sans-serif;
+          background: #f8fafc;
+          overflow-x: hidden;
+        }
+
+        .container {
+          width: 100%;
+          max-width: 1250px;
+          margin: auto;
+          padding: 0 20px;
+        }
+
+        section {
+          padding: 80px 0;
+        }
+
+        .section-header {
+          text-align: center;
+          margin-bottom: 50px;
+        }
+
+        .section-header span {
+          display: inline-block;
+          background: #dbeafe;
+          color: #2563eb;
+          padding: 8px 18px;
+          border-radius: 30px;
+          font-size: 14px;
+          font-weight: 600;
+          margin-bottom: 15px;
+        }
+
+        .section-header h2 {
+          font-size: 42px;
+          color: #0f172a;
+          margin-bottom: 12px;
+        }
+
+        .section-header p {
+          color: #64748b;
+          max-width: 700px;
+          margin: auto;
+          line-height: 1.7;
+        }
+
+        /* HERO */
+        .hero-section {
+          position: relative;
+          background: linear-gradient(
+            135deg,
+            #eff6ff 0%,
+            #ffffff 50%,
+            #eef2ff 100%
+          );
+          padding: 100px 0;
+          min-height: 95vh;
+          display: flex;
+          align-items: center;
+          overflow: hidden;
+        }
+
+        /* Animated Background Shapes */
+        .hero-bg-shapes {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          z-index: 0;
+        }
+
+        .shape {
+          position: absolute;
+          border-radius: 50%;
+          filter: blur(60px);
+          opacity: 0.15;
+        }
+
+        .shape-1 {
+          width: 400px;
+          height: 400px;
+          background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+          top: -100px;
+          right: -100px;
+          animation: float 20s ease-in-out infinite;
+        }
+
+        .shape-2 {
+          width: 500px;
+          height: 500px;
+          background: linear-gradient(135deg, #06b6d4, #3b82f6);
+          bottom: -150px;
+          left: -150px;
+          animation: float 15s ease-in-out infinite reverse;
+        }
+
+        .shape-3 {
+          width: 300px;
+          height: 300px;
+          background: linear-gradient(135deg, #f59e0b, #ef4444);
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          animation: pulse 10s ease-in-out infinite;
+        }
+
+        @keyframes float {
+          0%, 100% { transform: translate(0, 0) rotate(0deg); }
+          33% { transform: translate(30px, -30px) rotate(5deg); }
+          66% { transform: translate(-20px, 20px) rotate(-3deg); }
+        }
+
+        @keyframes pulse {
+          0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.15; }
+          50% { transform: translate(-50%, -50%) scale(1.3); opacity: 0.08; }
+        }
+
+        .hero-container {
+          position: relative;
+          z-index: 2;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 60px;
+          align-items: center;
+          max-width: 1250px;
+          margin: 0 auto;
+          padding: 0 20px;
+          width: 100%;
+        }
+
+        .hero-badge {
+          display: inline-flex;
+          align-items: center;
+          gap: 10px;
+          background: rgba(37, 99, 235, 0.1);
+          color: #2563eb;
+          padding: 10px 18px;
+          border-radius: 40px;
+          font-size: 14px;
+          font-weight: 600;
+          margin-bottom: 20px;
+        }
+
+        .hero-content h1 {
+          font-size: 3.2rem;
+          line-height: 1.2;
+          color: #0f172a;
+          margin-bottom: 20px;
+          font-weight: 800;
+        }
+
+        .hero-content h1 span {
+          color: #2563eb;
+          font-size: 3.2rem;
+        }
+
+        .hero-content p {
+          font-size: 18px;
+          color: #475569;
+          line-height: 1.8;
+          margin-bottom: 30px;
+          max-width: 90%;
+        }
+
+        .hero-buttons {
+          display: flex;
+          gap: 15px;
+          flex-wrap: wrap;
+          margin-bottom: 40px;
+        }
+
+        .primary-btn,
+        .secondary-btn {
+          border: none;
+          padding: 15px 28px;
+          border-radius: 14px;
+          font-size: 15px;
+          font-weight: 600;
+          cursor: pointer;
+          transition: 0.3s ease;
+        }
+
+        .primary-btn {
+          background: #2563eb;
+          color: white;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+
+        .primary-btn:hover {
+          transform: translateY(-3px);
+          background: #1d4ed8;
+        }
+
+        .secondary-btn {
+          background: white;
+          border: 1px solid #cbd5e1;
+          color: #0f172a;
+        }
+
+        .secondary-btn:hover {
+          background: #f1f5f9;
+        }
+
+        .hero-stats {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 18px;
+        }
+
+        .stat-card {
+          background: rgba(255, 255, 255, 0.7);
+          backdrop-filter: blur(10px);
+          padding: 25px 20px;
+          border-radius: 22px;
+          text-align: center;
+          border: 1px solid #e2e8f0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .stat-icon {
+          font-size: 28px;
+          color: #2563eb;
+          margin-bottom: 12px;
+          display: flex;
+          justify-content: center;
+        }
+
+        .stat-card h3 {
+          font-size: 28px;
+          color: #0f172a;
+        }
+
+        .stat-card p {
+          font-size: 14px;
+          margin-top: 6px;
+        }
+
+        .hero-image img {
+          width: 100%;
+          border-radius: 30px;
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        /* ABOUT */
+        .about-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 25px;
+        }
+
+        .about-card {
+          background: white;
+          padding: 35px 28px;
+          border-radius: 24px;
+          text-align: center;
+          transition: 0.3s;
+          border: 1px solid #e2e8f0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .about-card:hover {
+          transform: translateY(-6px);
+          box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+        }
+
+        .about-icon-wrapper {
+          display: flex;
+          justify-content: center;
+          margin-bottom: 18px;
+        }
+
+        .about-icon {
+          font-size: 45px;
+          color: #2563eb;
+        }
+
+        .about-card h3 {
+          margin-bottom: 10px;
+          color: #0f172a;
+        }
+
+        .about-card p {
+          color: #64748b;
+          line-height: 1.7;
+        }
+
+        /* STREAM */
+        .stream-section {
+          background: #ffffff;
+        }
+
+        .stream-selector {
+          display: flex;
+          justify-content: center;
+          gap: 20px;
+          margin-bottom: 40px;
+          flex-wrap: wrap;
+        }
+
+        .stream-selector button {
+          border: none;
+          padding: 15px 28px;
+          border-radius: 16px;
+          background: #f1f5f9;
+          color: #0f172a;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          font-size: 15px;
+          font-weight: 600;
+          transition: 0.3s;
+        }
+
+        .stream-btn-icon {
+          display: flex;
+          align-items: center;
+        }
+
+        .stream-selector button.active {
+          background: #2563eb;
+          color: white;
+        }
+
+        .stream-card {
+          background: #f8fafc;
+          border-radius: 30px;
+          padding: 40px;
+        }
+
+        .stream-top {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          margin-bottom: 35px;
+        }
+
+        .stream-icon {
+          width: 80px;
+          height: 80px;
+          border-radius: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 35px;
+        }
+
+        .stream-top h3 {
+          font-size: 32px;
+          color: #0f172a;
+        }
+
+        .stream-top p {
+          color: #64748b;
+        }
+
+        .stream-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 30px;
+        }
+
+        .stream-box {
+          background: white;
+          padding: 30px;
+          border-radius: 24px;
+        }
+
+        .stream-box h4 {
+          font-size: 20px;
+          margin-bottom: 20px;
+          color: #0f172a;
+        }
+
+        .stream-box ul {
+          list-style: none;
+        }
+
+        .stream-box ul li {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          margin-bottom: 14px;
+          color: #475569;
+          line-height: 1.6;
+        }
+
+        .check-icon {
+          display: flex;
+          align-items: center;
+          color: #2563eb;
+          min-width: 20px;
+        }
+
+        .career-text {
+          color: #475569;
+          line-height: 1.8;
+          margin-bottom: 25px;
+        }
+
+        .feature-title {
+          margin-top: 20px;
+        }
+
+        /* TABLE */
+        .exam-section {
+          background: #f8fafc;
+        }
+
+        .table-wrapper {
+          overflow-x: auto;
+          background: white;
+          border-radius: 24px;
+          padding: 20px;
+        }
+
+        .info-table {
+          width: 100%;
+          border-collapse: collapse;
+        }
+
+        .info-table th {
+          background: #2563eb;
+          color: white;
+          padding: 18px;
+          text-align: left;
+        }
+
+        .info-table td {
+          padding: 18px;
+          border-bottom: 1px solid #e2e8f0;
+          color: #475569;
+        }
+
+        .info-table tr:hover {
+          background: #f8fafc;
+        }
+
+        /* CTA */
+        .cta-box {
+          background: linear-gradient(135deg, #2563eb, #1e3a8a);
+          padding: 70px 30px;
+          border-radius: 32px;
+          text-align: center;
+          color: white;
+        }
+
+        .cta-box h2 {
+          font-size: 42px;
+          margin-bottom: 18px;
+        }
+
+        .cta-box p {
+          max-width: 700px;
+          margin: auto;
+          margin-bottom: 30px;
+          line-height: 1.7;
+        }
+
+        .cta-box .primary-btn {
+          margin: auto;
+          background: white;
+          color: #2563eb;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 1100px) {
+          .hero-container {
+            min-height: auto;
+            padding: 60px 20px;
+          }
+          .hero-container,
+          .stream-grid {
+            grid-template-columns: 1fr;
+          }
+
+          .hero-content {
+            text-align: center;
+          }
+
+          .hero-buttons {
+            justify-content: center;
+          }
+
+          .hero-stats {
+            grid-template-columns: repeat(2, 1fr);
+          }
+
+          .hero-content p {
+            max-width: 100%;
+          }
+
+          .about-grid {
+            grid-template-columns: 1fr;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .hero-section {
+            min-height: auto;
+            padding: 80px 0;
+          }
+          section {
+            padding: 60px 0;
+          }
+
+          .hero-content h1 {
+            font-size: 2.5rem;
+          }
+
+          .hero-content h1 span {
+            font-size: 2.5rem;
+          }
+
+          .section-header h2 {
+            font-size: 32px;
+          }
+
+          .stream-card {
+            padding: 25px;
+          }
+
+          .stream-top {
+            flex-direction: column;
+            text-align: center;
+          }
+
+          .cta-box h2 {
+            font-size: 30px;
+          }
+        }
+
+        @media (max-width: 500px) {
+          .hero-content h1 {
+            font-size: 2rem;
+          }
+
+          .hero-content h1 span {
+            font-size: 2rem;
+          }
+
+          .hero-stats {
+            grid-template-columns: 1fr;
+          }
+
+          .stream-selector button {
+            width: 100%;
+            justify-content: center;
+          }
+
+          .primary-btn,
+          .secondary-btn {
+            width: 100%;
+            justify-content: center;
+          }
+
+          .section-header h2 {
+            font-size: 28px;
+          }
+
+          .stream-top h3 {
+            font-size: 26px;
+          }
+
+          .cta-box {
+            padding: 50px 20px;
+          }
+        }
+      `}</style>
+    </div>
+  );
+};
+
+export default HigherSecondaryPage;

@@ -1,0 +1,243 @@
+/* Footer.css - Matches the school navbar theme */
+
+.footer {
+  background: #102a4c;
+  color: white;
+  margin-top: auto;
+}
+
+.footer-main {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  padding: 3rem 0 2rem;
+}
+
+.footer-container,
+.footer-bottom-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: minmax(260px, 1.4fr) repeat(3, minmax(160px, 1fr));
+  gap: 2rem;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.footer-logo-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-logo {
+  width: 64px;
+  height: 64px;
+  border-radius: 10px;
+  object-fit: cover;
+  background: white;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+}
+
+.footer-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.footer-subtitle {
+  max-width: 360px;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.82rem;
+  line-height: 1.5;
+  margin: 0.25rem 0 0;
+}
+
+.footer-description {
+  max-width: 420px;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 0.92rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.footer-apply-button {
+  background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+  color: white;
+  text-decoration: none;
+  padding: 0.65rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.footer-apply-button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+  box-shadow: 0 8px 20px rgba(230, 126, 34, 0.3);
+}
+
+.footer-heading {
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 1rem;
+  padding-bottom: 0.6rem;
+  position: relative;
+}
+
+.footer-heading::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 42px;
+  height: 3px;
+  border-radius: 99px;
+  background: linear-gradient(135deg, #e67e22, #f39c12);
+}
+
+.footer-links,
+.footer-contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.65rem;
+}
+
+.footer-links a,
+.footer-contact-list a {
+  color: rgba(255, 255, 255, 0.82);
+  text-decoration: none;
+  font-size: 0.88rem;
+  transition: all 0.2s ease;
+}
+
+.footer-links a:hover,
+.footer-contact-list a:hover {
+  color: #f39c12;
+}
+
+.footer-links a:hover {
+  padding-left: 0.3rem;
+}
+
+.footer-contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.footer-contact-list li {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.footer-icon {
+  min-width: 62px;
+  color: #f39c12;
+  font-weight: 700;
+}
+
+.footer-bottom {
+  background: #0b1f39;
+  padding: 1rem 0;
+}
+
+.footer-bottom-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.82rem;
+}
+
+.footer-bottom-container p {
+  margin: 0;
+}
+
+.footer-bottom-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer-bottom-links a {
+  color: rgba(255, 255, 255, 0.78);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-bottom-links a:hover {
+  color: #f39c12;
+}
+
+@media screen and (max-width: 992px) {
+  .footer-container {
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer-main {
+    padding: 2.3rem 0 1.5rem;
+  }
+
+  .footer-container,
+  .footer-bottom-container {
+    padding: 0 1rem;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 1.7rem;
+  }
+
+  .footer-bottom-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer-logo-row {
+    align-items: flex-start;
+  }
+
+  .footer-logo {
+    width: 54px;
+    height: 54px;
+  }
+
+  .footer-title {
+    font-size: 1.05rem;
+  }
+
+  .footer-subtitle,
+  .footer-description,
+  .footer-links a,
+  .footer-contact-list li,
+  .footer-bottom-container {
+    font-size: 0.78rem;
+  }
+}
