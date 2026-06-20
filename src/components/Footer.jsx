@@ -14,7 +14,7 @@ const Footer = () => {
               <div>
                 <h3 className="footer-title">प्रेरणा शिक्षण संस्था</h3>
                 <p className="footer-subtitle">
-                  Prerana Valak, Primary, Secondary & Tukaram Gujar Jr. College
+                  Prerana Primary, Secondary & Tukaram Gujar Jr. College
                 </p>
               </div>
             </div>
@@ -29,12 +29,12 @@ const Footer = () => {
             <h4 className="footer-heading">Quick Links</h4>
             <ul className="footer-links">
               <li><a href="/home">Home</a></li>
-              <li><a href="/about/overview">About Us</a></li>
+              <li><a href="/about">About Us</a></li>
               <li><a href="/about/mission-vision">Mission & Vision</a></li>
               <li><a href="/academics/primary">Academics</a></li>
-              <li><a href="#admissions">Admissions 2026</a></li>
-              <li><a href="/gallery/photo-gallery">Gallery</a></li>
-              <li><a href="#contact">Contact Us</a></li>
+              <li><a href="/admissions">Admissions 2026</a></li>
+              <li><a href="/gallery">Gallery</a></li>
+              <li><a href="/contact">Contact Us</a></li>
             </ul>
           </div>
 
@@ -74,7 +74,7 @@ const Footer = () => {
 
       <div className="footer-bottom">
         <div className="footer-bottom-container">
-          <p>© {currentYear} Prerana Shikshan Sanstha. All rights reserved.</p>
+          <p>© {currentYear} Trijja Media Works. All rights reserved.</p>
           <div className="footer-bottom-links">
             <a href="/about/overview">About</a>
             <a href="/notices/latest-notices">Notices</a>

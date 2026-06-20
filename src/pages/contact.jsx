@@ -39,7 +39,7 @@ const Contact = () => {
 
               <p className="text-gray-600 leading-7">
                 प्रेरणा शिक्षण संस्था <br />
-                Prerana Balak, Primary, Secondary & Tukaram Gujar Jr. College
+                Prerana Primary, Secondary & Tukaram Gujar Jr. College
                 <br />
                 Laxminagar, Thergaon, Pune - 33
               </p>

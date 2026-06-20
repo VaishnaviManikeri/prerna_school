@@ -1,8 +1,13 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { FaCamera, FaTimes, FaSearchPlus, FaSchool, FaArrowLeft, FaImages } from 'react-icons/fa';
 import { getGallery } from '../api';
+import './Gallery.css';
 
 const Gallery = () => {
   const [items, setItems] = useState([]);
+  const [allItems, setAllItems] = useState([]); // keep an untouched master copy for filtering
+  const [activeCategory, setActiveCategory] = useState('All');
   const [loading, setLoading] = useState(true);
   const [selectedImage, setSelectedImage] = useState(null);
   const [error, setError] = useState(null);
@@ -17,23 +22,60 @@ const Gallery = () => {
       const response = await getGallery();
       // Ensure we're setting an array
       const galleryData = response.data || [];
-      setItems(Array.isArray(galleryData) ? galleryData : []);
+      const safeData = Array.isArray(galleryData) ? galleryData : [];
+      setItems(safeData);
+      setAllItems(safeData);
+      setActiveCategory('All');
       setError(null);
     } catch (error) {
       console.error('Failed to fetch gallery:', error);
       setError('Failed to load gallery images. Please try again later.');
       setItems([]);
+      setAllItems([]);
     } finally {
       setLoading(false);
     }
   };
 
+  // Safely get categories from the master list (not the filtered one)
+  const categories = allItems && Array.isArray(allItems)
+    ? [...new Set(allItems.filter(item => item?.category).map(item => item.category))]
+    : [];
+
+  const handleFilter = (category) => {
+    setActiveCategory(category);
+    if (category === 'All') {
+      setItems(allItems);
+    } else {
+      setItems(allItems.filter(item => item.category === category));
+    }
+  };
+
+  // Keyboard support for the lightbox (Esc to close)
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') setSelectedImage(null);
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
+
   if (loading) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="text-center">
-          <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
-          <p className="mt-4 text-gray-600">Loading gallery...</p>
+      <div className="gallery-page">
+        <div className="gallery-page-hero">
+          <div className="gallery-page-container">
+            <span className="gallery-eyebrow"><FaImages /> Moments at प्रेरणा</span>
+            <h1>Campus Gallery</h1>
+            <p>A look inside the classrooms, events, and everyday moments that shape our students.</p>
+          </div>
+        </div>
+        <div className="gallery-page-container">
+          <div className="gallery-grid-page">
+            {Array.from({ length: 8 }).map((_, i) => (
+              <div className="gallery-card skeleton-card" key={i}></div>
+            ))}
+          </div>
         </div>
       </div>
     );
@@ -41,80 +83,96 @@ const Gallery = () => {
 
   if (error) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="text-center">
-          <div className="text-red-600 text-5xl mb-4">⚠️</div>
-          <p className="text-gray-800 mb-4">{error}</p>
-          <button 
-            onClick={fetchGallery}
-            className="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700"
-          >
+      <div className="gallery-page">
+        <div className="gallery-state-screen">
+          <div className="gallery-state-icon error">
+            <FaCamera />
+          </div>
+          <h2>Something went wrong</h2>
+          <p>{error}</p>
+          <button onClick={fetchGallery} className="gallery-btn primary">
             Try Again
           </button>
+          <Link to="/" className="gallery-btn-link"><FaArrowLeft /> Back to Home</Link>
         </div>
       </div>
     );
   }
 
-  // Safely get categories from items array
-  const categories = items && Array.isArray(items) 
-    ? [...new Set(items.filter(item => item?.category).map(item => item.category))]
-    : [];
-
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 py-12">
-        <h1 className="text-4xl font-serif font-bold text-center mb-4">Our Gallery</h1>
-        <p className="text-center text-gray-600 mb-12">Explore memorable moments from our school</p>
-        
+    <div className="gallery-page">
+      {/* Page Hero */}
+      <div className="gallery-page-hero">
+        <div className="gallery-page-container">
+          <span className="gallery-eyebrow"><FaImages /> Moments at प्रेरणा</span>
+          <h1>Campus Gallery</h1>
+          <p>A look inside the classrooms, events, celebrations, and everyday moments that shape our students at प्रेरणा शिक्षण संस्था.</p>
+        </div>
+      </div>
+
+      <div className="gallery-page-container">
+        {/* Category Filters */}
         {categories.length > 0 && (
-          <div className="flex justify-center gap-4 mb-8 flex-wrap">
-            <button 
-              onClick={() => setItems([...items])}
-              className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition"
+          <div className="gallery-filters">
+            <button
+              onClick={() => handleFilter('All')}
+              className={`filter-chip ${activeCategory === 'All' ? 'active' : ''}`}
             >
-              All
+              All Photos
             </button>
             {categories.map(category => (
-              <button 
-                key={category} 
-                onClick={() => {
-                  const filtered = items.filter(item => item.category === category);
-                  setItems(filtered);
-                }}
-                className="px-4 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300 transition"
+              <button
+                key={category}
+                onClick={() => handleFilter(category)}
+                className={`filter-chip ${activeCategory === category ? 'active' : ''}`}
               >
                 {category}
               </button>
             ))}
           </div>
         )}
-        
+
+        {/* Empty State */}
         {items && items.length === 0 ? (
-          <div className="text-center py-12">
-            <p className="text-gray-500 text-lg">No gallery images available at the moment.</p>
+          <div className="gallery-state-screen inline">
+            <div className="gallery-state-icon">
+              <FaSchool />
+            </div>
+            <h2>No photos here yet</h2>
+            <p>
+              {activeCategory === 'All'
+                ? 'Gallery images will appear here once they are added.'
+                : `No photos found in "${activeCategory}". Try another category.`}
+            </p>
+            {activeCategory !== 'All' && (
+              <button onClick={() => handleFilter('All')} className="gallery-btn primary">
+                View All Photos
+              </button>
+            )}
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {items.map((item) => (
+          <div className="gallery-grid-page">
+            {items.map((item, idx) => (
               item && (
                 <div
                   key={item._id}
-                  className="group relative overflow-hidden rounded-lg shadow-lg cursor-pointer transform transition duration-300 hover:scale-105"
+                  className="gallery-card"
+                  style={{ animationDelay: `${(idx % 8) * 0.06}s` }}
                   onClick={() => setSelectedImage(item)}
                 >
                   <img
                     src={item.imageUrl}
                     alt={item.title || 'Gallery image'}
-                    className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+                    loading="lazy"
                     onError={(e) => {
-                      e.target.src = 'https://via.placeholder.com/400x300?text=Image+Not+Found';
+                      e.target.src = 'https://via.placeholder.com/400x300?text=प्रेरणा+School';
                     }}
                   />
-                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex items-center justify-center">
-                    <div className="text-center text-white p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <h3 className="text-xl font-semibold mb-2">{item.title || 'Untitled'}</h3>
-                      <p className="text-sm">{item.description || 'No description available'}</p>
+                  <div className="gallery-card-overlay">
+                    <span className="zoom-icon"><FaSearchPlus /></span>
+                    <div className="gallery-card-info">
+                      <h3>{item.title || 'Untitled'}</h3>
+                      {item.category && <span className="card-category">{item.category}</span>}
                     </div>
                   </div>
                 </div>
@@ -123,30 +181,33 @@ const Gallery = () => {
           </div>
         )}
       </div>
-      
+
       {/* Lightbox */}
       {selectedImage && (
-        <div 
-          className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4"
+        <div
+          className="gallery-lightbox"
           onClick={() => setSelectedImage(null)}
         >
-          <div className="relative max-w-5xl max-h-full" onClick={(e) => e.stopPropagation()}>
-            <img 
-              src={selectedImage.imageUrl} 
-              alt={selectedImage.title || 'Gallery image'} 
-              className="max-w-full max-h-screen object-contain rounded-lg"
+          <button
+            className="lightbox-close"
+            onClick={() => setSelectedImage(null)}
+            aria-label="Close"
+          >
+            <FaTimes />
+          </button>
+          <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
+            <img
+              src={selectedImage.imageUrl}
+              alt={selectedImage.title || 'Gallery image'}
+              onError={(e) => {
+                e.target.src = 'https://via.placeholder.com/600x400?text=प्रेरणा+School';
+              }}
             />
-            <button
-              className="absolute top-4 right-4 text-white text-3xl hover:text-gray-300 transition bg-black bg-opacity-50 w-10 h-10 rounded-full flex items-center justify-center"
-              onClick={() => setSelectedImage(null)}
-            >
-              ×
-            </button>
-            <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white p-4 rounded-b-lg">
-              <h3 className="text-xl font-semibold">{selectedImage.title || 'Untitled'}</h3>
-              <p className="text-sm mt-1">{selectedImage.description || 'No description available'}</p>
+            <div className="lightbox-info">
+              <h3>{selectedImage.title || 'Untitled'}</h3>
+              <p>{selectedImage.description || 'No description available'}</p>
               {selectedImage.category && (
-                <p className="text-xs mt-1 text-gray-300">Category: {selectedImage.category}</p>
+                <span className="card-category">{selectedImage.category}</span>
               )}
             </div>
           </div>

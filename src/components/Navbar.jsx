@@ -98,7 +98,7 @@ const Navbar = () => {
         <div className="institute-bar-container">
           <div className="institute-name-wrapper">
             <span className="institute-name-main">प्रेरणा शिक्षण संस्था</span>
-            <span className="institute-name-sub">Prerana Balak, Primary, Secondary & Tukaram Gujar Jr. College</span>
+            <span className="institute-name-sub">Prerana Primary, Secondary & Tukaram Gujar Jr. College</span>
           </div>
         </div>
       </div>
@@ -117,7 +117,7 @@ const Navbar = () => {
           {/* Desktop Menu - Gallery and Notices removed from here */}
           <ul className="nav-menu">
             <li className="nav-item">
-              <Link to="/home" className="nav-link">Home</Link>
+              <Link to="/" className="nav-link">Home</Link>
             </li>
 
             <li className="nav-item dropdown">

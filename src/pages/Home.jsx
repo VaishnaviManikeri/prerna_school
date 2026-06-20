@@ -1,11 +1,18 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import './Home.css';
+import { getGallery } from '../api';
 
 // Images for Slider (replace with actual school images)
 import slider1 from '/assets/images/image.png';
 import slider2 from '/assets/images/h11.png';
 import slider3 from '/assets/images/h3.png';
 import slider4 from '/assets/images/h4.png';
+
+// Images for Top Rankers
+import student1 from '/assets/images/student.png';
+import student2 from '/assets/images/student1.png';
+import student3 from '/assets/images/student3.png';
 
 // Icons (using React Icons)
 import { 
@@ -44,7 +51,9 @@ import {
   FaLinkedinIn,
   FaClock,
   FaShieldAlt,
-  FaGlobe
+  FaGlobe,
+  FaImages,
+  FaArrowRight
 } from 'react-icons/fa';
 
 const Home = () => {
@@ -62,6 +71,11 @@ const Home = () => {
   });
   const [hasCounted, setHasCounted] = useState(false);
   const counterRef = useRef(null);
+
+  // Gallery Preview State (live data from backend)
+  const [galleryItems, setGalleryItems] = useState([]);
+  const [galleryLoading, setGalleryLoading] = useState(true);
+  const [galleryError, setGalleryError] = useState(false);
 
   // Auto slide
   useEffect(() => {
@@ -85,6 +99,31 @@ const Home = () => {
     if (counterRef.current) observer.observe(counterRef.current);
     return () => observer.disconnect();
   }, [hasCounted]);
+
+  // Fetch latest gallery images for the homepage preview
+  useEffect(() => {
+    const fetchGalleryPreview = async () => {
+      try {
+        setGalleryLoading(true);
+        const response = await getGallery();
+        const data = response?.data || [];
+        const list = Array.isArray(data) ? data : [];
+        // Show the 4 most recent gallery uploads on the homepage
+        const latestFour = [...list]
+          .sort((a, b) => new Date(b.createdAt || 0) - new Date(a.createdAt || 0))
+          .slice(0, 4);
+        setGalleryItems(latestFour);
+        setGalleryError(false);
+      } catch (err) {
+        console.error('Failed to load homepage gallery preview:', err);
+        setGalleryError(true);
+        setGalleryItems([]);
+      } finally {
+        setGalleryLoading(false);
+      }
+    };
+    fetchGalleryPreview();
+  }, []);
 
   const animateCounters = () => {
     const target = { students: 1250, teachers: 68, courses: 24, awards: 32 };
@@ -130,9 +169,9 @@ const Home = () => {
   ];
 
   const topRankers = [
-    { name: "Aditya Sharma", rank: "1st (SSC 98.6%)", img: "https://randomuser.me/api/portraits/men/32.jpg" },
-    { name: "Neha Patil", rank: "2nd (SSC 97.8%)", img: "https://randomuser.me/api/portraits/women/68.jpg" },
-    { name: "Rohan Joshi", rank: "1st (JEE Mains)", img: "https://randomuser.me/api/portraits/men/45.jpg" },
+    { name: "Aditya Sharma", rank: "1st (SSC 98.6%)", img: student1 },
+    { name: "Neha Patil", rank: "2nd (SSC 97.8%)", img: student2 },
+    { name: "Rohan Joshi", rank: "1st (JEE Mains)", img: student3 },
   ];
 
   const testimonials = [
@@ -248,7 +287,7 @@ const Home = () => {
                 <button className="read-more-btn">Read More →</button>
               </div>
               <div className="about-img">
-                <img src="https://picsum.photos/id/159/500/400" alt="School Building - प्रेरणा शिक्षण संस्था Campus" />
+                <img src="/assets/images/i1.png" alt="School Building - प्रेरणा शिक्षण संस्था Campus" />
               </div>
             </div>
           </div>
@@ -346,18 +385,54 @@ const Home = () => {
           </div>
         </section>
 
-        {/* Gallery Preview */}
+        {/* Gallery Preview — now powered by live backend data */}
         <section className="gallery-section" id="gallery">
           <div className="container">
-            <span className="section-badge center">Moments</span>
-            <h2 className="section-title">Campus <span>Gallery</span></h2>
-            <div className="gallery-grid">
-              {[1,2,3,4,5,6].map((i) => (
-                <div className="gallery-img" key={i}>
-                  <img src={`https://picsum.photos/id/1${i+10}/300/200`} alt={`Campus Gallery ${i}`} loading="lazy" />
-                  <div className="gallery-overlay"><FaCamera /> View Gallery</div>
-                </div>
-              ))}
+            <div className="gallery-header">
+              <div>
+                <span className="section-badge">Moments</span>
+                <h2 className="section-title left">Campus <span>Gallery</span></h2>
+              </div>
+              <Link to="/gallery" className="view-all-link">
+                See Full Gallery <FaArrowRight />
+              </Link>
+            </div>
+
+            {galleryLoading ? (
+              <div className="gallery-grid">
+                {[1, 2, 3, 4].map((i) => (
+                  <div className="gallery-img skeleton" key={i}></div>
+                ))}
+              </div>
+            ) : galleryError || galleryItems.length === 0 ? (
+              <div className="gallery-empty">
+                <FaCamera />
+                <p>Gallery photos are coming soon. Check back shortly!</p>
+                <Link to="/gallery" className="cta-btn primary">Visit Gallery Page</Link>
+              </div>
+            ) : (
+              <div className="gallery-grid">
+                {galleryItems.map((item) => (
+                  <Link to="/gallery" className="gallery-img" key={item._id}>
+                    <img
+                      src={item.imageUrl}
+                      alt={item.title || 'Campus Gallery'}
+                      loading="lazy"
+                      onError={(e) => { e.target.src = 'https://via.placeholder.com/400x300?text=प्रेरणा+School'; }}
+                    />
+                    <div className="gallery-overlay">
+                      <FaCamera />
+                      <span>{item.title || 'View Gallery'}</span>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            )}
+
+            <div className="gallery-cta">
+              <Link to="/gallery" className="cta-btn primary">
+                <FaImages /> Explore Full Gallery
+              </Link>
             </div>
           </div>
         </section>
@@ -413,28 +488,8 @@ const Home = () => {
           </div>
         </section>
 
-        {/* Video Section */}
-        {/* <section className="video-section">
-          <div className="container">
-            <span className="section-badge center">Media</span>
-            <h2 className="section-title">School <span>Virtual Tour</span></h2>
-            <div className="video-wrapper">
-              <iframe width="100%" height="450" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=0" title="प्रेरणा School Virtual Tour" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-            </div>
-          </div>
-        </section> */}
-
         {/* Campus Tour */}
-        <section className="campustour-section">
-          <div className="container">
-            <h2 className="section-title">360° <span>Campus Tour</span></h2>
-            <div className="tour-grid">
-              <div className="tour-card"><img src="https://picsum.photos/id/15/400/250" alt="Smart Classroom" loading="lazy" /><div className="tour-info"><FaMapMarkerAlt /> Smart Classroom</div></div>
-              <div className="tour-card"><img src="https://picsum.photos/id/91/400/250" alt="Library" loading="lazy" /><div className="tour-info"><FaMapMarkerAlt /> Central Library</div></div>
-              <div className="tour-card"><img src="https://picsum.photos/id/96/400/250" alt="Sports Ground" loading="lazy" /><div className="tour-info"><FaMapMarkerAlt /> Sports Complex</div></div>
-            </div>
-          </div>
-        </section>
+        
 
         {/* FAQ Section */}
         <section className="faq-section">
