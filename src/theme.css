@@ -1,0 +1,992 @@
+/* Prerna School brand theme: espresso, crimson and warm white. */
+:root {
+  --primary-color: #a6192e;
+  --primary-dark: #76101f;
+  --primary-light: #d85b6d;
+  --secondary-color: #321b14;
+  --secondary-light: #583328;
+  --accent-color: #bd1f36;
+  --text-dark: #2d1b16;
+  --text-muted: #705f59;
+  --text-light: #a18f88;
+  --text-white: #ffffff;
+  --bg-light: #fbf7f5;
+  --bg-white: #ffffff;
+  --bg-gray: #f3e9e5;
+  --danger: #a6192e;
+  --shadow-xs: 0 1px 3px rgba(50, 27, 20, 0.08);
+  --shadow-sm: 0 4px 14px rgba(50, 27, 20, 0.08);
+  --shadow-md: 0 9px 26px rgba(50, 27, 20, 0.12);
+  --shadow-lg: 0 18px 42px rgba(50, 27, 20, 0.14);
+  --shadow-xl: 0 26px 58px rgba(50, 27, 20, 0.18);
+}
+
+html {
+  color-scheme: light;
+  background: #fbf7f5;
+}
+
+body {
+  color: #2d1b16;
+  background: #fbf7f5;
+}
+
+::selection {
+  color: #fff;
+  background: #a6192e;
+}
+
+a,
+button,
+input,
+select,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgba(166, 25, 46, 0.28) !important;
+  outline-offset: 3px;
+}
+
+/* Header and navigation */
+.top-bar,
+.institute-bar,
+.mobile-menu-header {
+  background: linear-gradient(135deg, #27140f 0%, #4a251c 100%) !important;
+}
+
+.institute-bar {
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+.navbar,
+.navbar-scrolled {
+  background: rgba(255, 255, 255, 0.98) !important;
+  border-bottom: 1px solid #eadbd5;
+  box-shadow: 0 8px 28px rgba(50, 27, 20, 0.08) !important;
+}
+
+.logo-title,
+.admission-link,
+.mobile-nav-link.admission-link {
+  background-image: linear-gradient(135deg, #75101f, #bd1f36) !important;
+}
+
+.nav-link,
+.dropdown-menu li a,
+.mobile-nav-link {
+  color: #321b14;
+}
+
+.nav-link:hover,
+.nav-link.active,
+.dropdown-menu li a:hover,
+.mobile-nav-link:hover,
+.mobile-nav-link.active,
+.mobile-top-links a {
+  color: #a6192e !important;
+}
+
+.nav-link.active {
+  border-bottom-color: #a6192e !important;
+}
+
+.dropdown-menu,
+.mobile-menu {
+  border: 1px solid #eadbd5;
+  box-shadow: 0 18px 42px rgba(50, 27, 20, 0.16) !important;
+}
+
+.dropdown-menu li a:hover,
+.mobile-nav-link:hover,
+.mobile-nav-link.active,
+.mobile-contact-info,
+.mobile-dropdown-menu {
+  background: #fbf3f1 !important;
+}
+
+.mobile-dropdown-menu li a:hover {
+  color: #fff !important;
+  background: #a6192e !important;
+}
+
+.bar {
+  background: linear-gradient(135deg, #321b14, #a6192e) !important;
+}
+
+.top-apply-button,
+.mobile-apply-button {
+  color: #fff !important;
+  background: linear-gradient(135deg, #bd1f36, #831326) !important;
+  box-shadow: 0 7px 18px rgba(166, 25, 46, 0.24) !important;
+}
+
+.top-apply-button:hover,
+.mobile-apply-button:hover {
+  background: linear-gradient(135deg, #cf2941, #94172b) !important;
+  box-shadow: 0 10px 24px rgba(166, 25, 46, 0.34) !important;
+}
+
+/* Shared page surfaces and typography */
+main {
+  background: #fffdfa;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #321b14;
+}
+
+.section-title span,
+.about-text .highlight,
+.view-all-link,
+.faq-item h3,
+.event-item p,
+.notice-item p,
+.ranker-card p,
+.principal-msg span {
+  color: #a6192e !important;
+}
+
+.section-title span::after,
+.course-card::before {
+  background: linear-gradient(90deg, #a6192e, #d85b6d) !important;
+}
+
+.section-badge {
+  background: linear-gradient(135deg, #bd1f36, #76101f) !important;
+  box-shadow: 0 5px 14px rgba(166, 25, 46, 0.18);
+}
+
+.quick-card,
+.feature-card,
+.course-card,
+.facility-card,
+.achievement-card,
+.ranker-card,
+.event-item,
+.notice-item,
+.principal-card,
+.testimonial-card,
+.faq-item {
+  border-color: #eadbd5 !important;
+  box-shadow: 0 8px 24px rgba(50, 27, 20, 0.08);
+}
+
+.quick-card:hover,
+.feature-card:hover,
+.course-card:hover,
+.facility-card:hover,
+.achievement-card:hover,
+.ranker-card:hover,
+.testimonial-card:hover,
+.faq-item:hover {
+  box-shadow: 0 18px 38px rgba(50, 27, 20, 0.14) !important;
+}
+
+.quick-card svg,
+.feature-icon,
+.course-card svg,
+.counter-icon,
+.facility-icon,
+.events h3 svg,
+.notices h3 svg,
+.quote-icon,
+.testimonial-card svg {
+  color: #a6192e !important;
+}
+
+.about-section,
+.courses-section,
+.rankers-section,
+.events-notices,
+.principal-section,
+.video-section,
+.faq-section {
+  background: #fbf7f5 !important;
+}
+
+.counter-section,
+.achievements-section {
+  background: linear-gradient(135deg, #29150f 0%, #5a281f 58%, #76101f 100%) !important;
+}
+
+.counter-section h2,
+.counter-section h3,
+.counter-section h4,
+.achievements-section h2 {
+  color: #fff;
+}
+
+.achievement-card .ach-icon,
+.achievements-section .section-title span {
+  color: #f2c3ca !important;
+}
+
+.read-more-btn {
+  color: #a6192e !important;
+  border-color: #a6192e !important;
+}
+
+.read-more-btn:hover,
+.tour-info {
+  color: #fff !important;
+  background: #a6192e !important;
+}
+
+.slider-btn {
+  color: #a6192e !important;
+  border: 1px solid rgba(166, 25, 46, 0.14);
+}
+
+.slider-btn:hover,
+.dot.active {
+  color: #fff !important;
+  background: #a6192e !important;
+}
+
+.ranker-card img,
+.principal-card img {
+  border-color: #a6192e !important;
+}
+
+.event-item,
+.notice-item {
+  border-left-color: #a6192e;
+}
+
+/* Footer */
+.footer,
+.footer-main,
+.footer-bottom {
+  background: #24120e !important;
+}
+
+.footer-main {
+  background-image: linear-gradient(135deg, #321b14 0%, #5a281f 100%) !important;
+}
+
+.footer h2,
+.footer h3,
+.footer h4,
+.footer a,
+.footer p,
+.footer span {
+  color: #fff;
+}
+
+.footer a:hover,
+.footer-link:hover {
+  color: #f1b6bf !important;
+}
+
+/* Keep forms and data-heavy pages crisp and professional. */
+input,
+select,
+textarea {
+  border-color: #ddcbc4 !important;
+  background: #fff;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #a6192e !important;
+  box-shadow: 0 0 0 4px rgba(166, 25, 46, 0.1) !important;
+}
+
+button[type="submit"],
+.submit-btn,
+.apply-btn,
+.cta-btn.primary {
+  color: #fff !important;
+  border-color: #a6192e !important;
+  background: linear-gradient(135deg, #bd1f36, #76101f) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+/* Headings use clean typography without decorative underlines. */
+:is(h1, h2, h3, h4, h5, h6),
+:is(h1, h2, h3, h4, h5, h6) * {
+  text-decoration: none !important;
+  border-bottom: 0 !important;
+}
+
+:is(h1, h2, h3, h4, h5, h6)::before,
+:is(h1, h2, h3, h4, h5, h6)::after,
+:is(h1, h2, h3, h4, h5, h6) *::before,
+:is(h1, h2, h3, h4, h5, h6) *::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* Replace legacy Tailwind blue/indigo utilities with the brown brand palette. */
+[class*="text-blue-"],
+[class*="text-indigo-"] {
+  color: #5a281f !important;
+}
+
+[class*="bg-blue-"],
+[class*="bg-indigo-"] {
+  background-color: #5a281f !important;
+}
+
+[class*="bg-blue-50"],
+[class*="bg-blue-100"],
+[class*="bg-indigo-50"],
+[class*="bg-indigo-100"] {
+  color: #321b14 !important;
+  background-color: #fbf3f1 !important;
+}
+
+[class*="border-blue-"],
+[class*="border-indigo-"] {
+  border-color: #6b3a2a !important;
+}
+
+[class*="from-blue-"],
+[class*="from-indigo-"] {
+  --tw-gradient-from: #5a281f var(--tw-gradient-from-position) !important;
+  --tw-gradient-to: rgba(90, 40, 31, 0) var(--tw-gradient-to-position) !important;
+}
+
+[class*="to-blue-"],
+[class*="to-indigo-"] {
+  --tw-gradient-to: #321b14 var(--tw-gradient-to-position) !important;
+}
+
+[class*="ring-blue-"],
+[class*="ring-indigo-"] {
+  --tw-ring-color: rgba(90, 40, 31, 0.42) !important;
+}
+
+/* Internal-page heroes use a clean branded background; homepage slider is excluded. */
+main > :not(.home-container) .about-hero-img,
+main > :not(.home-container) .dropdown-hero-img,
+main > :not(.home-container) .hero-image-wrapper,
+main > :not(.home-container) .hero-image,
+main > :not(.home-container) .student-hero-img,
+main > :not(.home-container) .hero-main-image,
+main > :not(.home-container) .hero-bg-shapes {
+  display: none !important;
+}
+
+main > :not(.home-container) :is(.hero-section, .about-hero, .dropdown-hero, .curriculum-hero, .gallery-page-hero) {
+  background: linear-gradient(135deg, #24120e 0%, #5a281f 62%, #6b3a2a 100%) !important;
+  background-image: linear-gradient(135deg, #24120e 0%, #5a281f 62%, #6b3a2a 100%) !important;
+}
+
+main > :not(.home-container) :is(.hero-container, .about-hero-content) {
+  grid-template-columns: minmax(0, 1fr) !important;
+}
+
+main > :not(.home-container) :is(.hero-content, .about-hero-content, .dropdown-hero-content) {
+  max-width: 900px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center !important;
+  align-items: center !important;
+}
+
+main > :not(.home-container) :is(.hero-container, .about-hero-overlay, .dropdown-hero-overlay, .curriculum-hero-content, .gallery-page-hero) {
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+main > :not(.home-container) :is(.hero-title, .hero-subtitle, .hero-desc, .hero-description, .hero-content h1, .hero-content p, .about-hero h1, .about-hero p, .dropdown-hero h1, .dropdown-hero p, .curriculum-hero h1, .curriculum-hero p, .gallery-page-hero h1, .gallery-page-hero p) {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center !important;
+}
+
+main > :not(.home-container) :is(.hero-buttons, .hero-actions, .about-hero-actions, .hero-stats) {
+  justify-content: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+main > :not(.home-container) :is(.hero-badge, .dropdown-icon-pill, .dropdown-section-label) {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+main > :not(.home-container) :is(.hero-title, .hero-content h1, .about-hero h1, .dropdown-hero h1, .curriculum-hero h1, .gallery-page-hero h1) {
+  color: #ffffff !important;
+}
+
+main > :not(.home-container) :is(.hero-desc, .hero-description, .hero-content p, .about-hero p, .dropdown-hero p, .curriculum-hero p, .gallery-page-hero p) {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Site-wide responsive foundations */
+html {
+  width: 100%;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+}
+
+body,
+#root,
+main {
+  width: 100%;
+  min-width: 0;
+}
+
+body {
+  overflow-x: clip;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img,
+picture,
+video,
+canvas,
+svg,
+iframe {
+  max-width: 100%;
+}
+
+img,
+video {
+  height: auto;
+}
+
+input,
+select,
+textarea,
+button {
+  max-width: 100%;
+  font: inherit;
+}
+
+button,
+a {
+  overflow-wrap: anywhere;
+}
+
+table {
+  max-width: 100%;
+}
+
+.overflow-x-auto,
+.table-responsive,
+.exam-table-wrapper,
+.fee-table-wrapper {
+  overscroll-behavior-inline: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media screen and (max-width: 768px) {
+  :is(.container, .about-container, .dropdown-container, .gallery-page-container) {
+    width: min(100% - 2rem, 100%) !important;
+    max-width: none;
+  }
+
+  main h1 {
+    overflow-wrap: anywhere;
+  }
+
+  main :is(p, li, a, span) {
+    overflow-wrap: anywhere;
+  }
+
+  .gallery-lightbox {
+    padding: 56px 12px 12px;
+  }
+
+  .lightbox-content {
+    max-height: calc(100dvh - 68px);
+    border-radius: 10px;
+  }
+
+  .lightbox-content img {
+    max-height: 58dvh;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  :is(.container, .about-container, .dropdown-container, .gallery-page-container) {
+    width: min(100% - 1.25rem, 100%) !important;
+  }
+
+  main :is(button, .btn, [class*="button"], [class*="-btn"]) {
+    min-height: 44px;
+  }
+
+  .gallery-lightbox {
+    align-items: flex-start;
+  }
+
+  .lightbox-info {
+    padding: 16px;
+  }
+}
+
+/* Match all internal-page icon and text combinations to the Home page. */
+main > :not(.home-container) {
+  --page-heading: #321b14;
+  --page-accent: #a6192e;
+  --page-copy: #705f59;
+  --page-soft: #fbf3f1;
+}
+
+main > :not(.home-container) :is(
+  [class*="card"],
+  [class*="item"],
+  [class*="panel"],
+  [class*="feature"],
+  [class*="facility"],
+  [class*="highlight"],
+  [class*="detail"]
+) :is(h2, h3, h4, strong) {
+  color: var(--page-heading);
+}
+
+main > :not(.home-container) :is(
+  [class*="card"],
+  [class*="item"],
+  [class*="panel"],
+  [class*="feature"],
+  [class*="facility"],
+  [class*="highlight"],
+  [class*="detail"]
+) p {
+  color: var(--page-copy);
+}
+
+main > :not(.home-container) :is(
+  [class*="card"],
+  [class*="item"],
+  [class*="panel"],
+  [class*="feature"],
+  [class*="facility"],
+  [class*="highlight"],
+  [class*="detail"]
+) > svg,
+main > :not(.home-container) :is(
+  [class*="card"],
+  [class*="item"],
+  [class*="panel"],
+  [class*="feature"],
+  [class*="facility"],
+  [class*="highlight"],
+  [class*="detail"]
+) [class*="icon"] {
+  color: var(--page-accent) !important;
+}
+
+main > :not(.home-container) :is(
+  [class*="section-label"],
+  [class*="kicker"],
+  [class*="eyebrow"],
+  [class*="tag"]
+) {
+  color: var(--page-accent);
+}
+
+/* Preserve white content wherever the component has a dark background. */
+main > :not(.home-container) :is(
+  [class*="hero"],
+  [class*="cta"],
+  [class*="banner"],
+  [class*="dark"],
+  [class*="principal-card"]
+) :is(h1, h2, h3, h4, p, span, strong, a, svg),
+main > :not(.home-container) :is(button, [class*="button"], [class*="-btn"]) svg {
+  color: #fff !important;
+}
+
+/* Normalize common utility colors used by older pages. */
+main > :not(.home-container) :is(
+  [class*="text-orange-"],
+  [class*="text-red-"],
+  [class*="text-pink-"]
+) {
+  color: var(--page-accent) !important;
+}
+
+main > :not(.home-container) :is(
+  [class*="text-gray-500"],
+  [class*="text-gray-600"],
+  [class*="text-gray-700"]
+) {
+  color: var(--page-copy) !important;
+}
+
+/* =========================================================
+   FOUR-COLOR DESIGN SYSTEM: dark brown, red, white and gray
+   ========================================================= */
+:root {
+  --brand-brown: #321b14;
+  --brand-brown-deep: #24120e;
+  --brand-red: #a6192e;
+  --brand-red-dark: #76101f;
+  --brand-white: #ffffff;
+  --brand-gray-50: #f6f6f6;
+  --brand-gray-100: #eeeeee;
+  --brand-gray-300: #d2d2d2;
+  --brand-gray-600: #666666;
+  --primary-color: var(--brand-red);
+  --primary-dark: var(--brand-red-dark);
+  --primary-light: var(--brand-red);
+  --secondary-color: var(--brand-brown);
+  --secondary-light: var(--brand-brown);
+  --accent-color: var(--brand-red);
+  --text-dark: var(--brand-brown);
+  --text-muted: var(--brand-gray-600);
+  --text-light: var(--brand-gray-600);
+  --bg-light: var(--brand-gray-50);
+  --bg-white: var(--brand-white);
+  --bg-gray: var(--brand-gray-100);
+  --success: var(--brand-brown);
+  --warning: var(--brand-red);
+  --danger: var(--brand-red);
+  --info: var(--brand-gray-600);
+}
+
+html,
+body,
+#root,
+main {
+  color: var(--brand-brown);
+  background-color: var(--brand-gray-50);
+}
+
+main :is(h1, h2, h3, h4, h5, h6) {
+  color: var(--brand-brown);
+}
+
+main :is(p, li, dd) {
+  color: var(--brand-gray-600);
+}
+
+main a:not([class*="button"]):not([class*="btn"]):not(.nav-link) {
+  color: var(--brand-red);
+}
+
+/* Clean white and gray content surfaces. */
+main :is(
+  [class*="card"],
+  [class*="panel"],
+  [class*="item"],
+  [class*="box"],
+  [class*="form"]
+) {
+  border-color: var(--brand-gray-300) !important;
+}
+
+main :is(
+  [class*="card"],
+  [class*="panel"],
+  [class*="form"]
+):not([class*="hero"]):not([class*="dark"]):not([class*="principal"]) {
+  background-color: var(--brand-white);
+}
+
+main :is(
+  [class*="section-label"],
+  [class*="badge"],
+  [class*="kicker"],
+  [class*="eyebrow"],
+  [class*="tag"]
+) {
+  color: var(--brand-white) !important;
+  background: var(--brand-red) !important;
+  border-color: var(--brand-red) !important;
+}
+
+main :is(
+  [class*="icon"],
+  [class*="Icon"]
+) {
+  color: var(--brand-red) !important;
+}
+
+/* One consistent action style across forms and pages. */
+main :is(
+  button[type="submit"],
+  .submit-btn,
+  .apply-btn,
+  .cta-btn.primary,
+  [class*="primary-btn"],
+  [class*="primary-button"]
+) {
+  color: var(--brand-white) !important;
+  background: var(--brand-red) !important;
+  border-color: var(--brand-red) !important;
+  box-shadow: 0 8px 20px rgba(50, 27, 20, 0.16) !important;
+}
+
+main :is(
+  button[type="submit"],
+  .submit-btn,
+  .apply-btn,
+  .cta-btn.primary,
+  [class*="primary-btn"],
+  [class*="primary-button"]
+):hover {
+  background: var(--brand-red-dark) !important;
+}
+
+input,
+select,
+textarea {
+  color: var(--brand-brown) !important;
+  background: var(--brand-white) !important;
+  border-color: var(--brand-gray-300) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--brand-gray-600) !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--brand-red) !important;
+  box-shadow: 0 0 0 4px rgba(166, 25, 46, 0.12) !important;
+}
+
+/* Header, footer and premium dark sections use the same brown. */
+.top-bar,
+.institute-bar,
+.mobile-menu-header,
+.footer,
+.footer-main,
+.footer-bottom,
+.counter-section,
+.achievements-section {
+  background: var(--brand-brown) !important;
+  background-image: none !important;
+}
+
+.navbar,
+.navbar-scrolled,
+.dropdown-menu,
+.mobile-menu {
+  background: var(--brand-white) !important;
+}
+
+.nav-link,
+.dropdown-menu a,
+.mobile-nav-link {
+  color: var(--brand-brown) !important;
+}
+
+.nav-link:hover,
+.dropdown-menu a:hover,
+.mobile-nav-link:hover,
+.nav-link.active {
+  color: var(--brand-red) !important;
+}
+
+.top-apply-button,
+.mobile-apply-button,
+.footer-apply-button {
+  color: var(--brand-white) !important;
+  background: var(--brand-red) !important;
+  background-image: none !important;
+}
+
+.top-apply-button:hover,
+.mobile-apply-button:hover,
+.footer-apply-button:hover {
+  background: var(--brand-red-dark) !important;
+}
+
+/* Convert legacy utility palettes to the four approved colors. */
+[class*="text-blue-"],
+[class*="text-indigo-"],
+[class*="text-orange-"],
+[class*="text-yellow-"],
+[class*="text-green-"],
+[class*="text-teal-"],
+[class*="text-purple-"],
+[class*="text-pink-"],
+[class*="text-red-"] {
+  color: var(--brand-red) !important;
+}
+
+[class*="bg-blue-"],
+[class*="bg-indigo-"],
+[class*="bg-orange-"],
+[class*="bg-yellow-"],
+[class*="bg-green-"],
+[class*="bg-teal-"],
+[class*="bg-purple-"],
+[class*="bg-pink-"],
+[class*="bg-red-"] {
+  background-color: var(--brand-gray-50) !important;
+}
+
+[class*="border-blue-"],
+[class*="border-indigo-"],
+[class*="border-orange-"],
+[class*="border-yellow-"],
+[class*="border-green-"],
+[class*="border-teal-"],
+[class*="border-purple-"],
+[class*="border-pink-"],
+[class*="border-red-"] {
+  border-color: var(--brand-gray-300) !important;
+}
+
+/* White is always retained on dark/bold UI for accessible contrast. */
+:is(
+  .top-bar,
+  .institute-bar,
+  .footer,
+  .counter-section,
+  .achievements-section,
+  [class*="hero-overlay"],
+  [class*="dark"],
+  [class*="cta"]
+) :is(h1, h2, h3, h4, p, li, span, strong, a, svg) {
+  color: var(--brand-white) !important;
+}
+
+::selection {
+  color: var(--brand-white);
+  background: var(--brand-red);
+}
+
+/* Keep achievement cards readable on the dark-brown section. */
+.achievements-section .achievement-card {
+  background: var(--brand-white) !important;
+  border-color: var(--brand-gray-300) !important;
+}
+
+.achievements-section .achievement-card h3 {
+  color: var(--brand-brown) !important;
+}
+
+.achievements-section .achievement-card p {
+  color: var(--brand-red) !important;
+}
+
+.achievements-section .achievement-card span {
+  color: var(--brand-gray-600) !important;
+}
+
+.achievements-section .achievement-card .ach-icon {
+  color: var(--brand-red) !important;
+}
+
+/* About-image statement card uses the dark brand treatment. */
+.home-container .about-image-card {
+  color: var(--brand-white) !important;
+  background: var(--brand-brown) !important;
+  border-color: var(--brand-brown) !important;
+}
+
+.home-container .about-image-card :is(span, strong) {
+  color: var(--brand-white) !important;
+}
+
+/* Information CTA is a light surface, not a dark CTA banner. */
+.dropdown-cta-box {
+  background: var(--brand-gray-50) !important;
+  border-color: var(--brand-gray-300) !important;
+}
+
+.dropdown-cta-box h2 {
+  color: var(--brand-brown) !important;
+}
+
+.dropdown-cta-box p {
+  color: var(--brand-brown) !important;
+}
+
+.dropdown-cta-box a {
+  color: var(--brand-white) !important;
+  background: var(--brand-red) !important;
+  border-color: var(--brand-red) !important;
+}
+
+.dropdown-cta-box a svg {
+  color: var(--brand-white) !important;
+}
+
+.about-overview-page .dropdown-cta-box :is(h2, p) {
+  color: var(--brand-brown) !important;
+}
+
+/* Shared site CTA contrast overrides. */
+.common-cta .common-cta-primary {
+  color: var(--brand-white) !important;
+  background: var(--brand-red) !important;
+}
+
+.common-cta .common-cta-secondary {
+  color: var(--brand-brown) !important;
+  background: var(--brand-white) !important;
+  border-color: var(--brand-brown) !important;
+}
+
+.common-cta .common-cta-secondary:hover {
+  color: var(--brand-white) !important;
+  background: var(--brand-brown) !important;
+}
+
+.common-cta .common-cta-meta svg {
+  color: var(--brand-red) !important;
+}
+
+.common-cta {
+  color: var(--brand-brown) !important;
+  background: #f7f3ea !important;
+}
+
+.common-cta .common-cta-kicker {
+  color: var(--brand-red) !important;
+}
+
+.common-cta :is(h2, .common-cta-meta span, .common-cta-meta a) {
+  color: var(--brand-brown) !important;
+}
+
+.common-cta p {
+  color: var(--brand-gray-600) !important;
+}
+
+/* Mission & Vision philosophy feature is intentionally a dark statement card. */
+.mission-vision-page .philosophy-card {
+  color: var(--brand-white) !important;
+  background: var(--brand-brown) !important;
+  border-color: var(--brand-brown) !important;
+}
+
+.mission-vision-page .philosophy-card :is(h2, p, strong) {
+  color: var(--brand-white) !important;
+}
+
+.history-page .journey-continues-overlay :is(h2, p, span) {
+  color: var(--brand-white) !important;
+}
+
+.primary-school-page .primary-beyond :is(h2, p, span, svg),
+.primary-school-page .primary-highlight-strip span {
+  color: var(--brand-white) !important;
+}
+
+.primary-school-page .primary-beyond .primary-activity-tags svg {
+  color: var(--brand-red) !important;
+}

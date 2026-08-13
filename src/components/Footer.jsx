@@ -22,7 +22,6 @@ const Footer = () => {
               Building bright futures through quality education, values, and
               holistic development for every student.
             </p>
-            <a href="#enroll" className="footer-apply-button">Apply Now</a>
           </div>
 
           <div className="footer-column">

@@ -10,6 +10,13 @@ import {
   FaClipboardList,
   FaEnvelopeOpenText,
   FaGraduationCap,
+  FaLaptop,
+  FaFlask,
+  FaFutbol,
+  FaBus,
+  FaFirstAid,
+  FaTint,
+  FaVideo,
   FaMapMarkedAlt,
   FaNewspaper,
   FaSchool,
@@ -27,6 +34,17 @@ const iconMap = {
   facilities: <FaSchool />,
   about: <FaBookOpen />,
 };
+
+const infrastructureFacilities = [
+  { icon: <FaLaptop />, title: 'Smart Classrooms', text: 'Bright classrooms supported by digital teaching tools and audio-visual learning resources.' },
+  { icon: <FaFlask />, title: 'Science Laboratories', text: 'Dedicated practical spaces that help students understand scientific concepts through experiments.' },
+  { icon: <FaBookOpen />, title: 'School Library', text: 'A calm reading and reference space with academic resources for learning beyond textbooks.' },
+  { icon: <FaFutbol />, title: 'Sports & Activity Areas', text: 'Safe spaces for physical education, team games, fitness, cultural practice, and student activities.' },
+  { icon: <FaVideo />, title: 'Campus Security', text: 'Monitored common areas and disciplined entry procedures support a secure school environment.' },
+  { icon: <FaBus />, title: 'School Transport', text: 'Organized transport support designed around student safety, punctuality, and convenient access.' },
+  { icon: <FaFirstAid />, title: 'Health & First Aid', text: 'Basic first-aid assistance and student wellbeing support are available during school hours.' },
+  { icon: <FaTint />, title: 'Clean Water & Hygiene', text: 'Clean drinking-water access and regularly maintained sanitation facilities across the campus.' },
+];
 
 const pageContent = {
   about: {
@@ -313,11 +331,276 @@ const DropdownPage = () => {
   const { category, pageId } = useParams();
   const page = pageContent[category]?.[pageId] || fallbackPage;
   const isOverview = category === 'about' && pageId === 'overview';
+  const isInfrastructure = category === 'about' && pageId === 'infrastructure';
+  const isPrincipalMessage = category === 'about' && pageId === 'principal-message';
+  const isMissionVision = category === 'about' && pageId === 'mission-vision';
+  const isHistory = category === 'about' && pageId === 'history';
+
+  if (isPrincipalMessage) {
+    const principalFocus = [
+      { icon: <FaGraduationCap />, title: 'Academic Excellence', text: 'Clear learning, steady guidance, and confidence in every subject.' },
+      { icon: <FaShieldAlt />, title: 'Character & Values', text: 'Respect, discipline, empathy, and responsibility in daily life.' },
+      { icon: <FaTrophy />, title: 'Holistic Development', text: 'Equal opportunity across academics, sports, culture, and activities.' },
+      { icon: <FaLaptop />, title: 'Future-Ready Education', text: 'Strong foundations supported by modern methods and technology.' },
+    ];
+
+    return (
+      <div className="principal-message-page">
+        <section className="principal-message-hero">
+          <div className="dropdown-container principal-message-hero-inner">
+            <span className="principal-message-label">From the Principal's Desk</span>
+            <h1>Principal's Message</h1>
+            <p>Guiding every learner with knowledge, care, discipline, and purpose.</p>
+          </div>
+        </section>
+
+        <section className="principal-message-main">
+          <div className="dropdown-container principal-message-layout">
+            <aside className="principal-message-aside">
+              <div className="principal-photo-frame">
+                <img src="/assets/m/principle.png" alt="Principal of Prerana Shikshan Sanstha" />
+              </div>
+              <div className="principal-quote-card">
+                <FaBookOpen aria-hidden="true" />
+                <blockquote>“Education inspires knowledge, builds character, and empowers every child to create a brighter future.”</blockquote>
+              </div>
+            </aside>
+
+            <article className="principal-letter">
+              <span className="principal-letter-kicker">Dear Parents, Students and Well-Wishers,</span>
+              <p>It gives me immense pleasure to welcome you to <strong>प्रेरणा शिक्षण संस्था – Prerana Primary, Secondary &amp; Tukaram Gujar Jr. College, Laxminagar, Thergaon, Pune – 33.</strong></p>
+              <p>At Prerana, we believe that education is not merely about academic achievement; it is about nurturing responsible, confident, compassionate, and capable individuals who are prepared to face the opportunities and challenges of the future.</p>
+              <p>Our aim is to provide every student with a supportive and inspiring learning environment where they can discover their potential, develop curiosity, build strong values, and grow academically as well as personally. We encourage our students to participate actively in academics, sports, cultural activities, and other co-curricular opportunities that contribute to their overall development.</p>
+              <p>Our dedicated teachers play an important role in this journey by guiding students with knowledge, care, discipline, and encouragement. We also strongly believe that a meaningful partnership between <strong>students, teachers, parents, and the institution</strong> is essential for a child’s success.</p>
+              <p>As we continue to grow, our commitment remains to provide <strong>quality education rooted in strong values while embracing modern learning methods and technology.</strong> We want our students not only to succeed in examinations but also to become thoughtful, responsible citizens who contribute positively to society.</p>
+              <p>I extend my sincere gratitude to our parents for their trust and cooperation, to our teachers and staff for their dedication, and to our students for making our institution proud.</p>
+              <p className="principal-closing-line"><strong>Together, let us continue to learn, grow, and inspire.</strong></p>
+              <div className="principal-signature">
+                <span>Warm Regards,</span>
+                <strong>Principal</strong>
+                <span>Prerana Primary, Secondary &amp; Tukaram Gujar Jr. College</span>
+                <span>Laxminagar, Thergaon, Pune – 33</span>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section className="principal-focus-section">
+          <div className="dropdown-container">
+            <div className="principal-focus-heading">
+              <span>Our Educational Focus</span>
+              <h2>Preparing students for life, not only examinations.</h2>
+            </div>
+            <div className="principal-focus-grid">
+              {principalFocus.map((item) => (
+                <article className="principal-focus-card" key={item.title}>
+                  <div className="principal-focus-icon">{item.icon}</div>
+                  <h3>{item.title}</h3>
+                  <p>{item.text}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      </div>
+    );
+  }
+
+  if (isMissionVision) {
+    const missionPoints = [
+      'Provide a safe, supportive, and student-centered learning environment.',
+      'Build strong foundations in academics while encouraging curiosity and creativity.',
+      'Promote discipline, integrity, respect, responsibility, and compassion.',
+      'Encourage participation in sports, cultural activities, technology, and extracurricular learning.',
+      'Help students develop communication, leadership, problem-solving, and life skills.',
+      'Create equal opportunities for students to identify and develop their individual talents.',
+      'Build a strong partnership between students, teachers, parents, and the community.',
+      'Prepare students to confidently face the opportunities and challenges of the future.',
+    ];
+    const coreValues = [
+      { icon: <FaBookOpen />, marathi: 'ज्ञान', title: 'Knowledge', text: 'Building strong academic foundations and encouraging lifelong learning.' },
+      { icon: <FaShieldAlt />, marathi: 'संस्कार', title: 'Values', text: 'Developing respect, honesty, discipline, empathy, and responsibility.' },
+      { icon: <FaTrophy />, marathi: 'उत्कृष्टता', title: 'Excellence', text: 'Encouraging every student to continuously improve and achieve their best.' },
+      { icon: <FaLaptop />, marathi: 'सर्जनशीलता', title: 'Creativity', text: 'Giving students opportunities to think independently, explore ideas, and innovate.' },
+      { icon: <FaUsers />, marathi: 'समानता', title: 'Inclusivity', text: 'Creating an environment where every learner is respected, supported, and given opportunities to grow.' },
+      { icon: <FaCheckCircle />, marathi: 'जबाबदारी', title: 'Responsibility', text: 'Preparing students to become responsible citizens who contribute positively to society.' },
+    ];
+
+    return (
+      <div className="mission-vision-page">
+        <section className="mission-vision-hero">
+          <div className="dropdown-container mission-vision-hero-inner">
+            <span className="mission-vision-label">Our Purpose &amp; Direction</span>
+            <h1>Mission &amp; Vision</h1>
+            <p>ज्ञान <i>•</i> संस्कार <i>•</i> प्रगती</p>
+            <small>Prerana Primary, Secondary &amp; Tukaram Gujar Jr. College</small>
+          </div>
+        </section>
+
+        <section className="vision-section">
+          <div className="dropdown-container vision-layout">
+            <div className="vision-visual">
+              <img src="/assets/images/vision.png" alt="Prerana students inspired by a shared educational vision" />
+              <div className="vision-mark" aria-hidden="true"><FaGraduationCap /></div>
+            </div>
+            <div className="vision-copy">
+              <span>Our Vision</span>
+              <h2>Inspiring Minds, Building Character, Shaping the Future</h2>
+              <p>To create a progressive and nurturing educational environment where every student is encouraged to discover their potential, develop strong values, and grow into a confident, responsible, and compassionate citizen.</p>
+              <p>We envision Prerana Shikshan Sanstha as a place where academic excellence goes hand in hand with character building, creativity, discipline, and lifelong learning.</p>
+            </div>
+          </div>
+        </section>
+
+        <section className="mission-section">
+          <div className="dropdown-container">
+            <div className="mission-heading">
+              <span>Our Mission</span>
+              <h2>Quality, inclusive, and value-based education for every learner.</h2>
+              <p>Our mission supports the intellectual, emotional, social, and physical development of every student. We strive to:</p>
+            </div>
+            <div className="mission-points-grid">
+              {missionPoints.map((point, index) => (
+                <div className="mission-point" key={point}>
+                  <span>{String(index + 1).padStart(2, '0')}</span>
+                  <p>{point}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="philosophy-section">
+          <div className="dropdown-container philosophy-card">
+            <div className="philosophy-symbol"><FaBookOpen /></div>
+            <div>
+              <span>Our Educational Philosophy</span>
+              <h2>शिक्षणातून प्रेरणा, संस्कारातून व्यक्तिमत्त्व आणि ज्ञानातून उज्ज्वल भविष्य.</h2>
+              <p>At Prerana, we believe that education is not limited to textbooks and examinations. True education develops the mind, character, confidence, creativity, and values of a child.</p>
+              <p>From primary education through secondary and junior college, our aim is to provide students with an environment where they can <strong>Learn, Explore, Grow, and Succeed.</strong></p>
+            </div>
+          </div>
+        </section>
+
+        <section className="core-values-section">
+          <div className="dropdown-container">
+            <div className="core-values-heading">
+              <span>Our Core Values</span>
+              <h2>The principles that shape the Prerana experience.</h2>
+            </div>
+            <div className="core-values-grid">
+              {coreValues.map((value) => (
+                <article className="core-value-card" key={value.title}>
+                  <div className="core-value-icon">{value.icon}</div>
+                  <span>{value.marathi}</span>
+                  <h3>{value.title}</h3>
+                  <p>{value.text}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="commitment-section">
+          <div className="dropdown-container commitment-inner">
+            <span>Our Commitment</span>
+            <h2>Every Child. Every Dream. Every Opportunity.</h2>
+            <p>At Prerana Primary, Secondary &amp; Tukaram Gujar Jr. College, we are committed to nurturing every learner with knowledge, values, confidence, and opportunities so they can build a meaningful and successful future.</p>
+          </div>
+        </section>
+      </div>
+    );
+  }
+
+  if (isHistory) {
+    const journeyMilestones = [
+      { icon: <FaSchool />, title: 'Foundation of Prerana Shikshan Sanstha', text: "The beginning of the institution's journey with a vision to make meaningful and value-based education accessible to students.", image: '/assets/images/h1.png' },
+      { icon: <FaBookOpen />, title: 'Beginning of Primary Education', text: 'Expansion into foundational education with an emphasis on building strong academic habits, curiosity, confidence, and personal values.', image: '/assets/images/h2.png' },
+      { icon: <FaChalkboardTeacher />, title: 'Growth into Secondary Education', text: 'The institution expanded its educational offerings to guide students through the important years of secondary-school learning.', image: '/assets/images/h3.png' },
+      { icon: <FaGraduationCap />, title: 'Tukaram Gujar Junior College', text: 'A significant step extending the educational journey into junior college and helping learners prepare for higher education and future careers.', image: '/assets/images/h4.png' },
+      { icon: <FaLaptop />, title: 'Development of Campus & Facilities', text: 'Continuous improvement of classrooms, learning resources, laboratories, sports facilities, technology, and student-support infrastructure.', image: '/assets/images/i1.png' },
+      { icon: <FaTrophy />, title: 'Academic & Co-curricular Achievements', text: "Celebrating students' efforts and accomplishments across academics, sports, cultural activities, competitions, and many other fields.", image: '/assets/images/h5.png' },
+      { icon: <FaUsers />, title: 'Prerana Today', text: 'A growing educational community continuing its commitment to knowledge, character, discipline, confidence, and holistic development.', image: '/assets/images/image.png' },
+    ];
+
+    return (
+      <div className="history-page">
+        <section className="history-hero">
+          <div className="dropdown-container history-hero-inner">
+            <span className="history-label">Our Journey</span>
+            <h1>A Legacy of Learning,<br />A Future of Possibilities</h1>
+            <p>प्रेरणा शिक्षण संस्था · Laxminagar, Thergaon, Pune – 33</p>
+          </div>
+        </section>
+
+        <section className="history-intro">
+          <div className="dropdown-container history-intro-layout">
+            <div className="history-intro-heading">
+              <span>Our Story</span>
+              <h2>An educational journey shaped by purpose and community.</h2>
+            </div>
+            <div className="history-intro-copy">
+              <p>Prerana Shikshan Sanstha has been committed to providing quality education and creating an environment where students can learn, grow, and develop into responsible individuals.</p>
+              <p>Through <strong>Prerana Primary, Secondary &amp; Tukaram Gujar Jr. College</strong>, the institution supports students through important stages of their educational journey—from foundational learning in the primary years to secondary and junior college education.</p>
+              <p>Located at <strong>Laxminagar, Thergaon, Pune – 33</strong>, the institution continues to work toward academic development while encouraging discipline, values, confidence, creativity, and the overall growth of every student.</p>
+            </div>
+          </div>
+        </section>
+
+        <section className="history-milestones">
+          <div className="dropdown-container">
+            <div className="history-section-heading">
+              <span>Our Milestones</span>
+              <h2>Important chapters in the Prerana journey.</h2>
+              <p>Presented without dates until the institution's historical records are formally verified.</p>
+            </div>
+            <div className="journey-timeline">
+              {journeyMilestones.map((milestone, index) => (
+                <article className="journey-entry" key={milestone.title}>
+                  <div className="journey-image"><img src={milestone.image} alt={`${milestone.title} at Prerana Shikshan Sanstha`} /></div>
+                  <div className="journey-marker"><span>{index + 1}</span></div>
+                  <div className="journey-content">
+                    <div className="journey-icon">{milestone.icon}</div>
+                    <h3>{milestone.title}</h3>
+                    <p>{milestone.text}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="then-now-section">
+          <div className="dropdown-container">
+            <div className="history-section-heading">
+              <span>Then &amp; Now</span>
+              <h2>Growing with Every Generation</h2>
+            </div>
+            <div className="then-now-grid">
+              <figure><img src="/assets/images/h1.png" alt="The developing journey of Prerana campus" /><figcaption>The Journey</figcaption></figure>
+              <figure><img src="/assets/images/h4.png" alt="Learning environment at Prerana today" /><figcaption>Prerana Today</figcaption></figure>
+            </div>
+            <p className="then-now-message">From its early beginnings to the institution it is today, Prerana's journey has been shaped by the dedication of its founders, management, teachers, staff, students, parents, and well-wishers.</p>
+          </div>
+        </section>
+
+        <section className="journey-continues">
+          <img src="/assets/images/h5.png" alt="Students continuing the Prerana educational journey" />
+          <div className="journey-continues-overlay">
+            <div className="dropdown-container">
+              <span>Looking Ahead</span>
+              <h2>Our Journey Continues…</h2>
+              <p>With every learner, every lesson, and every new opportunity, Prerana continues to move forward with purpose—rooted in values and inspired by the future.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    );
+  }
 
   return (
-    <div className="dropdown-page">
-      <section className="dropdown-hero">
-        <img src={page.image} alt={page.title} className="dropdown-hero-img" />
+    <div className={`dropdown-page ${isOverview ? 'about-overview-page' : ''}`}>
+      <section className="dropdown-hero dropdown-hero-no-image">
         <div className="dropdown-hero-overlay">
           <div className="dropdown-container dropdown-hero-content">
             <div className="dropdown-icon-pill">
@@ -350,6 +633,28 @@ const DropdownPage = () => {
           </aside>
         </div>
       </section>
+
+      {isInfrastructure && (
+        <section className="infrastructure-showcase" aria-labelledby="infrastructure-heading">
+          <div className="dropdown-container">
+            <div className="infrastructure-heading">
+              <span className="dropdown-section-label">Campus Infrastructure</span>
+              <h2 id="infrastructure-heading">Infrastructure in Our School</h2>
+              <p>Purposeful spaces and essential facilities create a safe, engaging, and student-friendly learning environment.</p>
+            </div>
+
+            <div className="infrastructure-grid">
+              {infrastructureFacilities.map((facility) => (
+                <article className="infrastructure-card" key={facility.title}>
+                  <div className="infrastructure-logo" aria-hidden="true">{facility.icon}</div>
+                  <h3>{facility.title}</h3>
+                  <p>{facility.text}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {isOverview && (
         <section className="overview-depth">
@@ -399,15 +704,6 @@ const DropdownPage = () => {
         </div>
       </section>
 
-      <section className="dropdown-cta">
-        <div className="dropdown-container dropdown-cta-box">
-          <div>
-            <h2>Need more information?</h2>
-            <p>Contact the school office for current details, schedules, and admission guidance.</p>
-          </div>
-          <a href="#contact">Contact School <FaArrowRight /></a>
-        </div>
-      </section>
     </div>
   );
 };

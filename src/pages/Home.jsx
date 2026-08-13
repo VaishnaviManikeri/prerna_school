@@ -3,12 +3,6 @@ import { Link } from 'react-router-dom';
 import './Home.css';
 import { getGallery } from '../api';
 
-// Images for Slider (replace with actual school images)
-import slider1 from '/assets/images/image.png';
-import slider2 from '/assets/images/h11.png';
-import slider3 from '/assets/images/h3.png';
-import slider4 from '/assets/images/h4.png';
-
 // Images for Top Rankers
 import student1 from '/assets/images/student.png';
 import student2 from '/assets/images/student1.png';
@@ -30,8 +24,6 @@ import {
   FaTrophy, 
   FaUserGraduate, 
   FaBookOpen, 
-  FaChevronLeft, 
-  FaChevronRight, 
   FaHeart, 
   FaStar, 
   FaAward, 
@@ -57,11 +49,6 @@ import {
 } from 'react-icons/fa';
 
 const Home = () => {
-  // Slider State
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const slides = [slider1, slider2, slider3, slider4];
-  const totalSlides = slides.length;
-
   // Counter State
   const [counters, setCounters] = useState({
     students: 0,
@@ -76,14 +63,6 @@ const Home = () => {
   const [galleryItems, setGalleryItems] = useState([]);
   const [galleryLoading, setGalleryLoading] = useState(true);
   const [galleryError, setGalleryError] = useState(false);
-
-  // Auto slide
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % totalSlides);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [totalSlides]);
 
   // Counter animation on scroll
   useEffect(() => {
@@ -148,9 +127,6 @@ const Home = () => {
     }, stepTime);
   };
 
-  const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % totalSlides);
-  const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
-
   // Sample data arrays
   const facilities = [
     { icon: <FaLaptop />, title: "Smart Classrooms", desc: "Digital learning with interactive boards" },
@@ -211,33 +187,22 @@ const Home = () => {
       </Helmet>
 
       <div className="home-container">
-        {/* Hero Section with Image Slider */}
+        {/* Hero Section */}
         <section className="hero-section">
-          <div className="slider-container">
-            <div className="slides" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
-              {slides.map((slide, idx) => (
-                <div className="slide" key={idx}>
-                  <img src={slide} alt={`प्रेरणा School Campus ${idx + 1}`} loading={idx === 0 ? "eager" : "lazy"} />
-                  <div className="slide-overlay">
-                    <div className="slide-content">
-                      <span className="school-badge">Since 2005</span>
-                      <h1 className="animate-fade">प्रेरणा शिक्षण संस्था</h1>
-                      <p className="animate-fade-delay">Laxminagar, Thergaon, Pune - 33</p>
-                      <div className="slide-buttons">
-                        <button className="cta-btn primary animate-fade-delay2">Enroll Now →</button>
-                        <button className="cta-btn secondary animate-fade-delay2">Virtual Tour</button>
-                      </div>
-                    </div>
-                  </div>
+          <img className="hero-background" src="/assets/images/hero.png" alt="Students learning at Prerana Shikshan Sanstha" />
+          <div className="hero-overlay">
+            <div className="container hero-layout">
+              <div className="hero-content">
+                <span className="school-badge">Admissions Open 2026–27</span>
+                <h1>Inspiring young minds to learn, lead, and succeed.</h1>
+                <p>Prerana Primary, Secondary & Tukaram Gujar Jr. College provides value-based education, caring guidance, and opportunities for every child to grow with confidence.</p>
+                <div className="hero-highlights">
+                  <span>Primary to Class 12</span>
+                  <span>Experienced Teachers</span>
+                  <span>Laxminagar, Thergaon</span>
                 </div>
-              ))}
-            </div>
-            <button className="slider-btn left" onClick={prevSlide} aria-label="Previous slide"><FaChevronLeft /></button>
-            <button className="slider-btn right" onClick={nextSlide} aria-label="Next slide"><FaChevronRight /></button>
-            <div className="dots">
-              {slides.map((_, idx) => (
-                <span key={idx} className={`dot ${idx === currentSlide ? 'active' : ''}`} onClick={() => setCurrentSlide(idx)}></span>
-              ))}
+                <Link to="/about" className="hero-learn-link">Discover our school <FaArrowRight /></Link>
+              </div>
             </div>
           </div>
         </section>
@@ -288,6 +253,10 @@ const Home = () => {
               </div>
               <div className="about-img">
                 <img src="/assets/images/i1.png" alt="School Building - प्रेरणा शिक्षण संस्था Campus" />
+                <div className="about-image-card">
+                  <span>Since 2005</span>
+                  <strong>Education that inspires curiosity, confidence, and lifelong growth.</strong>
+                </div>
               </div>
             </div>
           </div>
@@ -338,14 +307,16 @@ const Home = () => {
           <div className="container">
             <span className="section-badge center">Infrastructure</span>
             <h2 className="section-title">Our <span>Facilities</span></h2>
-            <div className="facilities-grid">
-              {facilities.map((fac, idx) => (
-                <div className="facility-card" key={idx}>
-                  <div className="facility-icon">{fac.icon}</div>
-                  <h3>{fac.title}</h3>
-                  <p>{fac.desc}</p>
-                </div>
-              ))}
+            <div className="facilities-frame">
+              <div className="facilities-grid">
+                {facilities.map((fac, idx) => (
+                  <div className="facility-card" key={idx}>
+                    <div className="facility-icon">{fac.icon}</div>
+                    <h3>{fac.title}</h3>
+                    <p>{fac.desc}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>

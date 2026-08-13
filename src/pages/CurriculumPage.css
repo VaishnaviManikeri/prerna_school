@@ -14,7 +14,7 @@
 
 /* ==================== HERO SECTION ==================== */
 .curriculum-hero {
-  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  background: linear-gradient(135deg, #321b14 0%, #5a281f 100%);
   padding: 4rem 2rem;
   text-align: center;
   position: relative;
@@ -88,7 +88,7 @@
 
 .info-section h2 {
   font-size: 1.8rem;
-  color: #1e3c72;
+  color: #321b14;
   margin-bottom: 1rem;
   position: relative;
   display: inline-block;
@@ -152,7 +152,7 @@
 
 .level-card h3 {
   font-size: 1.3rem;
-  color: #1e3c72;
+  color: #321b14;
   margin-bottom: 0.5rem;
 }
 
@@ -204,7 +204,7 @@
 
 .syllabus-section h2 {
   font-size: 1.6rem;
-  color: #1e3c72;
+  color: #321b14;
   margin-bottom: 1rem;
 }
 
@@ -259,7 +259,7 @@
 
 .teaching-methods h3 {
   font-size: 1.5rem;
-  color: #1e3c72;
+  color: #321b14;
   margin-bottom: 1.5rem;
   text-align: center;
 }

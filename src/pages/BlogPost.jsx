@@ -325,26 +325,6 @@ const BlogPost = () => {
             </div>
           )}
 
-          {/* CTA Section */}
-          <div className="mt-12 p-8 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg text-center">
-            <h3 className="text-2xl font-serif font-bold mb-4">Interested in Learning More?</h3>
-            <p className="text-gray-600 mb-6">Schedule a school visit or contact our admissions office</p>
-            <div className="flex gap-4 justify-center flex-wrap">
-              <Link
-                to="/admissions"
-                className="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition font-semibold"
-              >
-                Book a School Visit
-              </Link>
-              <Link
-                to="/contact"
-                className="bg-green-600 text-white px-6 py-3 rounded-md hover:bg-green-700 transition font-semibold"
-              >
-                Enquire Now
-              </Link>
-            </div>
-          </div>
-
           {/* Navigation Buttons */}
           <div className="mt-8 flex justify-between">
             <Link
@@ -403,7 +383,7 @@ const BlogPost = () => {
         }
         
         .blog-content blockquote {
-          border-left: 4px solid #3b82f6;
+          border-left: 4px solid #6b3a2a;
           padding-left: 1.5rem;
           margin: 1.5rem 0;
           font-style: italic;
@@ -436,7 +416,7 @@ const BlogPost = () => {
         }
         
         .blog-content a {
-          color: #3b82f6;
+          color: #6b3a2a;
           text-decoration: underline;
         }
         

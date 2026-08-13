@@ -16,6 +16,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import DropdownPage from "./pages/DropdownPage";
 import Footer from "./components/Footer";
+import CommonCTA from "./components/CommonCTA";
 import PrimaryPage from "./pages/PrimaryPage";
 import SecondaryPage from "./pages/SecondaryPage";
 import HigherSecondaryPage from "./pages/HigherSecondaryPage";
@@ -89,6 +90,8 @@ function App() {
           </Routes>
 
         </main>
+
+        <CommonCTA />
 
         {/* Footer */}
         <Footer />

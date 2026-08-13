@@ -61,48 +61,6 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Top Bar - Contact & Important Links */}
-      <div className="top-bar">
-        <div className="top-bar-container">
-          <div className="contact-info">
-            <span className="contact-phone">📞 7575919090 | 7575929090</span>
-            <span className="contact-email">✉️ info@prerana.edu.in</span>
-            <span className="contact-address">📍 Laxminagar, Thergaon, Pune - 33</span>
-          </div>
-          
-          {/* Top Bar Right Section with Gallery, Notices and Apply Now Button */}
-          <div className="top-bar-right">
-            {/* Gallery & Notices Links - Professional without emojis */}
-            <div className="top-links-group">
-              <Link to="/gallery" className="top-link">Gallery</Link>
-              <Link to="/notice" className="top-link">Notices</Link>
-            </div>
-
-            {/* Admin/User Section */}
-            {token && (
-              <div className="top-links">
-                <Link to="/admin/dashboard" className="dashboard-link">Admin Dashboard</Link>
-                <span>|</span>
-                <button onClick={handleLogout} className="logout-link">Logout</button>
-              </div>
-            )}
-            
-            {/* Apply Now Button */}
-            <Link to="/admissions" className="top-apply-button">Apply Now</Link>
-          </div>
-        </div>
-      </div>
-
-      {/* Institute Name Bar - Below Top Bar */}
-      <div className="institute-bar">
-        <div className="institute-bar-container">
-          <div className="institute-name-wrapper">
-            <span className="institute-name-main">प्रेरणा शिक्षण संस्था</span>
-            <span className="institute-name-sub">Prerana Primary, Secondary & Tukaram Gujar Jr. College</span>
-          </div>
-        </div>
-      </div>
-
       {/* Main Navbar */}
       <nav className={`navbar ${isScrolled ? 'navbar-scrolled' : ''}`}>
         <div className="navbar-container">
@@ -110,7 +68,10 @@ const Navbar = () => {
           <Link to="/" className="navbar-logo" onClick={handleLinkClick}>
             <img src="/assets/m/l.jpeg" alt="Prerana Logo" className="logo-img" />
             <div className="logo-text">
-              <span className="logo-title">उज्ज्वल भविष्यासाठी योग्य निवड!</span>
+              <span className="logo-title">
+                <span>उज्ज्वल भविष्यासाठी</span>
+                <span>योग्य निवड!</span>
+              </span>
             </div>
           </Link>
 
@@ -145,6 +106,14 @@ const Navbar = () => {
 
             <li className="nav-item">
               <Link to="/admissions" className="nav-link admission-link">Admissions 2026</Link>
+            </li>
+
+            <li className="nav-item">
+              <Link to="/gallery" className="nav-link">Gallery</Link>
+            </li>
+
+            <li className="nav-item">
+              <Link to="/notice" className="nav-link">Notices</Link>
             </li>
 
             <li className="nav-item dropdown">
@@ -234,6 +203,10 @@ const Navbar = () => {
 
             <li className="mobile-nav-item"><Link to="/admissions" onClick={handleLinkClick} className="mobile-nav-link admission-link">Admissions 2026</Link></li>
 
+            <li className="mobile-nav-item"><Link to="/gallery" onClick={handleLinkClick} className="mobile-nav-link">Gallery</Link></li>
+
+            <li className="mobile-nav-item"><Link to="/notice" onClick={handleLinkClick} className="mobile-nav-link">Notices</Link></li>
+
             <li className="mobile-nav-item dropdown-mobile">
               <div onClick={() => toggleDropdown('student')} className="mobile-nav-link dropdown-toggle">
                 Student Corner {activeDropdown === 'student' ? '▲' : '▼'}
@@ -279,22 +252,7 @@ const Navbar = () => {
               </>
             )}
             
-            {/* Mobile Apply Now Button */}
-            <li className="mobile-nav-item mobile-apply-now">
-              <Link to="/admissions" onClick={handleLinkClick} className="mobile-apply-button">Apply Now</Link>
-            </li>
           </ul>
-          
-          <div className="mobile-contact-info">
-            <p>📞 7575919090 | 7575929090</p>
-            <p>✉️ info@prerana.edu.in</p>
-            <p>📍 Laxminagar, Thergaon, Pune - 33</p>
-            {!token && (
-              <div className="mobile-top-links">
-                <Link to="/admin/login">Admin Login</Link>
-              </div>
-            )}
-          </div>
         </div>
       </nav>
     </>

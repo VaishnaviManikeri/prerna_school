@@ -9,7 +9,7 @@
 
 /* ==================== TOP BAR ==================== */
 .top-bar {
-  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  background: linear-gradient(135deg, #321b14 0%, #5a281f 100%);
   color: white;
   font-size: 0.8rem;
   padding: 0.5rem 0;
@@ -130,7 +130,7 @@
 
 /* ==================== INSTITUTE BAR ==================== */
 .institute-bar {
-  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  background: linear-gradient(135deg, #321b14 0%, #5a281f 100%);
   padding: 0.6rem 0;
   position: relative;
   z-index: 1000;
@@ -199,12 +199,13 @@
   display: flex;
   align-items: center;
   gap: 1rem;
+  margin-top: 10px;
   cursor: pointer;
   flex-shrink: 0;
 }
 
 .logo-img {
-  height: 55px;
+  height: 72px;
   width: auto;
   border-radius: 10px;
   object-fit: cover;
@@ -218,18 +219,27 @@
 .logo-text {
   display: flex;
   flex-direction: column;
+  min-width: max-content;
+  overflow: visible;
 }
 
 .logo-title {
-  font-size: 1rem;
+  display: block;
+  font-size: 1.25rem;
   font-weight: 700;
   background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   letter-spacing: -0.3px;
-  line-height: 1.2;
-  white-space: nowrap;
+  line-height: 1.3;
+  padding: 3px 0 2px;
+  white-space: normal;
+  overflow: visible;
+}
+
+.logo-title > span {
+  display: block;
 }
 
 /* ==================== DESKTOP NAVIGATION ==================== */
@@ -249,7 +259,7 @@
 .nav-link {
   text-decoration: none;
   color: #2c3e50;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 0.9rem;
   padding: 0.5rem 0;
   transition: all 0.3s ease;
@@ -267,7 +277,7 @@
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 /* ==================== DROPDOWN MENU ==================== */
@@ -300,6 +310,7 @@
   color: #2c3e50;
   text-decoration: none;
   font-size: 0.85rem;
+  font-weight: 400;
   transition: all 0.2s ease;
 }
 
@@ -322,7 +333,7 @@
 .bar {
   width: 28px;
   height: 3px;
-  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  background: linear-gradient(135deg, #321b14, #5a281f);
   transition: all 0.3s ease;
   border-radius: 2px;
 }
@@ -366,7 +377,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 1.5rem;
-  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  background: linear-gradient(135deg, #321b14, #5a281f);
   position: sticky;
   top: 0;
   z-index: 10;
@@ -411,7 +422,7 @@
   text-decoration: none;
   color: #2c3e50;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 400;
   display: block;
   padding: 0.8rem 1.5rem;
   transition: all 0.2s ease;
@@ -505,7 +516,7 @@
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  font-weight: bold;
+  font-weight: 400;
 }
 
 /* Dashboard Link Styles */
@@ -606,11 +617,11 @@
   }
   
   .logo-title {
-    font-size: 0.85rem;
+    font-size: 1.1rem;
   }
   
   .logo-img {
-    height: 48px;
+    height: 64px;
   }
 }
 
@@ -638,7 +649,7 @@
 }
 
 /* Tablet Devices (768px - 900px) */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1150px) {
   .nav-menu,
   .top-apply-button {
     display: none;
@@ -653,11 +664,11 @@
   }
   
   .logo-img {
-    height: 45px;
+    height: 56px;
   }
   
   .logo-title {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   
   .top-bar-right .top-links {
@@ -699,13 +710,17 @@
   .navbar-container {
     padding: 0.6rem 1rem;
   }
+
+  .navbar-logo {
+    margin-top: 6px;
+  }
   
   .logo-img {
-    height: 40px;
+    height: 50px;
   }
   
   .logo-title {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
   }
   
   .logo-text {
@@ -720,11 +735,11 @@
   }
   
   .logo-img {
-    height: 35px;
+    height: 46px;
   }
   
   .logo-title {
-    font-size: 0.6rem;
+    font-size: 0.82rem;
   }
   
   .mobile-menu {
@@ -750,11 +765,11 @@
 /* Small Mobile Devices (320px - 480px) */
 @media screen and (max-width: 480px) {
   .logo-title {
-    font-size: 0.55rem;
+    font-size: 0.75rem;
   }
   
   .logo-img {
-    height: 32px;
+    height: 42px;
   }
   
   .navbar-container {
@@ -768,7 +783,7 @@
   }
   
   .mobile-menu {
-    width: 90%;
+    width: min(92%, 360px);
   }
   
   .mobile-nav-link {
@@ -994,5 +1009,28 @@ html {
   
   .top-bar-container {
     justify-content: center;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .navbar-logo {
+    min-width: 0;
+  }
+
+  .logo-text {
+    min-width: 0;
+  }
+
+  .logo-title {
+    display: block;
+    max-width: 190px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .mobile-menu {
+    width: 100%;
+    max-width: none;
   }
 }

@@ -23,7 +23,7 @@ const HigherSecondaryPage = () => {
     science: {
       name: "Science Stream",
       icon: <FaFlask />,
-      color: "#2563eb",
+      color: "#5a281f",
       subjects: [
         "English (Compulsory)",
         "Marathi/Hindi (Compulsory)",
@@ -334,26 +334,8 @@ const HigherSecondaryPage = () => {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="cta-section">
-        <div className="container">
-          <div className="cta-box">
-            <h2>Start Your Bright Future Today</h2>
-
-            <p>
-              Admissions Open for 11th & 12th Standard | Limited Seats
-              Available
-            </p>
-
-            <button className="primary-btn">
-              Apply Now <FaArrowRight />
-            </button>
-          </div>
-        </div>
-      </section>
-
       {/* CSS */}
-      <style jsx>{`
+      <style>{`
         * {
           margin: 0;
           padding: 0;
@@ -384,8 +366,8 @@ const HigherSecondaryPage = () => {
 
         .section-header span {
           display: inline-block;
-          background: #dbeafe;
-          color: #2563eb;
+          background: #f3e9e5;
+          color: #5a281f;
           padding: 8px 18px;
           border-radius: 30px;
           font-size: 14px;
@@ -411,9 +393,9 @@ const HigherSecondaryPage = () => {
           position: relative;
           background: linear-gradient(
             135deg,
-            #eff6ff 0%,
+            #fffdfa 0%,
             #ffffff 50%,
-            #eef2ff 100%
+            #f3e9e5 100%
           );
           padding: 100px 0;
           min-height: 95vh;
@@ -443,7 +425,7 @@ const HigherSecondaryPage = () => {
         .shape-1 {
           width: 400px;
           height: 400px;
-          background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+          background: linear-gradient(135deg, #6b3a2a, #8b5cf6);
           top: -100px;
           right: -100px;
           animation: float 20s ease-in-out infinite;
@@ -452,7 +434,7 @@ const HigherSecondaryPage = () => {
         .shape-2 {
           width: 500px;
           height: 500px;
-          background: linear-gradient(135deg, #06b6d4, #3b82f6);
+          background: linear-gradient(135deg, #8a5a44, #6b3a2a);
           bottom: -150px;
           left: -150px;
           animation: float 15s ease-in-out infinite reverse;
@@ -497,7 +479,7 @@ const HigherSecondaryPage = () => {
           align-items: center;
           gap: 10px;
           background: rgba(37, 99, 235, 0.1);
-          color: #2563eb;
+          color: #5a281f;
           padding: 10px 18px;
           border-radius: 40px;
           font-size: 14px;
@@ -514,7 +496,7 @@ const HigherSecondaryPage = () => {
         }
 
         .hero-content h1 span {
-          color: #2563eb;
+          color: #5a281f;
           font-size: 3.2rem;
         }
 
@@ -545,7 +527,7 @@ const HigherSecondaryPage = () => {
         }
 
         .primary-btn {
-          background: #2563eb;
+          background: #5a281f;
           color: white;
           display: flex;
           align-items: center;
@@ -554,7 +536,7 @@ const HigherSecondaryPage = () => {
 
         .primary-btn:hover {
           transform: translateY(-3px);
-          background: #1d4ed8;
+          background: #321b14;
         }
 
         .secondary-btn {
@@ -587,7 +569,7 @@ const HigherSecondaryPage = () => {
 
         .stat-icon {
           font-size: 28px;
-          color: #2563eb;
+          color: #5a281f;
           margin-bottom: 12px;
           display: flex;
           justify-content: center;
@@ -641,7 +623,7 @@ const HigherSecondaryPage = () => {
 
         .about-icon {
           font-size: 45px;
-          color: #2563eb;
+          color: #5a281f;
         }
 
         .about-card h3 {
@@ -689,7 +671,7 @@ const HigherSecondaryPage = () => {
         }
 
         .stream-selector button.active {
-          background: #2563eb;
+          background: #5a281f;
           color: white;
         }
 
@@ -759,7 +741,7 @@ const HigherSecondaryPage = () => {
         .check-icon {
           display: flex;
           align-items: center;
-          color: #2563eb;
+          color: #5a281f;
           min-width: 20px;
         }
 
@@ -791,7 +773,7 @@ const HigherSecondaryPage = () => {
         }
 
         .info-table th {
-          background: #2563eb;
+          background: #5a281f;
           color: white;
           padding: 18px;
           text-align: left;
@@ -809,7 +791,7 @@ const HigherSecondaryPage = () => {
 
         /* CTA */
         .cta-box {
-          background: linear-gradient(135deg, #2563eb, #1e3a8a);
+          background: linear-gradient(135deg, #5a281f, #321b14);
           padding: 70px 30px;
           border-radius: 32px;
           text-align: center;
@@ -831,7 +813,7 @@ const HigherSecondaryPage = () => {
         .cta-box .primary-btn {
           margin: auto;
           background: white;
-          color: #2563eb;
+          color: #5a281f;
         }
 
         /* RESPONSIVE */

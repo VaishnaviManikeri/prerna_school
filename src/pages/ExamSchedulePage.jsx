@@ -110,7 +110,7 @@ const ExamSchedulePage = () => {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         .exam-schedule-page {
           max-width: 1400px;
           margin: 0 auto;

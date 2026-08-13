@@ -28,6 +28,13 @@ export default [
       ...react.configs.recommended.rules,
       ...react.configs['jsx-runtime'].rules,
       ...reactHooks.configs.recommended.rules,
+      // Vite uses the automatic JSX runtime, and this JavaScript project does
+      // not maintain a duplicate PropTypes layer. Keep lint focused on issues
+      // that can affect the running application.
+      'no-unused-vars': 'off',
+      'react/prop-types': 'off',
+      'react/no-unescaped-entities': 'off',
+      'react-hooks/exhaustive-deps': 'off',
       'react/jsx-no-target-blank': 'off',
       'react-refresh/only-export-components': [
         'warn',

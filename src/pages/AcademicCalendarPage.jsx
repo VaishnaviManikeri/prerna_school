@@ -19,23 +19,23 @@ const AcademicCalendarPage = () => {
   ];
 
   const stats = [
-    { value: '12', label: 'Months', icon: 'M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z', color: '#1e3c72' },
-    { value: '220+', label: 'Working Days', icon: 'M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z M17 21v-4H7v4 M12 7v6 M9 10h6', color: '#1e3c72' },
-    { value: '15+', label: 'Holidays', icon: 'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z', color: '#1e3c72' },
-    { value: '4', label: 'Exam Periods', icon: 'M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2 M9 12h6 M9 16h6', color: '#1e3c72' }
+    { value: '12', label: 'Months', icon: 'M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z', color: '#321b14' },
+    { value: '220+', label: 'Working Days', icon: 'M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z M17 21v-4H7v4 M12 7v6 M9 10h6', color: '#321b14' },
+    { value: '15+', label: 'Holidays', icon: 'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z', color: '#321b14' },
+    { value: '4', label: 'Exam Periods', icon: 'M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2 M9 12h6 M9 16h6', color: '#321b14' }
   ];
 
   const holidays = [
     { name: 'Independence Day', date: '15th August', icon: 'M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z', color: '#FF6B6B' },
     { name: 'Ganesh Chaturthi', date: 'September', icon: 'M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253', color: '#FF8C42' },
-    { name: 'Gandhi Jayanti', date: '2nd October', icon: 'M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253', color: '#4ECDC4' },
+    { name: 'Gandhi Jayanti', date: '2nd October', icon: 'M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253', color: '#8a5a44' },
     { name: 'Diwali Vacation', date: 'Oct/Nov (10 days)', icon: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z', color: '#FFE66D' },
     { name: 'Christmas', date: '25th December', icon: 'M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z', color: '#2E8B57' },
     { name: 'Republic Day', date: '26th January', icon: 'M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z', color: '#FF6B6B' },
     { name: 'Shivaji Maharaj Jayanti', date: '19th February', icon: 'M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z', color: '#9B59B6' },
-    { name: 'Mahashivratri', date: 'March', icon: 'M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2z M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 4c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6 2.69-6 6-6z', color: '#3498DB' },
+    { name: 'Mahashivratri', date: 'March', icon: 'M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2z M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 4c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6 2.69-6 6-6z', color: '#6b3a2a' },
     { name: 'Ambedkar Jayanti', date: '14th April', icon: 'M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253', color: '#FF8C42' },
-    { name: 'Maharashtra Day', date: '1st May', icon: 'M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z', color: '#4ECDC4' }
+    { name: 'Maharashtra Day', date: '1st May', icon: 'M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z', color: '#8a5a44' }
   ];
 
   // SVG Icon Components
@@ -277,18 +277,7 @@ const AcademicCalendarPage = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="cta-section">
-        <div className="container">
-          <div className="cta-box">
-            <h2>Stay Updated With School Events</h2>
-            <p>Get instant notifications about calendar updates, exam schedules, and important announcements</p>
-            <button className="primary-btn">Subscribe to Updates <ArrowIcon /></button>
-          </div>
-        </div>
-      </section>
-
-      <style jsx>{`
+      <style>{`
         * {
           margin: 0;
           padding: 0;
@@ -319,7 +308,7 @@ const AcademicCalendarPage = () => {
 
         .section-tag {
           display: inline-block;
-          background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+          background: linear-gradient(135deg, #321b14 0%, #5a281f 100%);
           padding: 0.25rem 1rem;
           border-radius: 50px;
           font-size: 0.8rem;
@@ -342,7 +331,7 @@ const AcademicCalendarPage = () => {
         }
 
         .gradient-text {
-          background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+          background: linear-gradient(135deg, #321b14 0%, #5a281f 100%);
           -webkit-background-clip: text;
           background-clip: text;
           color: transparent;
@@ -383,7 +372,7 @@ const AcademicCalendarPage = () => {
         }
 
         .hero-title .gradient-text {
-          background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+          background: linear-gradient(135deg, #321b14 0%, #5a281f 100%);
           -webkit-background-clip: text;
           background-clip: text;
           font-size: 3.2rem;
@@ -439,7 +428,7 @@ const AcademicCalendarPage = () => {
         .stat-card h3 {
           font-size: 1.5rem;
           font-weight: 700;
-          color: #1e3c72;
+          color: #321b14;
           letter-spacing: -0.01em;
         }
 
@@ -561,7 +550,7 @@ const AcademicCalendarPage = () => {
 
         .info-icon {
           font-size: 2.5rem;
-          color: #1e3c72;
+          color: #321b14;
           margin-bottom: 1rem;
           display: flex;
           justify-content: center;
@@ -604,7 +593,7 @@ const AcademicCalendarPage = () => {
         }
 
         .month-header {
-          background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+          background: linear-gradient(135deg, #321b14 0%, #5a281f 100%);
           padding: 1rem 1.5rem;
           display: flex;
           align-items: center;
@@ -753,7 +742,7 @@ const AcademicCalendarPage = () => {
           top: 0;
           bottom: 0;
           width: 2px;
-          background: linear-gradient(135deg, #1e3c72, #2a5298);
+          background: linear-gradient(135deg, #321b14, #5a281f);
         }
 
         .timeline-item {
@@ -789,7 +778,7 @@ const AcademicCalendarPage = () => {
 
         .timeline-date {
           display: inline-block;
-          background: linear-gradient(135deg, #1e3c72, #2a5298);
+          background: linear-gradient(135deg, #321b14, #5a281f);
           color: white;
           padding: 0.2rem 0.8rem;
           border-radius: 50px;
@@ -815,7 +804,7 @@ const AcademicCalendarPage = () => {
         }
 
         .cta-box {
-          background: linear-gradient(135deg, #1e3c72, #2a5298);
+          background: linear-gradient(135deg, #321b14, #5a281f);
           padding: 70px 30px;
           border-radius: 40px;
           text-align: center;

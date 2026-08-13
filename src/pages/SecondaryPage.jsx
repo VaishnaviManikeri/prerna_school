@@ -13,21 +13,21 @@ import {
 const SecondaryPage = () => {
   const subjects = [
     { name: 'First Language: Marathi', icon: <FaLanguage />, color: '#FF6B6B' },
-    { name: 'Second Language: Hindi/English', icon: <FaBook />, color: '#4ECDC4' },
+    { name: 'Second Language: Hindi/English', icon: <FaBook />, color: '#8a5a44' },
     { name: 'Third Language: English/Hindi', icon: <FaGlobe />, color: '#FFE66D' },
     { name: 'Mathematics', icon: <FaCalculator />, color: '#FF8C42' },
     { name: 'Science (Physics, Chemistry, Biology)', icon: <FaFlask />, color: '#2E8B57' },
     { name: 'Social Science (History, Geography, Civics)', icon: <FaGlobe />, color: '#9B59B6' },
-    { name: 'Information Technology', icon: <FaLaptopCode />, color: '#3498DB' }
+    { name: 'Information Technology', icon: <FaLaptopCode />, color: '#6b3a2a' }
   ];
 
   const highlights = [
     { title: 'Experienced Faculty', desc: 'SSC board-trained teachers with 10+ years experience', icon: <FaChalkboardTeacher />, color: '#FF6B6B' },
-    { title: 'Regular Assessments', desc: 'Weekly tests & remedial classes for improvement', icon: <FaClipboardList />, color: '#4ECDC4' },
+    { title: 'Regular Assessments', desc: 'Weekly tests & remedial classes for improvement', icon: <FaClipboardList />, color: '#8a5a44' },
     { title: 'Science Labs', desc: 'Fully equipped laboratories for practicals', icon: <FaScience />, color: '#FF8C42' },
     { title: 'Career Guidance', desc: 'Professional counseling for future pathways', icon: <FaBriefcase />, color: '#2E8B57' },
     { title: 'Digital Learning', desc: 'Smart classrooms with audio-visual aids', icon: <FaLaptop />, color: '#9B59B6' },
-    { title: 'Co-curricular Activities', desc: 'Sports, arts, and cultural competitions', icon: <FaFutbol />, color: '#3498DB' }
+    { title: 'Co-curricular Activities', desc: 'Sports, arts, and cultural competitions', icon: <FaFutbol />, color: '#6b3a2a' }
   ];
 
   const achievements = [
@@ -52,17 +52,17 @@ const SecondaryPage = () => {
 
   const examData = [
     { name: 'Unit Tests', frequency: 'Monthly', weightage: '20%', color: '#FF6B6B' },
-    { name: 'Quarterly Exam', frequency: 'Every 3 months', weightage: '30%', color: '#4ECDC4' },
+    { name: 'Quarterly Exam', frequency: 'Every 3 months', weightage: '30%', color: '#8a5a44' },
     { name: 'Half-Yearly', frequency: 'September/October', weightage: '20%', color: '#FF8C42' },
     { name: 'Preliminary Exam', frequency: 'January', weightage: '-', color: '#9B59B6' },
-    { name: 'SSC Board Exam', frequency: 'March (Std 10th)', weightage: '100%', color: '#3498DB' }
+    { name: 'SSC Board Exam', frequency: 'March (Std 10th)', weightage: '100%', color: '#6b3a2a' }
   ];
 
   const stats = [
-    { value: '95%', label: 'SSC Result', icon: <FaChartLine />, color: '#1e3c72' },
-    { value: '25+', label: 'Experienced Teachers', icon: <FaUserGraduate />, color: '#1e3c72' },
-    { value: '500+', label: 'Students', icon: <FaUsers />, color: '#1e3c72' },
-    { value: '15+', label: 'Years of Excellence', icon: <FaAward />, color: '#1e3c72' }
+    { value: '95%', label: 'SSC Result', icon: <FaChartLine />, color: '#321b14' },
+    { value: '25+', label: 'Experienced Teachers', icon: <FaUserGraduate />, color: '#321b14' },
+    { value: '500+', label: 'Students', icon: <FaUsers />, color: '#321b14' },
+    { value: '15+', label: 'Years of Excellence', icon: <FaAward />, color: '#321b14' }
   ];
 
   return (
@@ -266,18 +266,7 @@ const SecondaryPage = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="cta-section">
-        <div className="container">
-          <div className="cta-box">
-            <h2>Ready to Join Our Secondary Program?</h2>
-            <p>Admissions Open for Academic Year 2025-26 | Limited Seats Available</p>
-            <button className="primary-btn">Enquire Now <FaArrowRight /></button>
-          </div>
-        </div>
-      </section>
-
-      <style jsx>{`
+      <style>{`
         /* SecondaryPage.css - Matching Navbar Theme */
         * {
           margin: 0;
@@ -309,7 +298,7 @@ const SecondaryPage = () => {
 
         .section-tag {
           display: inline-block;
-          background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+          background: linear-gradient(135deg, #321b14 0%, #5a281f 100%);
           padding: 0.25rem 1rem;
           border-radius: 50px;
           font-size: 0.8rem;
@@ -332,7 +321,7 @@ const SecondaryPage = () => {
         }
 
         .gradient-text {
-          background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+          background: linear-gradient(135deg, #321b14 0%, #5a281f 100%);
           -webkit-background-clip: text;
           background-clip: text;
           color: transparent;
@@ -403,7 +392,7 @@ const SecondaryPage = () => {
         }
 
         .hero-title .gradient-text {
-          background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+          background: linear-gradient(135deg, #321b14 0%, #5a281f 100%);
           -webkit-background-clip: text;
           background-clip: text;
           font-size: 3.2rem;
@@ -459,7 +448,7 @@ const SecondaryPage = () => {
         .stat-card h3 {
           font-size: 1.5rem;
           font-weight: 700;
-          color: #1e3c72;
+          color: #321b14;
           letter-spacing: -0.01em;
         }
 
@@ -734,7 +723,7 @@ const SecondaryPage = () => {
           display: flex;
           align-items: center;
           justify-content: center;
-          color: #1e3c72;
+          color: #321b14;
           font-size: 1.2rem;
         }
 
@@ -817,12 +806,12 @@ const SecondaryPage = () => {
 
         .exam-weight {
           font-weight: 700;
-          color: #1e3c72;
+          color: #321b14;
         }
 
         /* Achievements Section */
         .achievements-section {
-          background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+          background: linear-gradient(135deg, #321b14 0%, #5a281f 100%);
         }
 
         .achievements-section .section-header h2,
@@ -933,7 +922,7 @@ const SecondaryPage = () => {
         }
 
         .cta-box {
-          background: linear-gradient(135deg, #1e3c72, #2a5298);
+          background: linear-gradient(135deg, #321b14, #5a281f);
           padding: 70px 30px;
           border-radius: 40px;
           text-align: center;
