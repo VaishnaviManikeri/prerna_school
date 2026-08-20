@@ -30,6 +30,15 @@ const About = () => {
     { icon: <FaSchool />, title: 'Safe Campus', text: 'A disciplined, caring environment designed for daily learning and student confidence.' },
   ];
 
+  const institutionFacts = [
+    { icon: <FaSchool />, title: 'Institution', text: 'Prerana Primary, Secondary & Tukaram Gujar Jr. College' },
+    { icon: <FaMapMarkerAlt />, title: 'Location', text: 'Laxminagar, Thergaon, Pune - 33' },
+    { icon: <FaGraduationCap />, title: 'Education Journey', text: 'Primary, secondary, and junior college learning' },
+    { icon: <FaChalkboardTeacher />, title: 'Learning Approach', text: 'Academic clarity, values, discipline, activities, and personal guidance' },
+    { icon: <FaFlask />, title: 'Student Experience', text: 'Classrooms, practical learning, reading, sports, culture, and regular feedback' },
+    { icon: <FaUsers />, title: 'Community', text: 'A partnership between students, teachers, parents, and the local community' },
+  ];
+
   return (
     <div className="about-page">
       <section className="about-hero" id="overview">
@@ -94,6 +103,27 @@ const About = () => {
               <strong>Holistic Growth</strong>
               <span>Academics, activities, values, and leadership habits.</span>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="about-facts" aria-labelledby="institution-facts-title">
+        <div className="about-container">
+          <div className="about-centered-heading">
+            <span className="about-section-label">Prerana at a Glance</span>
+            <h2 id="institution-facts-title">An institution rooted in Thergaon and focused on every learner.</h2>
+            <p>Key information about the school, its learning journey, and the community it serves.</p>
+          </div>
+          <div className="about-facts-grid">
+            {institutionFacts.map((fact) => (
+              <article className="about-fact-card" key={fact.title}>
+                <div className="about-fact-icon">{fact.icon}</div>
+                <div>
+                  <h3>{fact.title}</h3>
+                  <p>{fact.text}</p>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>

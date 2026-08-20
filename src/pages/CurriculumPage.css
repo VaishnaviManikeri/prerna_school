@@ -283,8 +283,7 @@
   gap: 0.8rem;
 }
 
-.method-item::before {
-  content: '✓';
+.method-item svg {
   display: inline-flex;
   align-items: center;
   justify-content: center;

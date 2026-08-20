@@ -1,5 +1,30 @@
 import React, { useState } from 'react';
 import './Admission.css';
+import {
+  FaAward,
+  FaBook,
+  FaFutbol,
+  FaLaptop,
+  FaWpforms,
+  FaHandshake,
+  FaFileAlt,
+  FaCheckCircle,
+  FaIdCard,
+  FaHome,
+  FaCamera,
+  FaSchool,
+  FaBullseye,
+  FaMedal,
+  FaGlobe,
+  FaMobileAlt,
+  FaMapMarkerAlt,
+  FaPhoneAlt,
+  FaEnvelope,
+  FaClock,
+  FaCheck,
+  FaStar,
+  FaArrowRight,
+} from 'react-icons/fa';
 
 const Admission = () => {
   const [formData, setFormData] = useState({
@@ -36,7 +61,7 @@ const Admission = () => {
     setTimeout(() => setIsSubmitted(false), 5000);
   };
 
-  // Professional image placeholders using Font Awesome style emoji + gradient backgrounds
+  // Professional image placeholders with gradient backgrounds
   // You can replace these with actual image URLs when available
   const heroStudentImage = "https://i.pinimg.com/736x/2e/30/09/2e3009f9968227684ca57abf35cf74c4.jpg";
   const defaultStudentImage = "https://i.pinimg.com/736x/4c/88/65/4c886557098440715f785f1e776c10e2.jpg";
@@ -58,7 +83,7 @@ const Admission = () => {
               and builds strong character for a bright tomorrow.
             </p>
             <div className="hero-buttons">
-              <button className="btn-primary">Enroll Now →</button>
+              <button className="btn-primary">Enroll Now <FaArrowRight /></button>
               <button className="btn-secondary">Virtual Tour</button>
             </div>
           </div>
@@ -111,19 +136,19 @@ const Admission = () => {
               </div>
               <div className="features-grid">
                 <div className="feature-item">
-                  <span className="feature-icon">🏆</span>
+                  <span className="feature-icon"><FaAward /></span>
                   <span>Experienced Faculty</span>
                 </div>
                 <div className="feature-item">
-                  <span className="feature-icon">📚</span>
+                  <span className="feature-icon"><FaBook /></span>
                   <span>Smart Classrooms</span>
                 </div>
                 <div className="feature-item">
-                  <span className="feature-icon">⚽</span>
+                  <span className="feature-icon"><FaFutbol /></span>
                   <span>Sports Facilities</span>
                 </div>
                 <div className="feature-item">
-                  <span className="feature-icon">💻</span>
+                  <span className="feature-icon"><FaLaptop /></span>
                   <span>Computer Labs</span>
                 </div>
               </div>
@@ -161,25 +186,25 @@ const Admission = () => {
           <div className="process-steps">
             <div className="step-card">
               <div className="step-number">01</div>
-              <div className="step-icon">📝</div>
+              <div className="step-icon"><FaWpforms /></div>
               <h3>Fill Application</h3>
               <p>Complete the online admission form or visit our campus for registration.</p>
             </div>
             <div className="step-card">
               <div className="step-number">02</div>
-              <div className="step-icon">🤝</div>
+              <div className="step-icon"><FaHandshake /></div>
               <h3>Interaction Session</h3>
               <p>Personal interaction with teachers and basic assessment for grade placement.</p>
             </div>
             <div className="step-card">
               <div className="step-number">03</div>
-              <div className="step-icon">📄</div>
+              <div className="step-icon"><FaFileAlt /></div>
               <h3>Submit Documents</h3>
               <p>Submit required documents including birth certificate and previous marksheets.</p>
             </div>
             <div className="step-card">
               <div className="step-number">04</div>
-              <div className="step-icon">✅</div>
+              <div className="step-icon"><FaCheckCircle /></div>
               <h3>Confirm Admission</h3>
               <p>Complete the fee payment and receive your admission confirmation kit.</p>
             </div>
@@ -197,42 +222,42 @@ const Admission = () => {
           </div>
           <div className="documents-grid">
             <div className="document-card">
-              <div className="doc-icon-wrapper">📄</div>
+              <div className="doc-icon-wrapper"><FaFileAlt /></div>
               <div className="doc-info">
                 <h4>Birth Certificate</h4>
                 <p>Original + 2 attested copies</p>
               </div>
             </div>
             <div className="document-card">
-              <div className="doc-icon-wrapper">📋</div>
+              <div className="doc-icon-wrapper"><FaFileAlt /></div>
               <div className="doc-info">
                 <h4>Previous Marksheet</h4>
                 <p>Last 2 years academic records</p>
               </div>
             </div>
             <div className="document-card">
-              <div className="doc-icon-wrapper">🆔</div>
+              <div className="doc-icon-wrapper"><FaIdCard /></div>
               <div className="doc-info">
                 <h4>Parent ID Proof</h4>
                 <p>Aadhar Card / PAN Card / Voter ID</p>
               </div>
             </div>
             <div className="document-card">
-              <div className="doc-icon-wrapper">🏠</div>
+              <div className="doc-icon-wrapper"><FaHome /></div>
               <div className="doc-info">
                 <h4>Address Proof</h4>
                 <p>Electricity bill / Rent agreement / Passport</p>
               </div>
             </div>
             <div className="document-card">
-              <div className="doc-icon-wrapper">📸</div>
+              <div className="doc-icon-wrapper"><FaCamera /></div>
               <div className="doc-info">
                 <h4>Photographs</h4>
                 <p>4 passport size + 2 stamp size</p>
               </div>
             </div>
             <div className="document-card">
-              <div className="doc-icon-wrapper">🏫</div>
+              <div className="doc-icon-wrapper"><FaSchool /></div>
               <div className="doc-info">
                 <h4>School Leaving Certificate</h4>
                 <p>For students above Class 1</p>
@@ -283,35 +308,35 @@ const Admission = () => {
                 className="student-why-img" 
                 onError={(e) => { e.target.onerror = null; e.target.src = "https://placehold.co/350x350/2C3E50/FFFFFF?text=Happy+Student"; }} 
               />
-              <div className="image-badge">✨ 500+ Happy Students</div>
+              <div className="image-badge"><FaStar /> 500+ Happy Students</div>
             </div>
             <div className="why-choose-content">
               <span className="section-tag">Why Choose Us</span>
               <h2 className="section-title">Best <span className="highlight">Learning Environment</span> in Pune</h2>
               <div className="why-features">
                 <div className="why-feature">
-                  <span className="why-icon">🎯</span>
+                  <span className="why-icon"><FaBullseye /></span>
                   <div>
                     <h4>Personalized Learning</h4>
                     <p>Individual attention with 20:1 student-teacher ratio</p>
                   </div>
                 </div>
                 <div className="why-feature">
-                  <span className="why-icon">🏅</span>
+                  <span className="why-icon"><FaMedal /></span>
                   <div>
                     <h4>Experienced Faculty</h4>
                     <p>Highly qualified teachers with 10+ years experience</p>
                   </div>
                 </div>
                 <div className="why-feature">
-                  <span className="why-icon">🌍</span>
+                  <span className="why-icon"><FaGlobe /></span>
                   <div>
                     <h4>Holistic Development</h4>
                     <p>Focus on academics, sports, arts, and life skills</p>
                   </div>
                 </div>
                 <div className="why-feature">
-                  <span className="why-icon">📱</span>
+                  <span className="why-icon"><FaMobileAlt /></span>
                   <div>
                     <h4>Smart Technology</h4>
                     <p>Digital classrooms and parent portal access</p>
@@ -334,28 +359,28 @@ const Admission = () => {
           <div className="contact-grid">
             <div className="contact-info">
               <div className="contact-card">
-                <span className="contact-icon">📍</span>
+                <span className="contact-icon"><FaMapMarkerAlt /></span>
                 <div>
                   <h4>Address</h4>
                   <p>Prerna Shikshan Sanstha, Laxminagar, Near Thergaon Bus Stop, Thergaon, Pune - 411033</p>
                 </div>
               </div>
               <div className="contact-card">
-                <span className="contact-icon">📞</span>
+                <span className="contact-icon"><FaPhoneAlt /></span>
                 <div>
                   <h4>Phone</h4>
                   <p>+91 98765 43210 | +91 98765 43211</p>
                 </div>
               </div>
               <div className="contact-card">
-                <span className="contact-icon">✉️</span>
+                <span className="contact-icon"><FaEnvelope /></span>
                 <div>
                   <h4>Email</h4>
                   <p>admissions@prernashikshan.edu.in</p>
                 </div>
               </div>
               <div className="contact-card">
-                <span className="contact-icon">⏰</span>
+                <span className="contact-icon"><FaClock /></span>
                 <div>
                   <h4>Office Hours</h4>
                   <p>Monday - Saturday: 9:00 AM - 5:00 PM</p>
@@ -371,7 +396,7 @@ const Admission = () => {
                   onError={(e) => { e.target.onerror = null; e.target.src = "https://placehold.co/500x300/2C3E50/FFFFFF?text=Map+Location%3A+Laxminagar%2C+Thergaon%2C+Pune-33"; }} 
                 />
                 <div className="map-overlay">
-                  <span>📍 Laxminagar, Thergaon, Pune - 33</span>
+                  <span><FaMapMarkerAlt /> Laxminagar, Thergaon, Pune - 33</span>
                 </div>
               </div>
             </div>
@@ -390,7 +415,7 @@ const Admission = () => {
             </div>
             {isSubmitted && (
               <div className="success-message">
-                ✅ Thank you for your interest! Our admission team will contact you shortly.
+                <><FaCheck /> Thank you for your interest! Our admission team will contact you shortly.</>
               </div>
             )}
             <form onSubmit={handleSubmit} className="admission-form">
@@ -443,7 +468,7 @@ const Admission = () => {
                 <label>Message / Query</label>
                 <textarea name="message" value={formData.message} onChange={handleChange} rows="4" placeholder="Any specific questions or requirements..."></textarea>
               </div>
-              <button type="submit" className="submit-btn">Submit Application →</button>
+              <button type="submit" className="submit-btn">Submit Application <FaArrowRight /></button>
             </form>
           </div>
         </div>

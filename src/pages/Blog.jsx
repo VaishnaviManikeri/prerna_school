@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { getBlogs } from '../api';
+import { FaExclamationTriangle, FaPen } from 'react-icons/fa';
 
 const Blog = () => {
   const [blogs, setBlogs] = useState([]);
@@ -77,7 +78,7 @@ const Blog = () => {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
-          <div className="text-red-600 text-5xl mb-4">⚠️</div>
+          <FaExclamationTriangle className="text-red-600 text-5xl mb-4" />
           <p className="text-gray-800 mb-4">{error}</p>
           <button 
             onClick={fetchBlogs}
@@ -149,7 +150,7 @@ const Blog = () => {
         {/* Blog Cards Grid */}
         {filteredBlogs.length === 0 ? (
           <div className="text-center py-12">
-            <div className="text-gray-400 text-5xl mb-4">📝</div>
+            <FaPen className="text-gray-400 text-5xl mb-4" />
             <p className="text-gray-500 text-lg">No blog posts found matching your criteria.</p>
           </div>
         ) : (
@@ -173,7 +174,7 @@ const Blog = () => {
                     />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-blue-400 to-indigo-500">
-                      <span className="text-white text-4xl">📝</span>
+                      <FaPen className="text-white text-4xl" />
                     </div>
                   )}
                   

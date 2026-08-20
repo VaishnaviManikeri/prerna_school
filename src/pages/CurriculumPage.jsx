@@ -1,6 +1,7 @@
 // pages/CurriculumPage.jsx
 import React from 'react';
 import './CurriculumPage.css';
+import { FaBook, FaBookOpen, FaBookReader, FaCheckCircle, FaDownload, FaLightbulb } from 'react-icons/fa';
 
 const CurriculumPage = () => {
   const primaryCurriculum = [
@@ -50,7 +51,7 @@ const CurriculumPage = () => {
         {/* Curriculum Levels */}
         <div className="curriculum-levels">
           <div className="level-card">
-            <div className="card-icon">📘</div>
+            <div className="card-icon"><FaBook /></div>
             <h3>Primary Level <span>(1st - 4th)</span></h3>
             <p className="focus-text"><strong>Focus:</strong> Foundational literacy, numeracy, and life skills</p>
             <ul>
@@ -61,7 +62,7 @@ const CurriculumPage = () => {
           </div>
 
           <div className="level-card">
-            <div className="card-icon">📙</div>
+            <div className="card-icon"><FaBookOpen /></div>
             <h3>Secondary Level <span>(5th - 10th)</span></h3>
             <p className="focus-text"><strong>Focus:</strong> Conceptual understanding & board exam preparation</p>
             <ul>
@@ -72,7 +73,7 @@ const CurriculumPage = () => {
           </div>
 
           <div className="level-card">
-            <div className="card-icon">📕</div>
+            <div className="card-icon"><FaBookReader /></div>
             <h3>Higher Secondary <span>(11th - 12th)</span></h3>
             <p className="focus-text"><strong>Focus:</strong> Specialization & career readiness</p>
             <ul>
@@ -85,7 +86,7 @@ const CurriculumPage = () => {
 
         {/* Syllabus Download Section */}
         <div className="syllabus-section">
-          <h2>📥 Syllabus Download</h2>
+          <h2><FaDownload /> Syllabus Download</h2>
           <p>Detailed syllabus for each standard is available at the school office. For reference:</p>
           <div className="syllabus-links">
             <a href="#" className="btn btn-primary">Download Primary Syllabus (Overview)</a>
@@ -97,14 +98,14 @@ const CurriculumPage = () => {
 
         {/* Teaching Methodology */}
         <div className="teaching-methods">
-          <h3>💡 Our Teaching Methodology</h3>
+          <h3><FaLightbulb /> Our Teaching Methodology</h3>
           <div className="methods-grid">
-            <div className="method-item">Interactive & student-centric classroom sessions</div>
-            <div className="method-item">Use of audio-visual aids & smartboards</div>
-            <div className="method-item">Regular formative assessments & feedback</div>
-            <div className="method-item">Project-based learning & group discussions</div>
-            <div className="method-item">Remedial coaching for weaker students</div>
-            <div className="method-item">Parent-teacher collaboration for student progress</div>
+            <div className="method-item"><FaCheckCircle /> Interactive & student-centric classroom sessions</div>
+            <div className="method-item"><FaCheckCircle /> Use of audio-visual aids & smartboards</div>
+            <div className="method-item"><FaCheckCircle /> Regular formative assessments & feedback</div>
+            <div className="method-item"><FaCheckCircle /> Project-based learning & group discussions</div>
+            <div className="method-item"><FaCheckCircle /> Remedial coaching for weaker students</div>
+            <div className="method-item"><FaCheckCircle /> Parent-teacher collaboration for student progress</div>
           </div>
         </div>
       </div>

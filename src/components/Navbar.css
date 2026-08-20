@@ -764,6 +764,15 @@
 
 /* Small Mobile Devices (320px - 480px) */
 @media screen and (max-width: 480px) {
+  .navbar-logo {
+    min-width: 0;
+    gap: 0.55rem;
+  }
+
+  .logo-text {
+    min-width: 0;
+  }
+
   .logo-title {
     font-size: 0.75rem;
   }

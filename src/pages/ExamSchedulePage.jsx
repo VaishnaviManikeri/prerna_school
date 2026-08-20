@@ -1,5 +1,6 @@
 // pages/ExamSchedulePage.jsx
 import React from 'react';
+import { FaClipboard, FaFlask, FaMapPin, FaChartBar } from 'react-icons/fa';
 
 const ExamSchedulePage = () => {
   const currentYear = '2024-2025';
@@ -30,12 +31,12 @@ const ExamSchedulePage = () => {
       </div>
 
       <div className="info-section">
-        <p>📌 <strong>Note:</strong> This is a provisional schedule. Exact dates will be announced 15 days prior to each examination. 
+        <p><FaMapPin /> <strong>Note:</strong> This is a provisional schedule. Exact dates will be announced 15 days prior to each examination. 
         Students are advised to prepare as per the syllabus completion timeline.</p>
       </div>
 
       <div className="schedule-section">
-        <h2>📝 Written Examination Schedule</h2>
+        <h2><FaClipboard /> Written Examination Schedule</h2>
         <div className="table-responsive">
           <table className="exam-table">
             <thead>
@@ -61,7 +62,7 @@ const ExamSchedulePage = () => {
       </div>
 
       <div className="schedule-section">
-        <h2>🔬 Practical Examination Schedule (Science & IT)</h2>
+        <h2><FaFlask /> Practical Examination Schedule (Science & IT)</h2>
         <div className="table-responsive">
           <table className="exam-table practical-table">
             <thead>
@@ -86,7 +87,7 @@ const ExamSchedulePage = () => {
 
       <div className="info-grid">
         <div className="important-instructions">
-          <h3>📌 Important Exam Instructions</h3>
+          <h3><FaMapPin /> Important Exam Instructions</h3>
           <ul>
             <li>Hall ticket / Admit card is mandatory for all examinations.</li>
             <li>Students must report 15 minutes before the exam start time.</li>
@@ -99,7 +100,7 @@ const ExamSchedulePage = () => {
         </div>
 
         <div className="result-declaration">
-          <h3>📊 Result Declaration Dates (Tentative)</h3>
+          <h3><FaChartBar /> Result Declaration Dates (Tentative)</h3>
           <ul>
             <li><strong>Quarterly Exam Result:</strong> Within 1 week of exam completion</li>
             <li><strong>Half-Yearly Result:</strong> 1st week of November 2024</li>

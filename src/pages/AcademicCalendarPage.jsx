@@ -401,7 +401,7 @@ const AcademicCalendarPage = () => {
         }
 
         .stat-card {
-          background: #f8fafc;
+          background: #fff3c4;
           padding: 1rem 1.2rem;
           border-radius: 20px;
           text-align: center;
@@ -423,18 +423,19 @@ const AcademicCalendarPage = () => {
           margin-bottom: 0.5rem;
           display: flex;
           justify-content: center;
+          color: #e64b27 !important;
         }
 
         .stat-card h3 {
           font-size: 1.5rem;
           font-weight: 700;
-          color: #321b14;
+          color: #6d1e1e !important;
           letter-spacing: -0.01em;
         }
 
         .stat-card p {
           font-size: 0.7rem;
-          color: #64748b;
+          color: #6d1e1e !important;
           text-transform: uppercase;
           letter-spacing: 0.5px;
           margin-top: 4px;

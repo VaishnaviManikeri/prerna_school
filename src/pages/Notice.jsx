@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { getNotices } from '../api';
+import { FaBullhorn, FaExclamationTriangle } from 'react-icons/fa';
 
 const Notice = () => {
   const [notices, setNotices] = useState([]);
@@ -41,7 +42,7 @@ const Notice = () => {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
-          <div className="text-red-600 text-5xl mb-4">⚠️</div>
+          <FaExclamationTriangle className="text-red-600 text-5xl mb-4" />
           <p className="text-gray-800 mb-4">{error}</p>
           <button 
             onClick={fetchNotices}
@@ -62,7 +63,7 @@ const Notice = () => {
         
         {notices && notices.length === 0 ? (
           <div className="text-center py-12">
-            <div className="text-gray-400 text-5xl mb-4">📢</div>
+            <FaBullhorn className="text-gray-400 text-5xl mb-4" />
             <p className="text-gray-500 text-lg">No notices available at the moment.</p>
           </div>
         ) : (

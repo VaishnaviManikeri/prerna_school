@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
+import { FaBriefcase, FaBullhorn, FaImages, FaPen } from 'react-icons/fa';
 
 const AdminDashboard = () => {
   const navigate = useNavigate();
@@ -13,10 +14,10 @@ const AdminDashboard = () => {
   };
 
   const modules = [
-    { title: 'Gallery Management', path: '/admin/gallery', icon: '🖼️', color: 'bg-blue-500' },
-    { title: 'Notice Management', path: '/admin/notices', icon: '📢', color: 'bg-green-500' },
-    { title: 'Career Management', path: '/admin/careers', icon: '💼', color: 'bg-purple-500' },
-    { title: 'Blog Management', path: '/admin/blogs', icon: '📝', color: 'bg-orange-500' },
+    { title: 'Gallery Management', path: '/admin/gallery', icon: <FaImages />, color: 'bg-blue-500' },
+    { title: 'Notice Management', path: '/admin/notices', icon: <FaBullhorn />, color: 'bg-green-500' },
+    { title: 'Career Management', path: '/admin/careers', icon: <FaBriefcase />, color: 'bg-purple-500' },
+    { title: 'Blog Management', path: '/admin/blogs', icon: <FaPen />, color: 'bg-orange-500' },
   ];
 
   return (

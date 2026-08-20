@@ -14,6 +14,8 @@ import {
   FaUserGraduate,
   FaSchool,
   FaAward,
+  FaBullseye,
+  FaStar,
 } from "react-icons/fa";
 
 const HigherSecondaryPage = () => {
@@ -236,7 +238,7 @@ const HigherSecondaryPage = () => {
 
             <div className="stream-grid">
               <div className="stream-box">
-                <h4>📚 Subjects Offered</h4>
+                <h4><FaBook /> Subjects Offered</h4>
 
                 <ul>
                   {streams[selectedStream].subjects.map((sub, idx) => (
@@ -249,13 +251,13 @@ const HigherSecondaryPage = () => {
               </div>
 
               <div className="stream-box">
-                <h4>🎯 Career Pathways</h4>
+                <h4><FaBullseye /> Career Pathways</h4>
 
                 <p className="career-text">
                   {streams[selectedStream].career}
                 </p>
 
-                <h4 className="feature-title">✨ Special Features</h4>
+                <h4 className="feature-title"><FaStar /> Special Features</h4>
 
                 <ul>
                   <li>

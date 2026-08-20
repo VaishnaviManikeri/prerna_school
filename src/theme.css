@@ -1,19 +1,22 @@
 /* Prerna School brand theme: espresso, crimson and warm white. */
 :root {
-  --primary-color: #a6192e;
-  --primary-dark: #76101f;
-  --primary-light: #d85b6d;
-  --secondary-color: #321b14;
-  --secondary-light: #583328;
-  --accent-color: #bd1f36;
-  --text-dark: #2d1b16;
-  --text-muted: #705f59;
-  --text-light: #a18f88;
+  --primary-color: #e64b27;
+  --primary-dark: #c83a1d;
+  --primary-light: #f28c28;
+  --secondary-color: #6d1e1e;
+  --secondary-light: #8f2d24;
+  --accent-color: #1e4fa1;
+  --text-dark: #6d1e1e;
+  --text-muted: #6f5b4f;
+  --text-light: #a9967e;
   --text-white: #ffffff;
-  --bg-light: #fbf7f5;
-  --bg-white: #ffffff;
-  --bg-gray: #f3e9e5;
-  --danger: #a6192e;
+  --bg-light: #fff8df;
+  --bg-white: #fffdf2;
+  --bg-gray: #f7edc9;
+  --success: #1b8e3e;
+  --warning: #f9c846;
+  --danger: #6d1e1e;
+  --info: #1e4fa1;
   --shadow-xs: 0 1px 3px rgba(50, 27, 20, 0.08);
   --shadow-sm: 0 4px 14px rgba(50, 27, 20, 0.08);
   --shadow-md: 0 9px 26px rgba(50, 27, 20, 0.12);
@@ -23,17 +26,17 @@
 
 html {
   color-scheme: light;
-  background: #fbf7f5;
+  background: #fff8df;
 }
 
 body {
-  color: #2d1b16;
-  background: #fbf7f5;
+  color: #6d1e1e;
+  background: #fff8df;
 }
 
 ::selection {
   color: #fff;
-  background: #a6192e;
+  background: #e64b27;
 }
 
 a,
@@ -57,7 +60,7 @@ textarea:focus-visible {
 .top-bar,
 .institute-bar,
 .mobile-menu-header {
-  background: linear-gradient(135deg, #27140f 0%, #4a251c 100%) !important;
+  background: linear-gradient(135deg, #6d1e1e 0%, #8f2d24 100%) !important;
 }
 
 .institute-bar {
@@ -74,13 +77,13 @@ textarea:focus-visible {
 .logo-title,
 .admission-link,
 .mobile-nav-link.admission-link {
-  background-image: linear-gradient(135deg, #75101f, #bd1f36) !important;
+  background-image: linear-gradient(135deg, #e64b27, #c83a1d) !important;
 }
 
 .nav-link,
 .dropdown-menu li a,
 .mobile-nav-link {
-  color: #321b14;
+  color: #6d1e1e;
 }
 
 .nav-link:hover,
@@ -89,11 +92,11 @@ textarea:focus-visible {
 .mobile-nav-link:hover,
 .mobile-nav-link.active,
 .mobile-top-links a {
-  color: #a6192e !important;
+  color: #e64b27 !important;
 }
 
 .nav-link.active {
-  border-bottom-color: #a6192e !important;
+  border-bottom-color: #e64b27 !important;
 }
 
 .dropdown-menu,
@@ -107,38 +110,38 @@ textarea:focus-visible {
 .mobile-nav-link.active,
 .mobile-contact-info,
 .mobile-dropdown-menu {
-  background: #fbf3f1 !important;
+  background: #fff3c4 !important;
 }
 
 .mobile-dropdown-menu li a:hover {
   color: #fff !important;
-  background: #a6192e !important;
+  background: #e64b27 !important;
 }
 
 .bar {
-  background: linear-gradient(135deg, #321b14, #a6192e) !important;
+  background: linear-gradient(135deg, #6d1e1e, #e64b27) !important;
 }
 
 .top-apply-button,
 .mobile-apply-button {
   color: #fff !important;
-  background: linear-gradient(135deg, #bd1f36, #831326) !important;
+  background: linear-gradient(135deg, #e64b27, #c83a1d) !important;
   box-shadow: 0 7px 18px rgba(166, 25, 46, 0.24) !important;
 }
 
 .top-apply-button:hover,
 .mobile-apply-button:hover {
-  background: linear-gradient(135deg, #cf2941, #94172b) !important;
+  background: linear-gradient(135deg, #f28c28, #e64b27) !important;
   box-shadow: 0 10px 24px rgba(166, 25, 46, 0.34) !important;
 }
 
 /* Shared page surfaces and typography */
 main {
-  background: #fffdfa;
+  background: #fff3c4;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #321b14;
+  color: #6d1e1e;
 }
 
 .section-title span,
@@ -154,11 +157,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .section-title span::after,
 .course-card::before {
-  background: linear-gradient(90deg, #a6192e, #d85b6d) !important;
+  background: linear-gradient(90deg, #e64b27, #f28c28) !important;
 }
 
 .section-badge {
-  background: linear-gradient(135deg, #bd1f36, #76101f) !important;
+  background: linear-gradient(135deg, #e64b27, #c83a1d) !important;
   box-shadow: 0 5px 14px rgba(166, 25, 46, 0.18);
 }
 
@@ -207,12 +210,12 @@ h1, h2, h3, h4, h5, h6 {
 .principal-section,
 .video-section,
 .faq-section {
-  background: #fbf7f5 !important;
+  background: #fff8df !important;
 }
 
 .counter-section,
 .achievements-section {
-  background: linear-gradient(135deg, #29150f 0%, #5a281f 58%, #76101f 100%) !important;
+  background: linear-gradient(135deg, #6d1e1e 0%, #8f2d24 58%, #e64b27 100%) !important;
 }
 
 .counter-section h2,
@@ -228,46 +231,46 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .read-more-btn {
-  color: #a6192e !important;
-  border-color: #a6192e !important;
+  color: #e64b27 !important;
+  border-color: #e64b27 !important;
 }
 
 .read-more-btn:hover,
 .tour-info {
   color: #fff !important;
-  background: #a6192e !important;
+  background: #e64b27 !important;
 }
 
 .slider-btn {
-  color: #a6192e !important;
+  color: #e64b27 !important;
   border: 1px solid rgba(166, 25, 46, 0.14);
 }
 
 .slider-btn:hover,
 .dot.active {
   color: #fff !important;
-  background: #a6192e !important;
+  background: #e64b27 !important;
 }
 
 .ranker-card img,
 .principal-card img {
-  border-color: #a6192e !important;
+  border-color: #e64b27 !important;
 }
 
 .event-item,
 .notice-item {
-  border-left-color: #a6192e;
+  border-left-color: #e64b27;
 }
 
 /* Footer */
 .footer,
 .footer-main,
 .footer-bottom {
-  background: #24120e !important;
+  background: #6d1e1e !important;
 }
 
 .footer-main {
-  background-image: linear-gradient(135deg, #321b14 0%, #5a281f 100%) !important;
+  background-image: linear-gradient(135deg, #6d1e1e 0%, #8f2d24 100%) !important;
 }
 
 .footer h2,
@@ -295,7 +298,7 @@ textarea {
 input:focus,
 select:focus,
 textarea:focus {
-  border-color: #a6192e !important;
+  border-color: #e64b27 !important;
   box-shadow: 0 0 0 4px rgba(166, 25, 46, 0.1) !important;
 }
 
@@ -305,7 +308,7 @@ button[type="submit"],
 .cta-btn.primary {
   color: #fff !important;
   border-color: #a6192e !important;
-  background: linear-gradient(135deg, #bd1f36, #76101f) !important;
+  background: linear-gradient(135deg, #e64b27, #c83a1d) !important;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -372,6 +375,108 @@ button[type="submit"],
   --tw-ring-color: rgba(90, 40, 31, 0.42) !important;
 }
 
+/* Homepage palette from the Prerana logo usage guide. */
+.home-container {
+  --primary-color: #e64b27;
+  --primary-dark: #c83a1d;
+  --primary-light: #f28c28;
+  --secondary-color: #6d1e1e;
+  --secondary-light: #8f2d24;
+  --accent-color: #1e4fa1;
+  --text-dark: #6d1e1e;
+  --text-muted: #6f5b4f;
+  --text-light: #a9967e;
+  --bg-light: #fff8df;
+  --bg-white: #fffdf2;
+  --bg-gray: #f7edc9;
+  --success: #1b8e3e;
+  --warning: #f9c846;
+  --danger: #6d1e1e;
+  --info: #1e4fa1;
+}
+
+.home-container :is(.section-title, .quick-card h3, .feature-card h3, .course-card h3, .facility-card h3, .ranker-card h3, .event-item h4, .notice-item h4, .faq-item h3) {
+  color: #6d1e1e !important;
+}
+
+.home-container :is(.section-title span, .about-text .highlight, .view-all-link, .event-item p, .notice-item p, .ranker-card p, .principal-msg span, .faq-item h3) {
+  color: #e64b27 !important;
+}
+
+.home-container span.course-tag {
+  color: #ffffff !important;
+  background: #e64b27 !important;
+}
+
+.home-container :is(.quick-card svg, .feature-icon, .course-card svg, .facility-icon, .events h3 svg, .notices h3 svg, .quote-icon, .testimonial-card svg) {
+  color: #e64b27 !important;
+}
+
+.home-container :is(.section-badge, .cta-btn.primary, .tour-info, .read-more-btn:hover) {
+  background: linear-gradient(135deg, #e64b27, #c83a1d) !important;
+}
+
+.home-container :is(.read-more-btn, .slider-btn) {
+  color: #e64b27 !important;
+  border-color: #e64b27 !important;
+}
+
+.home-container :is(.about-section, .courses-section, .rankers-section, .events-notices, .principal-section, .video-section, .faq-section) {
+  background: #fff8df !important;
+}
+
+.home-container :is(.counter-section, .achievements-section) {
+  background: linear-gradient(135deg, #6d1e1e 0%, #8f2d24 100%) !important;
+}
+
+.home-container .achievements-section h2.section-title,
+.home-container .achievements-section h2.section-title span {
+  color: #ffffff !important;
+}
+
+.home-container :is(.quick-card, .feature-card, .course-card, .facility-card, .achievement-card, .ranker-card, .event-item, .notice-item, .principal-card, .testimonial-card, .faq-item) {
+  border-color: #ead8a7 !important;
+}
+
+.home-container .notice-item.admission {
+  border-left-color: #1b8e3e !important;
+}
+
+.home-container .notice-item.holiday {
+  border-left-color: #f9c846 !important;
+}
+
+.home-container :is(.ranker-card img, .principal-card img) {
+  border-color: #e64b27 !important;
+}
+
+.home-container .hero-overlay {
+  background: rgba(70, 70, 70, 0.30) !important;
+}
+
+.home-container .hero-enquiry-form button {
+  background: #6d1e1e !important;
+}
+
+.academic-calendar-page .hero-stats .stat-card {
+  background: #fff3c4 !important;
+  border-color: #ead8a7 !important;
+}
+
+.academic-calendar-page .hero-stats .stat-card .stat-icon {
+  color: #e64b27 !important;
+}
+
+.academic-calendar-page .hero-stats .stat-card .stat-icon svg {
+  color: #e64b27 !important;
+  stroke: #e64b27 !important;
+}
+
+.academic-calendar-page .hero-stats .stat-card h3,
+.academic-calendar-page .hero-stats .stat-card p {
+  color: #6d1e1e !important;
+}
+
 /* Internal-page heroes use a clean branded background; homepage slider is excluded. */
 main > :not(.home-container) .about-hero-img,
 main > :not(.home-container) .dropdown-hero-img,
@@ -384,8 +489,8 @@ main > :not(.home-container) .hero-bg-shapes {
 }
 
 main > :not(.home-container) :is(.hero-section, .about-hero, .dropdown-hero, .curriculum-hero, .gallery-page-hero) {
-  background: linear-gradient(135deg, #24120e 0%, #5a281f 62%, #6b3a2a 100%) !important;
-  background-image: linear-gradient(135deg, #24120e 0%, #5a281f 62%, #6b3a2a 100%) !important;
+  background: linear-gradient(135deg, #6d1e1e 0%, #8f2d24 100%) !important;
+  background-image: linear-gradient(135deg, #6d1e1e 0%, #8f2d24 100%) !important;
 }
 
 main > :not(.home-container) :is(.hero-container, .about-hero-content) {
@@ -539,12 +644,87 @@ table {
   }
 }
 
+/* Responsive fallbacks for pages with embedded or shared layout styles. */
+@media screen and (max-width: 900px) {
+  :is(.admission-container, .secondary-page, .higher-page, .academic-calendar-page) :is(.hero-container, .about-grid) {
+    grid-template-columns: 1fr;
+  }
+
+  :is(.admission-container, .secondary-page, .higher-page, .academic-calendar-page) :is(.hero-content, .hero-image, .hero-image-wrapper, .about-image, .about-image-col) {
+    max-width: 700px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  :is(.secondary-page, .higher-page) :is(.hero-stats, .subjects-grid, .highlights-grid, .exam-grid, .achievements-grid, .stream-grid) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .academic-calendar-page :is(.hero-stats, .info-cards, .holidays-grid) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .admission-container :is(.stats-grid, .features-grid, .process-steps, .documents-grid) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .exam-schedule-page .info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  :is(.admission-container, .secondary-page, .higher-page, .academic-calendar-page) :is(section, .section-section) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  :is(.admission-container, .secondary-page, .higher-page, .academic-calendar-page) :is(.hero-container, .container) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  :is(.admission-container, .secondary-page, .higher-page, .academic-calendar-page) :is(.hero-title, .section-title) {
+    font-size: clamp(1.8rem, 9vw, 2.6rem);
+  }
+
+  :is(.secondary-page, .higher-page) :is(.hero-stats, .subjects-grid, .highlights-grid, .exam-grid, .achievements-grid, .stream-grid),
+  .academic-calendar-page :is(.hero-stats, .info-cards, .holidays-grid),
+  .admission-container :is(.stats-grid, .features-grid, .process-steps, .documents-grid) {
+    grid-template-columns: 1fr;
+  }
+
+  :is(.admission-container, .secondary-page, .higher-page, .academic-calendar-page) :is(.hero-buttons, .about-hero-actions) {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  :is(.admission-container, .secondary-page, .higher-page, .academic-calendar-page) :is(.hero-buttons > *, .about-hero-actions > *) {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .academic-calendar-page .calendar-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .exam-schedule-page {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .exam-schedule-page .schedule-section {
+    padding: 1rem;
+  }
+}
+
 /* Match all internal-page icon and text combinations to the Home page. */
 main > :not(.home-container) {
-  --page-heading: #321b14;
-  --page-accent: #a6192e;
-  --page-copy: #705f59;
-  --page-soft: #fbf3f1;
+  --page-heading: #6d1e1e;
+  --page-accent: #e64b27;
+  --page-copy: #6f5b4f;
+  --page-soft: #fff3c4;
 }
 
 main > :not(.home-container) :is(
@@ -634,31 +814,36 @@ main > :not(.home-container) :is(
    FOUR-COLOR DESIGN SYSTEM: dark brown, red, white and gray
    ========================================================= */
 :root {
-  --brand-brown: #321b14;
-  --brand-brown-deep: #24120e;
-  --brand-red: #a6192e;
-  --brand-red-dark: #76101f;
-  --brand-white: #ffffff;
-  --brand-gray-50: #f6f6f6;
-  --brand-gray-100: #eeeeee;
-  --brand-gray-300: #d2d2d2;
-  --brand-gray-600: #666666;
+  --brand-brown: #6d1e1e;
+  --brand-brown-deep: #6d1e1e;
+  --brand-red: #e64b27;
+  --brand-red-dark: #c83a1d;
+  --brand-orange: #f28c28;
+  --brand-cream: #fff3c4;
+  --brand-green: #1b8e3e;
+  --brand-blue: #1e4fa1;
+  --brand-gold: #f9c846;
+  --brand-white: #fffdf2;
+  --brand-gray-50: #fff8df;
+  --brand-gray-100: #f7edc9;
+  --brand-gray-300: #ead8a7;
+  --brand-gray-600: #6f5b4f;
   --primary-color: var(--brand-red);
   --primary-dark: var(--brand-red-dark);
-  --primary-light: var(--brand-red);
+  --primary-light: var(--brand-orange);
   --secondary-color: var(--brand-brown);
   --secondary-light: var(--brand-brown);
-  --accent-color: var(--brand-red);
+  --accent-color: var(--brand-blue);
   --text-dark: var(--brand-brown);
   --text-muted: var(--brand-gray-600);
   --text-light: var(--brand-gray-600);
   --bg-light: var(--brand-gray-50);
   --bg-white: var(--brand-white);
   --bg-gray: var(--brand-gray-100);
-  --success: var(--brand-brown);
-  --warning: var(--brand-red);
-  --danger: var(--brand-red);
-  --info: var(--brand-gray-600);
+  --success: var(--brand-green);
+  --warning: var(--brand-gold);
+  --danger: var(--brand-brown);
+  --info: var(--brand-blue);
 }
 
 html,

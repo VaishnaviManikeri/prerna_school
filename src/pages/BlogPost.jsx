@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { getBlogBySlug } from '../api';
 import toast from 'react-hot-toast';
+import { FaArrowLeft, FaExclamationTriangle } from 'react-icons/fa';
 
 const BlogPost = () => {
   const { slug } = useParams();
@@ -132,11 +133,11 @@ const BlogPost = () => {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center max-w-md mx-auto px-4">
-          <div className="text-red-600 text-5xl mb-4">⚠️</div>
+          <FaExclamationTriangle className="text-red-600 text-5xl mb-4" />
           <h1 className="text-2xl font-bold mb-4">Blog Post Not Found</h1>
           <p className="text-gray-600 mb-6">{error || 'The blog post you\'re looking for doesn\'t exist or has been removed.'}</p>
           <Link to="/blog" className="inline-block bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition">
-            ← Back to Blog
+            <FaArrowLeft /> Back to Blog
           </Link>
         </div>
       </div>
@@ -331,7 +332,7 @@ const BlogPost = () => {
               to="/blog"
               className="text-blue-600 hover:text-blue-800 inline-flex items-center gap-2"
             >
-              ← Back to Blog
+                      <FaArrowLeft /> Back to Blog
             </Link>
             <button
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}

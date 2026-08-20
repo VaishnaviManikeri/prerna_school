@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { getCareers } from '../api';
 import toast from 'react-hot-toast';
+import { FaBriefcase, FaBuilding, FaExclamationTriangle, FaMapMarkerAlt } from 'react-icons/fa';
 
 const Careers = () => {
   const [careers, setCareers] = useState([]);
@@ -52,7 +53,7 @@ const Careers = () => {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
-          <div className="text-red-600 text-5xl mb-4">⚠️</div>
+          <FaExclamationTriangle className="text-red-600 text-5xl mb-4" />
           <p className="text-gray-800 mb-4">{error}</p>
           <button 
             onClick={fetchCareers}
@@ -73,7 +74,7 @@ const Careers = () => {
         
         {careers && careers.length === 0 ? (
           <div className="text-center py-12">
-            <div className="text-gray-400 text-5xl mb-4">💼</div>
+            <FaBriefcase className="text-gray-400 text-5xl mb-4" />
             <p className="text-gray-500 text-lg">No open positions at the moment. Please check back later.</p>
           </div>
         ) : (
@@ -86,9 +87,9 @@ const Careers = () => {
                       <div className="flex-1">
                         <h2 className="text-2xl font-semibold text-gray-800 mb-2">{career.title || 'Position Title'}</h2>
                         <div className="flex flex-wrap gap-4 text-sm text-gray-600">
-                          {career.location && <span>📍 {career.location}</span>}
-                          {career.type && <span>💼 {career.type}</span>}
-                          {career.department && <span>🏢 {career.department}</span>}
+                          {career.location && <span><FaMapMarkerAlt /> {career.location}</span>}
+                          {career.type && <span><FaBriefcase /> {career.type}</span>}
+                          {career.department && <span><FaBuilding /> {career.department}</span>}
                         </div>
                       </div>
                       {career.salary && (

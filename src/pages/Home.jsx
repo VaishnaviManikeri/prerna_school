@@ -3,11 +3,6 @@ import { Link } from 'react-router-dom';
 import './Home.css';
 import { getGallery } from '../api';
 
-// Images for Top Rankers
-import student1 from '/assets/images/student.png';
-import student2 from '/assets/images/student1.png';
-import student3 from '/assets/images/student3.png';
-
 // Icons (using React Icons)
 import { 
   FaUsers, 
@@ -16,7 +11,6 @@ import {
   FaSchool, 
   FaCamera, 
   FaCalendarAlt, 
-  FaNewspaper, 
   FaQuoteLeft, 
   FaYoutube, 
   FaMapMarkerAlt, 
@@ -104,6 +98,25 @@ const Home = () => {
     fetchGalleryPreview();
   }, []);
 
+  // Reveal homepage sections as they enter the viewport.
+  useEffect(() => {
+    const revealSections = document.querySelectorAll('.home-reveal');
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+
+    revealSections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, []);
+
   const animateCounters = () => {
     const target = { students: 1250, teachers: 68, courses: 24, awards: 32 };
     const duration = 2000;
@@ -137,35 +150,10 @@ const Home = () => {
     { icon: <FaUtensils />, title: "Canteen", desc: "Nutritious meals & hygiene" },
   ];
 
-  const achievements = [
-    { title: "Best School Award", year: "2023", desc: "By Education Excellence" },
-    { title: "100% Board Results", year: "2024", desc: "SSC & HSC toppers" },
-    { title: "Green School", year: "2022", desc: "Eco-friendly initiative" },
-    { title: "National Rank", year: "2023", desc: "Rank 1 in Robotics" },
-  ];
-
-  const topRankers = [
-    { name: "Aditya Sharma", rank: "1st (SSC 98.6%)", img: student1 },
-    { name: "Neha Patil", rank: "2nd (SSC 97.8%)", img: student2 },
-    { name: "Rohan Joshi", rank: "1st (JEE Mains)", img: student3 },
-  ];
-
   const testimonials = [
     { name: "Mrs. Sunita Kulkarni", text: "Best decision for my child. Holistic development & caring teachers.", role: "Parent" },
     { name: "Mr. Rajesh Gupta", text: "Excellent infrastructure and academic support. Highly recommended!", role: "Parent" },
     { name: "Dr. Anjali Desai", text: "The school's vision is outstanding. My daughter loves going here.", role: "Parent" },
-  ];
-
-  const events = [
-    { title: "Annual Sports Day", date: "Dec 15, 2024", desc: "Inter-house competitions" },
-    { title: "PTA Meeting", date: "Nov 30, 2024", desc: "Progress discussion" },
-    { title: "Science Exhibition", date: "Jan 10, 2025", desc: "Innovative projects" },
-  ];
-
-  const notices = [
-    { title: "Winter Break Notice", date: "Dec 22 - Jan 5", type: "Important" },
-    { title: "Admission Open 2025-26", date: "Apply now", type: "Admission" },
-    { title: "Holiday on Monday", date: "Nov 15, 2024", type: "Holiday" },
   ];
 
   const navLinks = ["Home", "About", "Academics", "Admissions", "Gallery", "Contact"];
@@ -196,11 +184,6 @@ const Home = () => {
                 <span className="school-badge">Admissions Open 2026–27</span>
                 <h1>Inspiring young minds to learn, lead, and succeed.</h1>
                 <p>Prerana Primary, Secondary & Tukaram Gujar Jr. College provides value-based education, caring guidance, and opportunities for every child to grow with confidence.</p>
-                <div className="hero-highlights">
-                  <span>Primary to Class 12</span>
-                  <span>Experienced Teachers</span>
-                  <span>Laxminagar, Thergaon</span>
-                </div>
                 <Link to="/about" className="hero-learn-link">Discover our school <FaArrowRight /></Link>
               </div>
             </div>
@@ -208,7 +191,7 @@ const Home = () => {
         </section>
 
         {/* Quick Links Section */}
-        <section className="quick-links">
+        <section className="quick-links home-reveal">
           <div className="container">
             <div className="quick-grid">
               <div className="quick-card">
@@ -236,7 +219,7 @@ const Home = () => {
         </section>
 
         {/* About School */}
-        <section className="about-section" id="about">
+        <section className="about-section home-reveal" id="about">
           <div className="container">
             <div className="about-grid">
               <div className="about-text">
@@ -249,7 +232,7 @@ const Home = () => {
                   <div><span>5000+</span> Alumni</div>
                   <div><span>100%</span> Result</div>
                 </div>
-                <button className="read-more-btn">Read More →</button>
+                <button className="read-more-btn">Read More <FaArrowRight /></button>
               </div>
               <div className="about-img">
                 <img src="/assets/images/i1.png" alt="School Building - प्रेरणा शिक्षण संस्था Campus" />
@@ -263,7 +246,7 @@ const Home = () => {
         </section>
 
         {/* Why Choose Us */}
-        <section className="whyus-section">
+        <section className="whyus-section home-reveal">
           <div className="container">
             <span className="section-badge center">Why Choose Us</span>
             <h2 className="section-title">What Makes <span>Us Different?</span></h2>
@@ -277,7 +260,7 @@ const Home = () => {
         </section>
 
         {/* Courses / Education Levels */}
-        <section className="courses-section" id="academics">
+        <section className="courses-section home-reveal" id="academics">
           <div className="container">
             <span className="section-badge center">Academics</span>
             <h2 className="section-title">Our <span>Education Levels</span></h2>
@@ -291,7 +274,7 @@ const Home = () => {
         </section>
 
         {/* Statistics Counter */}
-        <section className="counter-section" ref={counterRef}>
+        <section className="counter-section home-reveal" ref={counterRef}>
           <div className="container">
             <div className="counter-grid">
               <div className="counter-item"><FaUsers className="counter-icon" /><div className="counter-number">{counters.students}+</div><p>Happy Students</p></div>
@@ -303,7 +286,7 @@ const Home = () => {
         </section>
 
         {/* Facilities Section */}
-        <section className="facilities-section">
+        <section className="facilities-section home-reveal">
           <div className="container">
             <span className="section-badge center">Infrastructure</span>
             <h2 className="section-title">Our <span>Facilities</span></h2>
@@ -321,43 +304,8 @@ const Home = () => {
           </div>
         </section>
 
-        {/* Achievements */}
-        <section className="achievements-section">
-          <div className="container">
-            <span className="section-badge center white">Recognition</span>
-            <h2 className="section-title">Our <span>Achievements</span></h2>
-            <div className="achievements-grid">
-              {achievements.map((ach, idx) => (
-                <div className="achievement-card" key={idx}>
-                  <FaTrophy className="ach-icon" />
-                  <h3>{ach.title}</h3>
-                  <p>{ach.year}</p>
-                  <span>{ach.desc}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Top Rankers */}
-        <section className="rankers-section">
-          <div className="container">
-            <span className="section-badge center">Excellence</span>
-            <h2 className="section-title">Our Top <span>Rankers</span></h2>
-            <div className="rankers-grid">
-              {topRankers.map((ranker, idx) => (
-                <div className="ranker-card" key={idx}>
-                  <img src={ranker.img} alt={ranker.name} loading="lazy" />
-                  <h3>{ranker.name}</h3>
-                  <p>{ranker.rank}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Gallery Preview — now powered by live backend data */}
-        <section className="gallery-section" id="gallery">
+        <section className="gallery-section home-reveal" id="gallery">
           <div className="container">
             <div className="gallery-header">
               <div>
@@ -408,24 +356,8 @@ const Home = () => {
           </div>
         </section>
 
-        {/* Events & Notices */}
-        <section className="events-notices">
-          <div className="container">
-            <div className="two-col">
-              <div className="events">
-                <h3><FaCalendarAlt /> Upcoming Events</h3>
-                {events.map((ev, idx) => <div key={idx} className="event-item"><h4>{ev.title}</h4><p>{ev.date}</p><small>{ev.desc}</small></div>)}
-              </div>
-              <div className="notices">
-                <h3><FaNewspaper /> Latest Notices</h3>
-                {notices.map((not, idx) => <div key={idx} className={`notice-item ${not.type.toLowerCase()}`}><h4>{not.title}</h4><p>{not.date}</p></div>)}
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Principal Message - Image Left, Content Right */}
-        <section className="principal-section">
+        <section className="principal-section home-reveal">
           <div className="container">
             <div className="principal-card">
               <div className="principal-image-wrapper">
@@ -442,7 +374,7 @@ const Home = () => {
         </section>
 
         {/* Testimonials */}
-        <section className="testimonials-section">
+        <section className="testimonials-section home-reveal">
           <div className="container">
             <span className="section-badge center">Feedback</span>
             <h2 className="section-title">What <span>Parents Say</span></h2>
@@ -463,7 +395,7 @@ const Home = () => {
         
 
         {/* FAQ Section */}
-        <section className="faq-section">
+        <section className="faq-section home-reveal">
           <div className="container">
             <span className="section-badge center">Help Center</span>
             <h2 className="section-title">Frequently Asked <span>Questions</span></h2>

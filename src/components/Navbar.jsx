@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './Navbar.css';
+import { FaTimes } from 'react-icons/fa';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -165,7 +166,7 @@ const Navbar = () => {
         <div className={`mobile-menu ${isMobileMenuOpen ? 'active' : ''}`}>
           <div className="mobile-menu-header">
             <img src="/assets/logo.jpeg" alt="Logo" className="mobile-logo" />
-            <button className="mobile-close" onClick={toggleMobileMenu}>✕</button>
+            <button className="mobile-close" onClick={toggleMobileMenu} aria-label="Close menu"><FaTimes /></button>
           </div>
           <ul className="mobile-nav-menu">
             <li className="mobile-nav-item"><Link to="/" onClick={handleLinkClick} className="mobile-nav-link">Home</Link></li>
