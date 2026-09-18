@@ -23,7 +23,7 @@ const HigherSecondaryPage = () => {
 
   const streams = {
     science: {
-      name: "Science Stream",
+      name: "Science Stream (Coming Soon)",
       icon: <FaFlask />,
       color: "#5a281f",
       subjects: [
@@ -120,16 +120,6 @@ const HigherSecondaryPage = () => {
               and career-focused learning for 11th & 12th standard.
             </p>
 
-            <div className="hero-buttons">
-              <button className="primary-btn">
-                Admission Open <FaArrowRight />
-              </button>
-
-              <button className="secondary-btn">
-                Explore Streams
-              </button>
-            </div>
-
             <div className="hero-stats">
               {stats.map((item, index) => (
                 <div className="stat-card" key={index}>
@@ -146,6 +136,57 @@ const HigherSecondaryPage = () => {
               src="/assets/images/h11.png"
               alt="Higher Secondary Students"
             />
+          </div>
+        </div>
+      </section>
+
+      <section className="higher-overview-section" id="higher-secondary-overview">
+        <div className="container">
+          <div className="higher-overview-heading">
+            <span>Higher Secondary Section | उच्च माध्यमिक विभाग</span>
+            <h2>इयत्ता ११ वी ते १२ वी कला आणि वाणिज्य</h2>
+            <p className="higher-overview-notice">लवकरच सायन्स शाखा सुरू करण्यात येणार आहे.</p>
+            <p>
+              उच्च माध्यमिक विभागामध्ये विद्यार्थ्यांना उच्च शिक्षण, स्पर्धात्मक परीक्षा
+              आणि भविष्यातील करिअरसाठी सक्षम करण्याच्या दृष्टीने गुणवत्तापूर्ण शिक्षण व
+              मार्गदर्शन दिले जाते. विद्यार्थ्यांच्या क्षमता, आवड आणि करिअरच्या दिशेनुसार
+              शैक्षणिक मार्गदर्शन, समुपदेशन आणि विविध शैक्षणिक व सहशालेय उपक्रम राबविले जातात.
+            </p>
+          </div>
+
+          <div className="higher-overview-grid">
+            <article className="higher-overview-card higher-overview-marathi">
+              <span className="higher-overview-language">मराठी</span>
+              <h3>उच्च शिक्षण आणि करिअरसाठी दिशा</h3>
+              <p>
+                कला आणि वाणिज्य शाखांमधून विद्यार्थ्यांना त्यांच्या आवडीनुसार विषयांची
+                निवड, सातत्यपूर्ण मार्गदर्शन, समुपदेशन आणि भविष्यातील संधींची ओळख करून
+                दिली जाते.
+              </p>
+              <div className="higher-overview-tags">
+                <span>उच्च शिक्षण</span>
+                <span>स्पर्धात्मक परीक्षा</span>
+                <span>करिअर मार्गदर्शन</span>
+                <span>सहशालेय उपक्रम</span>
+              </div>
+              <strong>माध्यमिक व उच्च माध्यमिक विभागाचे प्राचार्य : प्राचार्य शिवले जे. के.</strong>
+            </article>
+
+            <article className="higher-overview-card higher-overview-english">
+              <span className="higher-overview-language">English</span>
+              <h3>Guidance for higher education and future careers</h3>
+              <p>
+                The Higher Secondary Section focuses on preparing students for higher
+                education, competitive examinations and future career opportunities
+                through quality education and guidance.
+              </p>
+              <p>
+                Academic counselling, career guidance and various educational and
+                co-curricular activities are conducted to help students identify and
+                develop their interests and abilities.
+              </p>
+              <strong>Principal – Secondary &amp; Higher Secondary Section: J. K. Shivle</strong>
+            </article>
           </div>
         </div>
       </section>
@@ -919,6 +960,114 @@ const HigherSecondaryPage = () => {
 
           .cta-box {
             padding: 50px 20px;
+          }
+        }
+
+        .higher-overview-section {
+          background: #fff8df;
+          border-top: 1px solid #eadbd5;
+          border-bottom: 1px solid #eadbd5;
+        }
+
+        .higher-overview-heading {
+          max-width: 880px;
+          margin: 0 auto 2.8rem;
+          text-align: center;
+        }
+
+        .higher-overview-heading > span {
+          display: inline-block;
+          padding: 8px 18px;
+          color: #fff;
+          background: #6d1e1e;
+          border-radius: 30px;
+          font-size: 14px;
+          font-weight: 700;
+        }
+
+        .higher-overview-heading h2 {
+          margin: 1rem 0;
+          color: #321b14;
+          font-size: clamp(2rem, 4vw, 3.4rem);
+          line-height: 1.15;
+        }
+
+        .higher-overview-heading p,
+        .higher-overview-card p {
+          color: #5b6876;
+          line-height: 1.8;
+        }
+
+        .higher-overview-notice {
+          color: #e64b27 !important;
+          font-weight: 800;
+        }
+
+        .higher-overview-grid {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 1.25rem;
+        }
+
+        .higher-overview-card {
+          padding: 2rem;
+          background: #fff;
+          border: 1px solid #eadbd5;
+          border-top: 4px solid #e64b27;
+          box-shadow: 0 12px 28px rgba(50, 27, 20, 0.08);
+        }
+
+        .higher-overview-language {
+          color: #e64b27;
+          font-size: 0.78rem;
+          font-weight: 800;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+        }
+
+        .higher-overview-card h3 {
+          margin: 0.6rem 0 1rem;
+          color: #321b14;
+          font-size: 1.35rem;
+          line-height: 1.35;
+        }
+
+        .higher-overview-card p {
+          margin: 0 0 1rem;
+        }
+
+        .higher-overview-card strong {
+          display: block;
+          margin-top: 1.25rem;
+          color: #6d1e1e;
+          line-height: 1.6;
+        }
+
+        .higher-overview-tags {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.6rem;
+          margin-top: 1.3rem;
+        }
+
+        .higher-overview-tags span {
+          padding: 0.6rem 0.75rem;
+          color: #6d1e1e;
+          background: #fff8df;
+          border-left: 3px solid #f28c28;
+          font-size: 0.86rem;
+          font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+          .higher-overview-grid {
+            grid-template-columns: 1fr;
+          }
+        }
+
+        @media (max-width: 500px) {
+          .higher-overview-card {
+            padding: 1.35rem;
           }
         }
       `}</style>

@@ -4,8 +4,45 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    overflow-x: hidden;
+  }
+
   body {
     @apply bg-white text-gray-800 font-sans;
+    min-width: 320px;
+    overflow-x: hidden;
+    overflow-wrap: anywhere;
+  }
+
+  img,
+  video,
+  canvas,
+  svg {
+    max-width: 100%;
+  }
+
+  button,
+  a,
+  input,
+  select,
+  textarea {
+    max-width: 100%;
+  }
+
+  table {
+    max-width: 100%;
+  }
+
+  main,
+  section,
+  article,
+  aside,
+  header,
+  footer,
+  nav,
+  div {
+    min-width: 0;
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -32,5 +69,29 @@
   
   .ql-editor blockquote {
     @apply border-l-4 border-gray-300 pl-4 my-4 italic;
+  }
+}
+
+@media (max-width: 768px) {
+  .container,
+  .dropdown-container,
+  .primary-container {
+    width: min(100% - 2rem, 1280px);
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 480px) {
+  .container,
+  .dropdown-container,
+  .primary-container {
+    width: min(100% - 1.25rem, 1280px);
   }
 }

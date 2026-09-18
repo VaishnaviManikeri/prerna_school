@@ -1,8 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Footer.css';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   return (
     <footer className="footer">
@@ -27,25 +31,25 @@ const Footer = () => {
           <div className="footer-column">
             <h4 className="footer-heading">Quick Links</h4>
             <ul className="footer-links">
-              <li><a href="/home">Home</a></li>
-              <li><a href="/about">About Us</a></li>
-              <li><a href="/about/mission-vision">Mission & Vision</a></li>
-              <li><a href="/academics/primary">Academics</a></li>
-              <li><a href="/admissions">Admissions 2026</a></li>
-              <li><a href="/gallery">Gallery</a></li>
-              <li><a href="/contact">Contact Us</a></li>
+              <li><Link to="/" onClick={scrollToTop}>Home</Link></li>
+              <li><Link to="/about" onClick={scrollToTop}>About Us</Link></li>
+              <li><Link to="/about/mission-vision" onClick={scrollToTop}>Mission & Vision</Link></li>
+              <li><Link to="/academics/primary" onClick={scrollToTop}>Academics</Link></li>
+              <li><Link to="/admissions" onClick={scrollToTop}>Admissions 2026</Link></li>
+              <li><Link to="/gallery" onClick={scrollToTop}>Gallery</Link></li>
+              <li><Link to="/contact" onClick={scrollToTop}>Contact Us</Link></li>
             </ul>
           </div>
 
           <div className="footer-column">
             <h4 className="footer-heading">Student Corner</h4>
             <ul className="footer-links">
-              <li><a href="/student/study-material">Study Material</a></li>
-              <li><a href="/student/result">Results</a></li>
-              <li><a href="/student/timetable">Time Table</a></li>
-              <li><a href="/student/library">Library</a></li>
-              <li><a href="/student/sports">Sports & Activities</a></li>
-              <li><a href="/student/scholarship">Scholarships</a></li>
+              <li><Link to="/student/study-material" onClick={scrollToTop}>Study Material</Link></li>
+              <li><Link to="/student/result" onClick={scrollToTop}>Results</Link></li>
+              <li><Link to="/student/timetable" onClick={scrollToTop}>Time Table</Link></li>
+              <li><Link to="/student/library" onClick={scrollToTop}>Library</Link></li>
+              <li><Link to="/student/sports" onClick={scrollToTop}>Sports & Activities</Link></li>
+              <li><Link to="/student/scholarship" onClick={scrollToTop}>Scholarships</Link></li>
             </ul>
           </div>
 
@@ -73,12 +77,12 @@ const Footer = () => {
 
       <div className="footer-bottom">
         <div className="footer-bottom-container">
-          <p>© {currentYear} Trijja Media Works. All rights reserved.</p>
+          <p>© {currentYear} <a href="https://unseenstudios.co.in/" target="_blank" rel="noreferrer">Unseen Studios</a>. All rights reserved.</p>
           <div className="footer-bottom-links">
-            <a href="/about/overview">About</a>
-            <a href="/notices/latest-notices">Notices</a>
-            <a href="/student/result">Parent Portal</a>
-            <a href="#alumni">Alumni</a>
+            <Link to="/about/overview" onClick={scrollToTop}>About</Link>
+            <Link to="/notices/latest-notices" onClick={scrollToTop}>Notices</Link>
+            <Link to="/student/result" onClick={scrollToTop}>Parent Portal</Link>
+            <a href="#alumni" onClick={scrollToTop}>Alumni</a>
           </div>
         </div>
       </div>

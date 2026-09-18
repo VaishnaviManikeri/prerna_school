@@ -40,6 +40,17 @@ const gallery = [
   { image: '/assets/images/schoolcel.png', label: 'School Celebrations' },
 ];
 
+const primarySubjects = [
+  'मराठी | Marathi',
+  'इंग्रजी | English',
+  'गणित | Mathematics',
+  'परिसर अभ्यास | Environmental Studies',
+  'हिंदी | Hindi',
+  'कला व कार्यानुभव | Art & Work Education',
+  'शारीरिक शिक्षण | Physical Education',
+  'संगणक व डिजिटल शिक्षण | Computer & Digital Learning',
+];
+
 const PrimaryPage = () => (
   <div className="primary-school-page">
     <section className="primary-hero">
@@ -62,6 +73,56 @@ const PrimaryPage = () => (
           <h2>A Strong Beginning to Every Child’s Learning Journey</h2>
           <p>Primary education plays an important role in shaping a child’s academic and personal development. At Prerana, our focus is on helping children understand fundamental concepts while encouraging curiosity, communication, creativity, and independent thinking.</p>
           <p>We strive to create a learning environment where students feel encouraged to learn, explore, participate, and grow at their own pace.</p>
+        </div>
+      </div>
+    </section>
+
+    <section className="primary-section-overview" id="primary-section-overview">
+      <div className="primary-container">
+        <div className="primary-overview-heading">
+          <span className="primary-label">Primary Section | प्राथमिक विभाग</span>
+          <h2>इयत्ता १ ली ते ४ थी</h2>
+          <p className="primary-overview-lead">
+            प्राथमिक विभागामध्ये विद्यार्थ्यांचा शैक्षणिक पाया भक्कम करण्यासोबतच
+            त्यांच्या जिज्ञासा, सर्जनशीलता, भाषिक कौशल्ये, गणितीय विचारशक्ती,
+            वैज्ञानिक दृष्टिकोन आणि सामाजिक जाणीव विकसित करण्यावर भर दिला जातो.
+          </p>
+        </div>
+
+        <div className="primary-overview-grid">
+          <article className="primary-overview-card primary-overview-marathi">
+            <span className="primary-overview-language">मराठी</span>
+            <h3>प्रमुख विषय</h3>
+            <div className="primary-subject-list">
+              {primarySubjects.map((subject) => <span key={subject}>{subject}</span>)}
+            </div>
+            <p>
+              अध्यापनामध्ये कृतीआधारित, अनुभवाधारित आणि आनंददायी शिक्षणपद्धती,
+              गटकार्य, शैक्षणिक खेळ, प्रात्यक्षिके आणि डिजिटल साधनांचा वापर केला जातो.
+            </p>
+            <strong>प्राथमिक विभागाचे मुख्याध्यापक : श्री. एम. डी. पवार</strong>
+          </article>
+
+          <article className="primary-overview-card primary-overview-english">
+            <span className="primary-overview-language">English</span>
+            <h3>Primary learning at a glance</h3>
+            <p>
+              The Primary Section focuses on developing strong academic foundations
+              along with curiosity, creativity, language skills, mathematical thinking,
+              scientific temperament and social awareness.
+            </p>
+            <p>
+              Major subjects include Marathi, English, Mathematics, Environmental
+              Studies, Hindi, Art &amp; Work Education and Physical Education, along
+              with computer and digital learning.
+            </p>
+            <p>
+              The teaching-learning process includes activity-based, experiential and
+              joyful learning, group activities, educational games, demonstrations and
+              digital resources.
+            </p>
+            <strong>Headmaster, Primary Section: Mr. M. D. Pawar</strong>
+          </article>
         </div>
       </div>
     </section>

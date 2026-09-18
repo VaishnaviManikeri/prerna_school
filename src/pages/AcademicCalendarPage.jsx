@@ -38,6 +38,13 @@ const AcademicCalendarPage = () => {
     { name: 'Maharashtra Day', date: '1st May', icon: 'M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z', color: '#8a5a44' }
   ];
 
+  const annualActivities = [
+    'संस्कार वर्ग', 'सांस्कृतिक कार्यक्रम', 'क्रीडा स्पर्धा', 'विज्ञान प्रदर्शन',
+    'इन्स्पायर अवॉर्ड', 'आरोग्य शिबिरे', 'आपत्ती व्यवस्थापन', 'पर्यावरण संवर्धन',
+    'पर्यावरणपूरक गणेशोत्सव', 'सामाजिक जनजागृती', 'समुपदेशन', 'विविध दिनविशेष',
+    'पालक-शिक्षक संवाद', 'सहशालेय उपक्रम'
+  ];
+
   // SVG Icon Components
   const CalendarIcon = () => (
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -112,10 +119,6 @@ const AcademicCalendarPage = () => {
                 </div>
               ))}
             </div>
-            <div className="hero-buttons">
-              <button className="primary-btn">Download Calendar <ArrowIcon /></button>
-              <button className="secondary-btn">Subscribe Updates</button>
-            </div>
           </div>
           <div className="hero-image-wrapper">
             <div className="hero-image">
@@ -152,6 +155,30 @@ const AcademicCalendarPage = () => {
               <h3>Working Days</h3>
               <p><strong>Total Working Days:</strong> 220+ Days</p>
               <p><strong>Teaching Days:</strong> 200+ Days</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="calendar-overview-section">
+        <div className="container">
+          <div className="calendar-overview-grid">
+            <div className="calendar-overview-copy">
+              <span className="section-tag">Academic Calendar | शैक्षणिक दिनदर्शिका</span>
+              <h2>नियोजन, सातत्य आणि सर्वांगीण विकास.</h2>
+              <p>
+                शैक्षणिक वर्षाचे नियोजन शासन व महाराष्ट्र राज्य मंडळाच्या मार्गदर्शक
+                सूचनांनुसार केले जाते. शासनाच्या परिपत्रकानुसार सर्व सुट्ट्या पाळल्या जातात.
+              </p>
+              <p>
+                वर्षभरामध्ये विविध शैक्षणिक, सांस्कृतिक, क्रीडा व सामाजिक उपक्रम राबविले जातात.
+              </p>
+            </div>
+            <div className="calendar-activities-card">
+              <h3>प्रमुख उपक्रम</h3>
+              <div className="calendar-activity-list">
+                {annualActivities.map((activity) => <span key={activity}>{activity}</span>)}
+              </div>
             </div>
           </div>
         </div>
@@ -569,6 +596,72 @@ const AcademicCalendarPage = () => {
           line-height: 1.6;
         }
 
+        .calendar-overview-section {
+          background: #fff8df;
+          border-top: 1px solid #eadbd5;
+          border-bottom: 1px solid #eadbd5;
+        }
+
+        .calendar-overview-grid {
+          display: grid;
+          grid-template-columns: 0.9fr 1.1fr;
+          gap: 2rem;
+          align-items: center;
+        }
+
+        .calendar-overview-copy h2 {
+          margin: 0.8rem 0 1rem;
+          color: #321b14;
+          font-size: clamp(2rem, 4vw, 3.2rem);
+          line-height: 1.15;
+        }
+
+        .calendar-overview-copy p {
+          color: #5b6876;
+          line-height: 1.8;
+        }
+
+        .calendar-activities-card {
+          padding: 2rem;
+          background: #fff;
+          border: 1px solid #eadbd5;
+          border-top: 4px solid #e64b27;
+          box-shadow: 0 12px 28px rgba(50, 27, 20, 0.08);
+        }
+
+        .calendar-activities-card h3 {
+          margin: 0 0 1.2rem;
+          color: #321b14;
+          font-size: 1.4rem;
+        }
+
+        .calendar-activity-list {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.65rem;
+        }
+
+        .calendar-activity-list span {
+          padding: 0.62rem 0.75rem;
+          color: #6d1e1e;
+          background: #fff8df;
+          border-left: 3px solid #f28c28;
+          font-size: 0.86rem;
+          font-weight: 600;
+        }
+
+        @media (max-width: 760px) {
+          .calendar-overview-grid {
+            grid-template-columns: 1fr;
+          }
+        }
+
+        @media (max-width: 500px) {
+          .calendar-activities-card {
+            padding: 1.35rem;
+          }
+        }
+
         /* Calendar Section */
         .calendar-section {
           background: white;
@@ -650,6 +743,13 @@ const AcademicCalendarPage = () => {
         .holidays-section .section-header h2,
         .holidays-section .section-header p {
           color: white;
+        }
+
+        .holidays-section .section-header h2 .gradient-text {
+          color: white;
+          background: none;
+          -webkit-background-clip: initial;
+          background-clip: initial;
         }
 
         .holidays-section .section-tag {

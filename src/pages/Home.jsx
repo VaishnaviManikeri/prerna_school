@@ -190,6 +190,20 @@ const Home = () => {
           </div>
         </section>
 
+        <section className="institution-message home-reveal" aria-labelledby="institution-message-title">
+          <div className="container institution-message-inner">
+            <span className="institution-message-kicker">Prerana Shikshan Sanstha</span>
+            <h2 id="institution-message-title">“विद्या धनं श्रेष्ठम्”</h2>
+            <p className="institution-message-motto">ज्ञानातून प्रगती <i>•</i> संस्कारातून व्यक्तिमत्त्व <i>•</i> शिक्षणातून समाजनिर्मिती</p>
+            <div className="institution-message-points">
+              <span>१९८१ पासून शिक्षणाची अखंड प्रेरणायात्रा…</span>
+              <span>२५,०००+ विद्यार्थ्यांच्या उज्ज्वल भविष्याची साक्ष…</span>
+              <span>परंपरेचा वारसा, आधुनिकतेची साथ आणि भविष्याची दृष्टी…</span>
+            </div>
+            <strong>हीच प्रेरणा शिक्षण संस्था!</strong>
+          </div>
+        </section>
+
         {/* Quick Links Section */}
         <section className="quick-links home-reveal">
           <div className="container">
@@ -222,22 +236,24 @@ const Home = () => {
         <section className="about-section home-reveal" id="about">
           <div className="container">
             <div className="about-grid">
-              <div className="about-text">
+              <div className="about-text about-story">
                 <span className="section-badge">About Us</span>
-                <h2>Welcome to <span className="highlight">प्रेरणा शिक्षण संस्था</span></h2>
-                <p>Established in 2005, प्रेरणा शिक्षण संस्था is a premier institution in Thergaon, Pune, dedicated to nurturing young minds with academic excellence, moral values, and 21st-century skills. Our mission is to create lifelong learners and responsible citizens.</p>
-                <p>With a sprawling campus, modern facilities, and experienced faculty, we ensure every child receives personalized attention. Our student-centric approach blends traditional wisdom with innovative teaching methodologies.</p>
-                <div className="about-stats">
-                  <div><span>20+</span> Years Legacy</div>
-                  <div><span>5000+</span> Alumni</div>
-                  <div><span>100%</span> Result</div>
+                <h2>संस्थेची ओळख | <span className="highlight">About Prerana Shikshan Sanstha</span></h2>
+                <p>प्रेरणा शिक्षण संस्था ही शिक्षण, संस्कार आणि सामाजिक बांधिलकी यांचा सुंदर समन्वय साधणारी शैक्षणिक संस्था आहे.</p>
+                <p>परिसरातील सर्वसामान्य कुटुंबातील मुला-मुलींना दर्जेदार शिक्षणाची संधी मिळावी, या हेतूने संस्थापक अध्यक्ष माननीय तुकारामभाऊ लक्ष्मणराव गुजर यांनी आपल्या वडिलांच्या कै. लक्ष्मणराव बापू गुजर यांच्या स्मरणार्थ १ एप्रिल १९८१ रोजी प्रेरणा शिक्षण संस्थेची स्थापना केली.</p>
+                <p>“विद्या धनं श्रेष्ठम्” हे ब्रीदवाक्य घेऊन सुरू झालेल्या या प्रवासातून आजपर्यंत २५,००० हून अधिक विद्यार्थी घडले आहेत. माजी विद्यार्थी देश-विदेशात अधिकारी, डॉक्टर, वकील, चार्टर्ड अकाउंटंट, आर्किटेक्ट, कलाकार, खेळाडू, उद्योजक आणि विविध सामाजिक क्षेत्रांत कार्यरत आहेत.</p>
+                <p>आज संस्थेची धुरा मानद सचिव श्री. कांतीलाल तुकारामभाऊ गुजर यांच्या नेतृत्वाखाली पुढे जात आहे. विश्वस्त शालिनीताई गुजर तसेच अक्षय गुजर आणि ॲड. आकाश गुजर यांच्या सहभागातून संस्थेच्या शैक्षणिक व सामाजिक कार्याला नवी दिशा मिळत आहे.</p>
+                <p>परंपरेचा वारसा, वर्तमानाची गुणवत्ता आणि भविष्याची दृष्टी या त्रिसूत्रीच्या माध्यमातून प्रेरणा शिक्षण संस्था सातत्याने प्रगतीची वाटचाल करीत आहे.</p>
+                <div className="about-stats about-story-stats">
+                  <div><span>1981</span><small>Established</small></div>
+                  <div><span>25,000+</span><small>Students</small></div>
+                  <div><span>5</span><small>Schools</small></div>
                 </div>
-                <button className="read-more-btn">Read More <FaArrowRight /></button>
               </div>
-              <div className="about-img">
-                <img src="/assets/images/i1.png" alt="School Building - प्रेरणा शिक्षण संस्था Campus" />
+              <div className="about-img about-slider" aria-label="Prerana campus image slider">
+                <img src="/assets/images/i1.png" alt="Prerana Shikshan Sanstha campus" />
                 <div className="about-image-card">
-                  <span>Since 2005</span>
+                  <span>Since 1981</span>
                   <strong>Education that inspires curiosity, confidence, and lifelong growth.</strong>
                 </div>
               </div>
@@ -352,23 +368,6 @@ const Home = () => {
               <Link to="/gallery" className="cta-btn primary">
                 <FaImages /> Explore Full Gallery
               </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* Principal Message - Image Left, Content Right */}
-        <section className="principal-section home-reveal">
-          <div className="container">
-            <div className="principal-card">
-              <div className="principal-image-wrapper">
-                <img src="/assets/m/principle.png" alt="Principal Vandana Joshi - प्रेरणा शिक्षण संस्था" loading="lazy" />
-              </div>
-              <div className="principal-msg">
-                <FaQuoteLeft className="quote-icon" />
-                <p>At प्रेरणा शिक्षण संस्था, we believe every child has unique potential. Our dedicated team works tirelessly to create a nurturing environment where curiosity thrives and excellence becomes a habit. Join us on this beautiful journey of learning.</p>
-                <h4>Mrs. Vandana Joshi</h4>
-                <span>Principal, Prerna Shikshan Sanstha</span>
-              </div>
             </div>
           </div>
         </section>

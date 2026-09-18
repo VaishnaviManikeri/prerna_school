@@ -664,14 +664,34 @@
   border-radius: 12px;
   cursor: pointer;
   width: 100%;
+  min-height: 58px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
   transition: all 0.3s ease;
   margin-top: 16px;
+}
+
+.submit-btn svg {
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
+  padding: 4px;
+  color: #E67E22;
+  background: #fff;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
 }
 
 .submit-btn:hover {
   background: #D35400;
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(230, 126, 34, 0.3);
+}
+
+.submit-btn:hover svg {
+  transform: translateX(3px);
 }
 
 /* ==================== Footer ==================== */

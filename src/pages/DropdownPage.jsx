@@ -187,17 +187,17 @@ const pageContent = {
       label: 'Study Material',
       title: 'Learning resources for steady academic progress.',
       image: '/assets/images/h1.png',
-      lead: 'Study material supports classroom learning with notes, worksheets, practice questions, and revision guidance.',
-      details: ['Students can use these resources to revise important topics and prepare for assessments.', 'Teachers may share subject-wise support material based on class needs.'],
-      highlights: ['Notes', 'Worksheets', 'Practice sets', 'Revision guidance'],
+      lead: 'विद्यार्थ्यांना पाठ्यपुस्तके, संदर्भ साहित्य, सराव प्रश्नपत्रिका, प्रकल्प, उपक्रम, डिजिटल अध्ययन साहित्य आणि शिक्षकांचे मार्गदर्शन उपलब्ध करून दिले जाते.',
+      details: ['Study material supports classroom learning with notes, worksheets, practice questions, projects, activities, digital resources, and teacher guidance.', 'Students can use these resources to revise important topics and prepare for assessments.'],
+      highlights: ['पाठ्यपुस्तके', 'संदर्भ साहित्य', 'सराव प्रश्नपत्रिका', 'प्रकल्प व उपक्रम', 'डिजिटल अध्ययन साहित्य', 'शिक्षकांचे मार्गदर्शन'],
     },
     result: {
       label: 'Results',
-      title: 'Clear academic feedback for students and parents.',
+      title: 'Results | निकाल',
       image: '/assets/images/h2.png',
-      lead: 'The results section supports transparent communication about student performance and progress.',
-      details: ['Assessment outcomes help identify strengths and areas needing improvement.', 'Teachers and parents can work together to support each student after results are shared.'],
-      highlights: ['Exam results', 'Progress tracking', 'Teacher feedback', 'Parent support'],
+      lead: 'प्रेरणा शिक्षण संस्थेच्या विद्यार्थ्यांनी शैक्षणिक क्षेत्रात उल्लेखनीय कामगिरी केली आहे.',
+      details: ['The results section supports transparent communication about student performance and progress.', 'Assessment outcomes help identify strengths and areas needing improvement. Teachers and parents can work together to support each student after results are shared.'],
+      highlights: ['शैक्षणिक कामगिरी', 'निकाल व प्रगती', 'शिक्षकांचे मार्गदर्शन', 'पालकांचा सहभाग'],
     },
     timetable: {
       label: 'Time Table',
@@ -208,28 +208,28 @@ const pageContent = {
       highlights: ['Class schedule', 'Subject balance', 'Exam timing', 'Daily discipline'],
     },
     library: {
-      label: 'Library',
-      title: 'A reading culture for knowledge and imagination.',
+      label: 'Library | ग्रंथालय',
+      title: 'वाचन संस्कृती, स्व-अध्ययन आणि ज्ञानाची आवड.',
       image: '/assets/images/h4.png',
-      lead: 'The library encourages students to read beyond textbooks and build language, curiosity, and research skills.',
-      details: ['Students are guided to use books and reference material for assignments, projects, and independent reading.', 'Reading habits strengthen vocabulary, confidence, and comprehension.'],
-      highlights: ['Reference books', 'Story reading', 'Project support', 'Language growth'],
+      lead: 'शाळेच्या ग्रंथालयामध्ये कथा, कादंबऱ्या, चरित्रे, संदर्भग्रंथ, सामान्यज्ञान, विज्ञान व विविध विषयांवरील शैक्षणिक साहित्य उपलब्ध आहे.',
+      details: ['वाचन संस्कृती, स्व-अध्ययन, चिंतनशीलता आणि ज्ञानाची आवड विद्यार्थ्यांमध्ये निर्माण करण्यावर विशेष भर दिला जातो.', 'The library also supports independent reading, assignments, projects, language development, and learning beyond textbooks.'],
+      highlights: ['कथा व कादंबऱ्या', 'चरित्रे', 'संदर्भग्रंथ', 'सामान्यज्ञान', 'विज्ञान साहित्य', 'शैक्षणिक साहित्य'],
     },
     sports: {
-      label: 'Sports & Activities',
-      title: 'Confidence, fitness, teamwork, and leadership.',
+      label: 'Sports & Activities | क्रीडा व उपक्रम',
+      title: 'शारीरिक व मानसिक विकासासाठी क्रीडा आणि उपक्रम.',
       image: '/assets/images/h1.png',
-      lead: 'Sports and activities help students develop discipline, teamwork, stamina, and a healthy competitive spirit.',
-      details: ['Students are encouraged to participate in games, fitness activities, competitions, and house events.', 'Activities also support confidence, communication, creativity, and leadership.'],
-      highlights: ['Fitness', 'Teamwork', 'Competitions', 'Leadership'],
+      lead: 'विद्यार्थ्यांच्या शारीरिक व मानसिक विकासासाठी क्रीडेला विशेष महत्त्व दिले जाते.',
+      details: ['थेरगाव येथील विद्यालयात संस्थेने विद्यार्थ्यांसाठी अत्याधुनिक टर्फ मैदान उपलब्ध करून दिले आहे. याशिवाय प्रशस्त क्रीडांगण व विविध क्रीडा साधने उपलब्ध आहेत.', 'विद्यार्थ्यांसाठी विविध क्रीडा स्पर्धा, सांस्कृतिक कार्यक्रम, वक्तृत्व, कला, विज्ञान, पर्यावरण आणि सामाजिक उपक्रम आयोजित केले जातात.'],
+      highlights: ['अत्याधुनिक Turf Ground', 'प्रशस्त क्रीडांगण', 'क्रीडा साधने', 'क्रीडा स्पर्धा', 'सांस्कृतिक कार्यक्रम', 'वक्तृत्व, कला व विज्ञान', 'पर्यावरण व सामाजिक उपक्रम'],
     },
     scholarship: {
-      label: 'Scholarships',
-      title: 'Encouraging merit, effort, and opportunity.',
+      label: 'Scholarships | शिष्यवृत्ती',
+      title: 'शैक्षणिक सहाय्य आणि संधींबाबत मार्गदर्शन.',
       image: '/assets/images/h2.png',
-      lead: 'Scholarship guidance helps deserving students and families explore available support opportunities.',
-      details: ['Students may receive guidance for government, merit-based, or institution-supported scholarship processes where applicable.', 'The school encourages sincere effort and academic consistency.'],
-      highlights: ['Merit support', 'Application guidance', 'Student encouragement', 'Academic motivation'],
+      lead: 'शासनाच्या विविध शिष्यवृत्ती योजना व शैक्षणिक सहाय्य योजनांची माहिती पात्र विद्यार्थ्यांना दिली जाते.',
+      details: ['अर्ज प्रक्रिया, पात्रता व आवश्यक कागदपत्रांबाबत विद्यार्थ्यांना व पालकांना मार्गदर्शन केले जाते.', 'Eligible students and families can receive guidance about government, merit-based, and educational assistance schemes.'],
+      highlights: ['शासकीय शिष्यवृत्ती योजना', 'शैक्षणिक सहाय्य योजना', 'अर्ज प्रक्रिया', 'पात्रता मार्गदर्शन', 'आवश्यक कागदपत्रे', 'पालकांचे मार्गदर्शन'],
     },
   },
   notices: {
@@ -267,6 +267,14 @@ const pageContent = {
     },
   },
   facilities: {
+    overview: {
+      label: 'Facilities | आधुनिक सुविधा',
+      title: 'थेरगाव परिसरातील विद्यालयाच्या आधुनिक सुविधा.',
+      image: '/assets/images/i1.png',
+      lead: 'थेरगाव परिसरातील विद्यालयामध्ये विद्यार्थ्यांना ज्ञान, तंत्रज्ञान, प्रयोगशीलता आणि क्रीडा यांचा प्रत्यक्ष अनुभव देणाऱ्या विविध आधुनिक सुविधा उपलब्ध आहेत.',
+      details: ['प्रशस्त व सुसज्ज इमारत, अत्याधुनिक टर्फ मैदान, प्रशस्त क्रीडांगण, दोन संगणक प्रयोगशाळा, STEM Lab, तीन Digital Classrooms आणि स्वतंत्र कार्यक्रम सभागृह उपलब्ध आहे.', 'ग्रंथालय, क्रीडा साहित्य, डिजिटल शिक्षण सुविधा, आरोग्यविषयक सुविधा व उपक्रम, आपत्ती व्यवस्थापन प्रशिक्षण आणि पर्यावरणपूरक उपक्रमांमुळे विद्यार्थ्यांचा सर्वांगीण विकास साधला जातो.'],
+      highlights: ['प्रशस्त व सुसज्ज इमारत', 'अत्याधुनिक Turf Ground', 'प्रशस्त क्रीडांगण', 'दोन संगणक प्रयोगशाळा', 'STEM Lab', 'तीन Digital Classrooms', 'स्वतंत्र कार्यक्रम सभागृह', 'ग्रंथालय', 'क्रीडा साहित्य', 'डिजिटल शिक्षण सुविधा', 'आरोग्यविषयक सुविधा', 'आपत्ती व्यवस्थापन प्रशिक्षण', 'पर्यावरणपूरक उपक्रम'],
+    },
     'smart-class': {
       label: 'Smart Classes',
       title: 'Interactive classrooms for modern learning.',
@@ -367,19 +375,28 @@ const DropdownPage = () => {
             </aside>
 
             <article className="principal-letter">
-              <span className="principal-letter-kicker">Dear Parents, Students and Well-Wishers,</span>
-              <p>It gives me immense pleasure to welcome you to <strong>प्रेरणा शिक्षण संस्था – Prerana Primary, Secondary &amp; Tukaram Gujar Jr. College, Laxminagar, Thergaon, Pune – 33.</strong></p>
-              <p>At Prerana, we believe that education is not merely about academic achievement; it is about nurturing responsible, confident, compassionate, and capable individuals who are prepared to face the opportunities and challenges of the future.</p>
-              <p>Our aim is to provide every student with a supportive and inspiring learning environment where they can discover their potential, develop curiosity, build strong values, and grow academically as well as personally. We encourage our students to participate actively in academics, sports, cultural activities, and other co-curricular opportunities that contribute to their overall development.</p>
-              <p>Our dedicated teachers play an important role in this journey by guiding students with knowledge, care, discipline, and encouragement. We also strongly believe that a meaningful partnership between <strong>students, teachers, parents, and the institution</strong> is essential for a child’s success.</p>
-              <p>As we continue to grow, our commitment remains to provide <strong>quality education rooted in strong values while embracing modern learning methods and technology.</strong> We want our students not only to succeed in examinations but also to become thoughtful, responsible citizens who contribute positively to society.</p>
-              <p>I extend my sincere gratitude to our parents for their trust and cooperation, to our teachers and staff for their dedication, and to our students for making our institution proud.</p>
-              <p className="principal-closing-line"><strong>Together, let us continue to learn, grow, and inspire.</strong></p>
+              <span className="principal-letter-kicker">Principal's Message | प्राचार्यांचा संदेश</span>
+              <h2>मराठी</h2>
+              <p>“प्रिय विद्यार्थी, पालक आणि हितचिंतक,</p>
+              <p>प्रेरणा शिक्षण संस्था ही केवळ शिक्षण देणारी संस्था नसून ज्ञानासोबत संस्कार, कौशल्यासोबत आत्मविश्वास आणि शिक्षणासोबत सामाजिक बांधिलकी निर्माण करणारी संस्था आहे.</p>
+              <p>संस्थापक तुकारामभाऊ गुजर यांनी १ एप्रिल १९८१ रोजी लावलेल्या शिक्षणाच्या या रोपट्याचे आज एका विशाल वटवृक्षात रूपांतर झाले आहे. या संस्थेतून शिक्षण घेतलेले २५,००० हून अधिक विद्यार्थी आज विविध क्षेत्रांत आपल्या कर्तृत्वाचा ठसा उमटवत आहेत, ही आमच्यासाठी अभिमानाची बाब आहे.</p>
+              <p>आजच्या तंत्रज्ञानाच्या युगात विद्यार्थ्यांनी केवळ परीक्षेत यश मिळविणे पुरेसे नाही. त्यांनी ज्ञानसंपन्न, संस्कारक्षम, तंत्रज्ञानस्नेही, सर्जनशील, संवेदनशील आणि जबाबदार नागरिक म्हणून घडणे आवश्यक आहे.</p>
+              <p>याच उद्देशाने आमच्या विद्यालयांमध्ये आधुनिक तंत्रज्ञान, डिजिटल क्लासरूम, संगणक प्रयोगशाळा, STEM Lab, क्रीडा सुविधा आणि विविध सहशालेय उपक्रमांच्या माध्यमातून विद्यार्थ्यांच्या सर्वांगीण विकासासाठी सातत्याने प्रयत्न केले जात आहेत.</p>
+              <p>‘विद्या धनं श्रेष्ठम्’ या संस्थेच्या ब्रीदवाक्याला केंद्रस्थानी ठेवून प्रत्येक विद्यार्थ्याला आपल्या आयुष्यात यशस्वी होण्यासाठी योग्य दिशा, संधी आणि संस्कार देणे हे आमचे ध्येय आहे.”</p>
+              <p className="principal-closing-line"><strong>शुभेच्छांसह,</strong></p>
+              <h2>Principal's Message | English</h2>
+              <p>“Dear Students, Parents and Well-wishers,</p>
+              <p>Prerana Shikshan Sanstha is not merely an institution that imparts education; it strives to create a meaningful blend of knowledge and values, skills and confidence, and education and social responsibility.</p>
+              <p>The educational journey initiated by the Founder President, Hon. Tukaram Bhau Gujar, on 1 April 1981 has grown into a strong and inspiring institution. More than 25,000 students have been educated through our schools and are now contributing successfully to various fields in India and abroad.</p>
+              <p>In today's technology-driven world, academic success alone is not enough. Students must grow into knowledgeable, value-oriented, technology-enabled, creative, sensitive and responsible citizens.</p>
+              <p>With this vision, our schools continuously provide opportunities for holistic development through digital classrooms, computer laboratories, STEM education, sports facilities and diverse co-curricular activities.</p>
+              <p>Guided by our motto ‘Vidya Dhanam Shreshtham’ – Knowledge is the Greatest Wealth, we strive to provide every student with the right direction, opportunities and values to succeed in life.”</p>
               <div className="principal-signature">
-                <span>Warm Regards,</span>
-                <strong>Principal</strong>
-                <span>Prerana Primary, Secondary &amp; Tukaram Gujar Jr. College</span>
-                <span>Laxminagar, Thergaon, Pune – 33</span>
+                <span>With best wishes,</span>
+                <strong>प्राचार्य शिवले जे. के. | J. K. Shivle</strong>
+                <span>Prerana Highschool &amp; Tukaram Gujar Junior College</span>
+                <span>Secondary &amp; Higher Secondary Section</span>
+                <span>Laxminagar, Thergaon, Pune 411033</span>
               </div>
             </article>
           </div>
@@ -444,10 +461,10 @@ const DropdownPage = () => {
               <div className="vision-mark" aria-hidden="true"><FaGraduationCap /></div>
             </div>
             <div className="vision-copy">
-              <span>Our Vision</span>
-              <h2>Inspiring Minds, Building Character, Shaping the Future</h2>
-              <p>To create a progressive and nurturing educational environment where every student is encouraged to discover their potential, develop strong values, and grow into a confident, responsible, and compassionate citizen.</p>
-              <p>We envision Prerana Shikshan Sanstha as a place where academic excellence goes hand in hand with character building, creativity, discipline, and lifelong learning.</p>
+              <span>Vision | दृष्टी</span>
+              <h2>ज्ञान, संस्कार, कौशल्य आणि सामाजिक बांधिलकी.</h2>
+              <p>“ज्ञान, संस्कार, कौशल्य आणि सामाजिक बांधिलकी यांचा समन्वय साधून सक्षम, संवेदनशील आणि जबाबदार नागरिक घडविणे.”</p>
+              <p>“To nurture capable, sensitive and responsible citizens through a harmonious blend of knowledge, values, skills and social responsibility.”</p>
             </div>
           </div>
         </section>
@@ -455,9 +472,10 @@ const DropdownPage = () => {
         <section className="mission-section">
           <div className="dropdown-container">
             <div className="mission-heading">
-              <span>Our Mission</span>
-              <h2>Quality, inclusive, and value-based education for every learner.</h2>
-              <p>Our mission supports the intellectual, emotional, social, and physical development of every student. We strive to:</p>
+              <span>Mission | ध्येय</span>
+              <h2>गुणवत्तापूर्ण, सर्वसमावेशक आणि सर्वांगीण शिक्षण.</h2>
+              <p>“गुणवत्तापूर्ण व सर्वसमावेशक शिक्षणाच्या माध्यमातून प्रत्येक विद्यार्थ्याच्या सुप्त क्षमतांना वाव देणे, आधुनिक तंत्रज्ञानाचा प्रभावी वापर करणे आणि विद्यार्थ्यांचा शैक्षणिक, सामाजिक, सांस्कृतिक, क्रीडा व नैतिक विकास साधणे.”</p>
+              <p>“To provide quality and inclusive education, nurture the potential of every student, effectively integrate modern technology and promote the academic, social, cultural, physical and moral development of every learner.”</p>
             </div>
             <div className="mission-points-grid">
               {missionPoints.map((point, index) => (
@@ -514,13 +532,11 @@ const DropdownPage = () => {
 
   if (isHistory) {
     const journeyMilestones = [
-      { icon: <FaSchool />, title: 'Foundation of Prerana Shikshan Sanstha', text: "The beginning of the institution's journey with a vision to make meaningful and value-based education accessible to students.", image: '/assets/images/h1.png' },
-      { icon: <FaBookOpen />, title: 'Beginning of Primary Education', text: 'Expansion into foundational education with an emphasis on building strong academic habits, curiosity, confidence, and personal values.', image: '/assets/images/h2.png' },
-      { icon: <FaChalkboardTeacher />, title: 'Growth into Secondary Education', text: 'The institution expanded its educational offerings to guide students through the important years of secondary-school learning.', image: '/assets/images/h3.png' },
-      { icon: <FaGraduationCap />, title: 'Tukaram Gujar Junior College', text: 'A significant step extending the educational journey into junior college and helping learners prepare for higher education and future careers.', image: '/assets/images/h4.png' },
-      { icon: <FaLaptop />, title: 'Development of Campus & Facilities', text: 'Continuous improvement of classrooms, learning resources, laboratories, sports facilities, technology, and student-support infrastructure.', image: '/assets/images/i1.png' },
-      { icon: <FaTrophy />, title: 'Academic & Co-curricular Achievements', text: "Celebrating students' efforts and accomplishments across academics, sports, cultural activities, competitions, and many other fields.", image: '/assets/images/h5.png' },
-      { icon: <FaUsers />, title: 'Prerana Today', text: 'A growing educational community continuing its commitment to knowledge, character, discipline, confidence, and holistic development.', image: '/assets/images/image.png' },
+      { icon: <FaSchool />, title: '१९८१ – प्रेरणेची सुरुवात', text: '१ एप्रिल १९८१ रोजी संस्थापक अध्यक्ष माननीय तुकारामभाऊ लक्ष्मणराव गुजर यांनी आपल्या वडिलांच्या स्मरणार्थ प्रेरणा शिक्षण संस्थेची स्थापना केली.', image: '/assets/images/h1.png' },
+      { icon: <FaUsers />, title: '२५,०००+ विद्यार्थी', text: 'आजपर्यंत २५,००० हून अधिक विद्यार्थ्यांनी संस्थेच्या विविध विद्यालयांमधून शिक्षण घेतले आहे.', image: '/assets/images/h2.png' },
+      { icon: <FaTrophy />, title: 'विविध क्षेत्रांतील यशस्वी माजी विद्यार्थी', text: 'संस्थेचे माजी विद्यार्थी आज देश-विदेशात सरकारी अधिकारी, डॉक्टर, वकील, सीए, आर्किटेक्ट, कलाकार, खेळाडू, उद्योजक आणि विविध व्यावसायिक क्षेत्रांत कार्यरत आहेत.', image: '/assets/images/h3.png' },
+      { icon: <FaLaptop />, title: 'आधुनिक शैक्षणिक सुविधा', text: 'काळानुरूप संस्थेने आधुनिक शिक्षणाचा स्वीकार करून Digital Classrooms, Computer Labs, STEM Lab, Turf Ground आणि विविध आधुनिक शैक्षणिक सुविधा विद्यार्थ्यांसाठी उपलब्ध करून दिल्या आहेत.', image: '/assets/images/i1.png' },
+      { icon: <FaGraduationCap />, title: 'नव्या पिढीचा सहभाग', text: 'कांतीलाल तुकारामभाऊ गुजर, शालिनीताई गुजर, अक्षय गुजर आणि ॲड. आकाश गुजर यांच्या सक्रिय सहभागातून संस्थेची पुढील वाटचाल अधिक सक्षम करण्याचा प्रयत्न सुरू आहे.', image: '/assets/images/h4.png' },
     ];
 
     return (
@@ -536,13 +552,13 @@ const DropdownPage = () => {
         <section className="history-intro">
           <div className="dropdown-container history-intro-layout">
             <div className="history-intro-heading">
-              <span>Our Story</span>
-              <h2>An educational journey shaped by purpose and community.</h2>
+              <span>History &amp; Milestones | इतिहास व महत्त्वाचे टप्पे</span>
+              <h2>परंपरेचा वारसा, वर्तमानाची गुणवत्ता आणि भविष्याची दृष्टी.</h2>
             </div>
             <div className="history-intro-copy">
-              <p>Prerana Shikshan Sanstha has been committed to providing quality education and creating an environment where students can learn, grow, and develop into responsible individuals.</p>
-              <p>Through <strong>Prerana Primary, Secondary &amp; Tukaram Gujar Jr. College</strong>, the institution supports students through important stages of their educational journey—from foundational learning in the primary years to secondary and junior college education.</p>
-              <p>Located at <strong>Laxminagar, Thergaon, Pune – 33</strong>, the institution continues to work toward academic development while encouraging discipline, values, confidence, creativity, and the overall growth of every student.</p>
+              <p>१ एप्रिल १९८१ रोजी सुरू झालेल्या प्रेरणा शिक्षण संस्थेने आजपर्यंत २५,००० हून अधिक विद्यार्थ्यांना शिक्षणाची आणि विकासाची संधी दिली आहे.</p>
+              <p>माजी विद्यार्थ्यांनी विविध क्षेत्रांत उल्लेखनीय यश मिळविले असून संस्थेने काळानुरूप Digital Classrooms, Computer Labs, STEM Lab, Turf Ground आणि इतर आधुनिक सुविधा उपलब्ध करून दिल्या आहेत.</p>
+              <p>कांतीलाल तुकारामभाऊ गुजर, शालिनीताई गुजर, अक्षय गुजर आणि ॲड. आकाश गुजर यांच्या सक्रिय सहभागातून संस्थेची पुढील वाटचाल अधिक सक्षम करण्याचा प्रयत्न सुरू आहे.</p>
             </div>
           </div>
         </section>
@@ -550,9 +566,9 @@ const DropdownPage = () => {
         <section className="history-milestones">
           <div className="dropdown-container">
             <div className="history-section-heading">
-              <span>Our Milestones</span>
-              <h2>Important chapters in the Prerana journey.</h2>
-              <p>Presented without dates until the institution's historical records are formally verified.</p>
+              <span>Our Milestones | महत्त्वाचे टप्पे</span>
+              <h2>प्रेरणा शिक्षण संस्थेच्या प्रगतीची वाटचाल.</h2>
+              <p>संस्थेच्या इतिहासातील महत्त्वाचे टप्पे आणि पुढील पिढीच्या सहभागातून सुरू असलेली विकासयात्रा.</p>
             </div>
             <div className="journey-timeline">
               {journeyMilestones.map((milestone, index) => (

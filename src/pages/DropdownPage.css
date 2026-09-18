@@ -392,6 +392,19 @@
     flex-direction: column;
     align-items: flex-start;
   }
+
+  .principal-message-aside {
+    position: static;
+  }
+
+  .principal-message-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .principal-quote-card {
+    width: 100%;
+    margin: 1rem 0 0;
+  }
 }
 
 @media screen and (max-width: 560px) {

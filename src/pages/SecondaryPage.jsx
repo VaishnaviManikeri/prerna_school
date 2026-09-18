@@ -86,10 +86,6 @@ const SecondaryPage = () => {
                 </div>
               ))}
             </div>
-            <div className="hero-buttons">
-              <button className="primary-btn">Admission Open <FaArrowRight /></button>
-              <button className="secondary-btn">View Curriculum</button>
-            </div>
           </div>
           <div className="hero-image-wrapper">
             <div className="hero-image">
@@ -102,6 +98,57 @@ const SecondaryPage = () => {
                 <FaUniversity /> SSC Board Preparation
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="secondary-overview-section" id="secondary-section-overview">
+        <div className="container">
+          <div className="secondary-overview-heading">
+            <span className="section-tag">Secondary Section | माध्यमिक विभाग</span>
+            <h2>इयत्ता ५ वी ते १० वी</h2>
+            <p>
+              माध्यमिक विभागामध्ये महाराष्ट्र राज्य मंडळाच्या अभ्यासक्रमानुसार
+              गुणवत्तापूर्ण शिक्षण दिले जाते. विद्यार्थ्यांच्या शैक्षणिक प्रगतीबरोबरच
+              विज्ञाननिष्ठ दृष्टिकोन, तंत्रज्ञानाची ओळख, व्यक्तिमत्त्व विकास, क्रीडा,
+              कला, सांस्कृतिक जाणीव, सामाजिक बांधिलकी आणि जीवनकौशल्ये विकसित करण्यावर भर दिला जातो.
+            </p>
+          </div>
+
+          <div className="secondary-overview-grid">
+            <article className="secondary-overview-card secondary-overview-marathi">
+              <span className="secondary-overview-language">मराठी</span>
+              <h3>गुणवत्तापूर्ण शिक्षण आणि सर्वांगीण विकास</h3>
+              <p>
+                विद्यार्थ्यांसाठी आधुनिक डिजिटल क्लासरूम, दोन संगणक प्रयोगशाळा,
+                STEM Lab, ग्रंथालय, टर्फ मैदान, प्रशस्त क्रीडांगण आणि विविध
+                शैक्षणिक सुविधा उपलब्ध आहेत.
+              </p>
+              <div className="secondary-overview-facilities">
+                <span>Digital Classrooms</span>
+                <span>2 Computer Labs</span>
+                <span>STEM Lab</span>
+                <span>Library</span>
+                <span>Turf Ground</span>
+                <span>Spacious Playground</span>
+              </div>
+            </article>
+
+            <article className="secondary-overview-card secondary-overview-english">
+              <span className="secondary-overview-language">English</span>
+              <h3>Academic excellence with meaningful growth</h3>
+              <p>
+                The Secondary Section follows the Maharashtra State Board curriculum
+                and focuses on academic excellence along with scientific thinking,
+                technology, personality development, sports, arts, cultural awareness,
+                social responsibility and life skills.
+              </p>
+              <p>
+                Students have access to digital classrooms, two computer laboratories,
+                a STEM Lab, library, modern turf ground, spacious playground and other
+                educational facilities.
+              </p>
+            </article>
           </div>
         </div>
       </section>
@@ -1078,6 +1125,92 @@ const SecondaryPage = () => {
         .subject-card:nth-child(5) { animation-delay: 0.5s; }
         .subject-card:nth-child(6) { animation-delay: 0.6s; }
         .subject-card:nth-child(7) { animation-delay: 0.7s; }
+
+        .secondary-overview-section {
+          background: #fff8df;
+          border-top: 1px solid #eadbd5;
+          border-bottom: 1px solid #eadbd5;
+        }
+
+        .secondary-overview-heading {
+          max-width: 850px;
+          margin: 0 auto 2.8rem;
+          text-align: center;
+        }
+
+        .secondary-overview-heading h2 {
+          margin: 0.75rem 0 1rem;
+          color: #6d1e1e;
+          font-size: clamp(2rem, 4vw, 3.4rem);
+          line-height: 1.1;
+        }
+
+        .secondary-overview-heading p,
+        .secondary-overview-card p {
+          color: #5b6876;
+          line-height: 1.8;
+        }
+
+        .secondary-overview-grid {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 1.25rem;
+        }
+
+        .secondary-overview-card {
+          padding: 2rem;
+          background: #fff;
+          border: 1px solid #eadbd5;
+          border-top: 4px solid #e64b27;
+          box-shadow: 0 12px 28px rgba(50, 27, 20, 0.08);
+        }
+
+        .secondary-overview-language {
+          color: #e64b27;
+          font-size: 0.78rem;
+          font-weight: 800;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+        }
+
+        .secondary-overview-card h3 {
+          margin: 0.6rem 0 1rem;
+          color: #321b14;
+          font-size: 1.35rem;
+          line-height: 1.35;
+        }
+
+        .secondary-overview-card p {
+          margin: 0 0 1rem;
+        }
+
+        .secondary-overview-facilities {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.6rem;
+          margin-top: 1.3rem;
+        }
+
+        .secondary-overview-facilities span {
+          padding: 0.6rem 0.75rem;
+          color: #6d1e1e;
+          background: #fff8df;
+          border-left: 3px solid #f28c28;
+          font-size: 0.86rem;
+          font-weight: 600;
+        }
+
+        @media (max-width: 760px) {
+          .secondary-overview-grid {
+            grid-template-columns: 1fr;
+          }
+        }
+
+        @media (max-width: 540px) {
+          .secondary-overview-card {
+            padding: 1.35rem;
+          }
+        }
 
         /* Print Styles */
         @media print {

@@ -95,10 +95,6 @@ textarea:focus-visible {
   color: #e64b27 !important;
 }
 
-.nav-link.active {
-  border-bottom-color: #e64b27 !important;
-}
-
 .dropdown-menu,
 .mobile-menu {
   border: 1px solid #eadbd5;
@@ -452,6 +448,12 @@ button[type="submit"],
 
 .home-container .hero-overlay {
   background: rgba(70, 70, 70, 0.30) !important;
+}
+
+@media (max-width: 768px) {
+  .home-container .hero-overlay {
+    background: transparent !important;
+  }
 }
 
 .home-container .hero-enquiry-form button {
@@ -981,6 +983,13 @@ textarea:focus {
 .mobile-nav-link:hover,
 .nav-link.active {
   color: var(--brand-red) !important;
+  border-bottom: 0 !important;
+}
+
+.navbar :is(.nav-link, .dropdown-menu a, .mobile-nav-link):focus,
+.navbar :is(.nav-link, .dropdown-menu a, .mobile-nav-link):focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 .top-apply-button,
@@ -1157,6 +1166,121 @@ textarea:focus {
   color: var(--brand-white) !important;
   background: var(--brand-brown) !important;
   border-color: var(--brand-brown) !important;
+}
+
+/* Shared motion layer for page entrances and interactive surfaces. */
+:is(
+  .home-container,
+  .dropdown-page,
+  .principal-message-page,
+  .mission-vision-page,
+  .history-page,
+  .academic-calendar-page,
+  .higher-page,
+  .secondary-page,
+  .curriculum-page,
+  .gallery-page,
+  .admission-page
+) {
+  animation: sitePageEnter 520ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+:is(
+  .quick-card,
+  .feature-card,
+  .course-card,
+  .facility-card,
+  .testimonial-card,
+  .faq-item,
+  .about-fact-card,
+  .about-mission-card,
+  .about-facility-card,
+  .overview-card,
+  .infrastructure-card,
+  .holiday-card,
+  .info-card,
+  .level-card,
+  .method-item,
+  .co-curricular-group,
+  .co-curricular-note
+) {
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+
+:is(
+  .quick-card,
+  .feature-card,
+  .course-card,
+  .facility-card,
+  .testimonial-card,
+  .faq-item,
+  .about-fact-card,
+  .about-mission-card,
+  .about-facility-card,
+  .overview-card,
+  .infrastructure-card,
+  .holiday-card,
+  .info-card,
+  .level-card,
+  .method-item,
+  .co-curricular-group,
+  .co-curricular-note
+):hover {
+  transform: translateY(-4px);
+}
+
+:is(.nav-link, .dropdown-menu a, .mobile-nav-link, .footer-links a, .footer-bottom-links a) {
+  transition: color 180ms ease, background-color 180ms ease, transform 180ms ease;
+}
+
+:is(button, a, .card, [class*="card"], [class*="btn"]):focus-visible {
+  outline: 3px solid rgba(230, 75, 39, 0.42);
+  outline-offset: 3px;
+}
+
+@keyframes sitePageEnter {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :is(
+    .home-container,
+    .dropdown-page,
+    .principal-message-page,
+    .mission-vision-page,
+    .history-page,
+    .academic-calendar-page,
+    .higher-page,
+    .secondary-page,
+    .curriculum-page,
+    .gallery-page,
+    .admission-page
+  ) {
+    animation: none;
+  }
+
+  :is(
+    .quick-card,
+    .feature-card,
+    .course-card,
+    .facility-card,
+    .testimonial-card,
+    .faq-item,
+    .about-fact-card,
+    .about-mission-card,
+    .about-facility-card,
+    .overview-card,
+    .infrastructure-card,
+    .holiday-card,
+    .info-card,
+    .level-card,
+    .method-item,
+    .co-curricular-group,
+    .co-curricular-note
+  ) {
+    transition: none;
+  }
 }
 
 .mission-vision-page .philosophy-card :is(h2, p, strong) {

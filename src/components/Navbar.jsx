@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Navbar.css';
 import { FaTimes } from 'react-icons/fa';
 
@@ -8,7 +8,9 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const navigate = useNavigate();
+  const location = useLocation();
   const token = localStorage.getItem('token');
+  const isActive = (path) => location.pathname === path || (path !== '/' && location.pathname.startsWith(path));
 
   // Handle scroll effect for navbar background
   useEffect(() => {
@@ -69,9 +71,10 @@ const Navbar = () => {
           <Link to="/" className="navbar-logo" onClick={handleLinkClick}>
             <img src="/assets/m/l.jpeg" alt="Prerana Logo" className="logo-img" />
             <div className="logo-text">
+              <span className="logo-institute-name">प्रेरणा शिक्षण संस्था</span>
+              <span className="logo-institute-address">लक्ष्मणनगर, थेरगाव, पुणे – ४११०३३</span>
               <span className="logo-title">
-                <span>उज्ज्वल भविष्यासाठी</span>
-                <span>योग्य निवड!</span>
+                <span>“विद्या धनं श्रेष्ठम्”</span>
               </span>
             </div>
           </Link>
@@ -79,11 +82,11 @@ const Navbar = () => {
           {/* Desktop Menu - Gallery and Notices removed from here */}
           <ul className="nav-menu">
             <li className="nav-item">
-              <Link to="/" className="nav-link">Home</Link>
+              <Link to="/" className={`nav-link ${isActive('/') ? 'active' : ''}`}>Home</Link>
             </li>
 
             <li className="nav-item dropdown">
-              <span className="nav-link">About Us ▼</span>
+              <span className={`nav-link ${isActive('/about') ? 'active' : ''}`}>About Us <span className="nav-chevron">▾</span></span>
               <ul className="dropdown-menu">
                 <li><Link to="/about/overview">Overview</Link></li>
                 <li><Link to="/about/mission-vision">Mission & Vision</Link></li>
@@ -94,7 +97,7 @@ const Navbar = () => {
             </li>
 
             <li className="nav-item dropdown">
-              <span className="nav-link">Academics ▼</span>
+              <span className={`nav-link ${isActive('/academics') ? 'active' : ''}`}>Academics <span className="nav-chevron">▾</span></span>
               <ul className="dropdown-menu">
                 <li><Link to="/academics/primary">Primary (1st - 4th)</Link></li>
                 <li><Link to="/academics/secondary">Secondary (5th - 10th)</Link></li>
@@ -106,19 +109,19 @@ const Navbar = () => {
             </li>
 
             <li className="nav-item">
-              <Link to="/admissions" className="nav-link admission-link">Admissions 2026</Link>
+              <Link to="/admissions" className={`nav-link admission-link ${isActive('/admissions') ? 'active' : ''}`}>Admissions 2026</Link>
             </li>
 
             <li className="nav-item">
-              <Link to="/gallery" className="nav-link">Gallery</Link>
+              <Link to="/gallery" className={`nav-link ${isActive('/gallery') ? 'active' : ''}`}>Gallery</Link>
             </li>
 
             <li className="nav-item">
-              <Link to="/notice" className="nav-link">Notices</Link>
+              <Link to="/notice" className={`nav-link ${isActive('/notice') ? 'active' : ''}`}>Notices</Link>
             </li>
 
             <li className="nav-item dropdown">
-              <span className="nav-link">Student Corner ▼</span>
+              <span className={`nav-link ${isActive('/student') ? 'active' : ''}`}>Student Corner <span className="nav-chevron">▾</span></span>
               <ul className="dropdown-menu">
                 <li><Link to="/student/study-material">Study Material</Link></li>
                 <li><Link to="/student/result">Results</Link></li>
@@ -130,12 +133,13 @@ const Navbar = () => {
             </li>
 
             <li className="nav-item">
-              <Link to="/blog" className="nav-link">Blog/News</Link>
+              <Link to="/blog" className={`nav-link ${isActive('/blog') ? 'active' : ''}`}>Blog/News</Link>
             </li>
 
             <li className="nav-item dropdown">
-              <span className="nav-link">Facilities ▼</span>
+              <span className={`nav-link ${isActive('/facilities') ? 'active' : ''}`}>Facilities <span className="nav-chevron">▾</span></span>
               <ul className="dropdown-menu">
+                <li><Link to="/facilities/overview">Facilities Overview</Link></li>
                 <li><Link to="/facilities/smart-class">Smart Classes</Link></li>
                 <li><Link to="/facilities/lab">Laboratories</Link></li>
                 <li><Link to="/facilities/sports-facility">Sports Facilities</Link></li>
@@ -146,26 +150,33 @@ const Navbar = () => {
             </li>
 
             <li className="nav-item">
-              <Link to="/careers" className="nav-link">Careers</Link>
+              <Link to="/careers" className={`nav-link ${isActive('/careers') ? 'active' : ''}`}>Careers</Link>
             </li>
 
             <li className="nav-item">
-              <Link to="/contact" className="nav-link">Contact Us</Link>
+              <Link to="/contact" className={`nav-link ${isActive('/contact') ? 'active' : ''}`}>Contact Us</Link>
             </li>
           </ul>
 
           {/* Mobile Menu Icon */}
-          <div className="mobile-menu-icon" onClick={toggleMobileMenu}>
+          <button
+            type="button"
+            className="mobile-menu-icon"
+            onClick={toggleMobileMenu}
+            aria-label={isMobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+            aria-expanded={isMobileMenuOpen}
+          >
             <div className={`bar ${isMobileMenuOpen ? 'change' : ''}`}></div>
             <div className={`bar ${isMobileMenuOpen ? 'change' : ''}`}></div>
             <div className={`bar ${isMobileMenuOpen ? 'change' : ''}`}></div>
-          </div>
+          </button>
         </div>
 
         {/* Mobile Menu Dropdown */}
+        <div className={`mobile-menu-backdrop ${isMobileMenuOpen ? 'active' : ''}`} onClick={handleLinkClick} aria-hidden="true"></div>
         <div className={`mobile-menu ${isMobileMenuOpen ? 'active' : ''}`}>
           <div className="mobile-menu-header">
-            <img src="/assets/logo.jpeg" alt="Logo" className="mobile-logo" />
+            <img src="/assets/m/l.jpeg" alt="Prerana Shikshan Sanstha logo" className="mobile-logo" />
             <button className="mobile-close" onClick={toggleMobileMenu} aria-label="Close menu"><FaTimes /></button>
           </div>
           <ul className="mobile-nav-menu">
@@ -232,6 +243,7 @@ const Navbar = () => {
               </div>
               {activeDropdown === 'facilities' && (
                 <ul className="mobile-dropdown-menu">
+                  <li><Link to="/facilities/overview" onClick={handleLinkClick}>Facilities Overview</Link></li>
                   <li><Link to="/facilities/smart-class" onClick={handleLinkClick}>Smart Classes</Link></li>
                   <li><Link to="/facilities/lab" onClick={handleLinkClick}>Laboratories</Link></li>
                   <li><Link to="/facilities/sports-facility" onClick={handleLinkClick}>Sports Facilities</Link></li>

@@ -82,10 +82,6 @@ const Admission = () => {
               Located in Laxminagar, Thergaon, Pune - 33, we provide quality education that nurtures young minds 
               and builds strong character for a bright tomorrow.
             </p>
-            <div className="hero-buttons">
-              <button className="btn-primary">Enroll Now <FaArrowRight /></button>
-              <button className="btn-secondary">Virtual Tour</button>
-            </div>
           </div>
           <div className="hero-image">
             <img src={heroStudentImage} alt="Students at Prerna Shikshan Sanstha" className="student-hero-img" onError={(e) => { e.target.onerror = null; e.target.src = "https://placehold.co/400x400/2C3E50/FFFFFF?text=Students"; }} />
@@ -267,36 +263,6 @@ const Admission = () => {
         </div>
       </section>
 
-      {/* Fee Structure Section */}
-      <section className="fee-section">
-        <div className="container">
-          <div className="section-header">
-            <span className="section-tag">Fee Structure</span>
-            <h2 className="section-title">Affordable <span className="highlight">Fee Plans</span></h2>
-            <p className="section-subtitle">Academic Year 2025-26</p>
-          </div>
-          <div className="fee-table-wrapper">
-            <table className="fee-table">
-              <thead>
-                <tr>
-                  <th>Grade Level</th>
-                  <th>Tuition Fee</th>
-                  <th>Activity Fee</th>
-                  <th>Total (Annual)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td>Nursery - UKG</td><td>₹35,000</td><td>₹5,000</td><td className="total-fee">₹40,000</td></tr>
-                <tr><td>Class 1 - 5</td><td>₹40,000</td><td>₹6,000</td><td className="total-fee">₹46,000</td></tr>
-                <tr><td>Class 6 - 8</td><td>₹45,000</td><td>₹7,000</td><td className="total-fee">₹52,000</td></tr>
-                <tr><td>Class 9 - 10</td><td>₹50,000</td><td>₹8,000</td><td className="total-fee">₹58,000</td></tr>
-              </tbody>
-            </table>
-            <p className="fee-note">*Transportation and meal facilities available at additional cost. Scholarships available for meritorious students.</p>
-          </div>
-        </div>
-      </section>
-
       {/* Why Choose Us Section with Student Image */}
       <section className="why-choose-section">
         <div className="container">
@@ -393,7 +359,7 @@ const Admission = () => {
                   src={campusImage} 
                   alt="Campus Location Map - Laxminagar Thergaon Pune" 
                   className="map-img" 
-                  onError={(e) => { e.target.onerror = null; e.target.src = "https://placehold.co/500x300/2C3E50/FFFFFF?text=Map+Location%3A+Laxminagar%2C+Thergaon%2C+Pune-33"; }} 
+                  onError={(e) => { e.target.onerror = null; e.target.src = "/assets/images/school.png"; }} 
                 />
                 <div className="map-overlay">
                   <span><FaMapMarkerAlt /> Laxminagar, Thergaon, Pune - 33</span>
@@ -468,7 +434,7 @@ const Admission = () => {
                 <label>Message / Query</label>
                 <textarea name="message" value={formData.message} onChange={handleChange} rows="4" placeholder="Any specific questions or requirements..."></textarea>
               </div>
-              <button type="submit" className="submit-btn">Submit Application <FaArrowRight /></button>
+              <button type="submit" className="submit-btn"><FaArrowRight aria-hidden="true" /> <span>Submit Application</span></button>
             </form>
           </div>
         </div>
