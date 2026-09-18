@@ -3,11 +3,11 @@ import React from 'react';
 import { 
   FaBook, FaLanguage, FaCalculator, FaFlask, FaGlobe, 
   FaLaptopCode, FaChalkboardTeacher, FaClipboardList, 
-  FaFlask as FaScience, FaBriefcase, FaChartLine, FaCalendarAlt,
+  FaFlask as FaScience, FaBriefcase, FaCalendarAlt,
   FaTrophy, FaUsers, FaMicrophone, FaPaintBrush, FaFutbol,
-  FaRegClock, FaCheckCircle, FaArrowRight, FaStar,
-  FaUniversity, FaUserGraduate, FaLaptop, FaSchool,
-  FaRegCalendarCheck, FaAward, FaRocket, FaHeart, FaRegEnvelope, FaPhoneAlt, FaMapMarkerAlt
+  FaCheckCircle, FaArrowRight, FaStar,
+  FaUniversity, FaLaptop, FaSchool,
+  FaRegCalendarCheck, FaAward, FaRocket, FaRegEnvelope, FaPhoneAlt, FaMapMarkerAlt
 } from 'react-icons/fa';
 
 const SecondaryPage = () => {
@@ -36,33 +36,12 @@ const SecondaryPage = () => {
     { year: '2021-22', achievement: 'Best Secondary School Award', icon: <FaAward />, color: '#CD7F32' }
   ];
 
-  const routine = [
-    { time: '8:00 AM - 8:15 AM', activity: 'Morning Assembly', icon: <FaRegClock /> },
-    { time: '8:15 AM - 9:00 AM', activity: 'First Period - Languages', icon: <FaBook /> },
-    { time: '9:00 AM - 9:45 AM', activity: 'Second Period - Mathematics', icon: <FaCalculator /> },
-    { time: '9:45 AM - 10:30 AM', activity: 'Third Period - Science', icon: <FaFlask /> },
-    { time: '10:30 AM - 10:45 AM', activity: 'Short Break', icon: <FaHeart /> },
-    { time: '10:45 AM - 11:30 AM', activity: 'Fourth Period - Social Science', icon: <FaGlobe /> },
-    { time: '11:30 AM - 12:15 PM', activity: 'Fifth Period - IT/Practical', icon: <FaLaptopCode /> },
-    { time: '12:15 PM - 12:45 PM', activity: 'Lunch Break', icon: <FaHeart /> },
-    { time: '12:45 PM - 1:30 PM', activity: 'Sixth Period - Remedial/Activity', icon: <FaUsers /> },
-    { time: '1:30 PM - 2:15 PM', activity: 'Seventh Period - Library/Sports', icon: <FaFutbol /> },
-    { time: '2:15 PM - 3:00 PM', activity: 'Homework & Revision Time', icon: <FaClipboardList /> }
-  ];
-
   const examData = [
     { name: 'Unit Tests', frequency: 'Monthly', weightage: '20%', color: '#FF6B6B' },
     { name: 'Quarterly Exam', frequency: 'Every 3 months', weightage: '30%', color: '#8a5a44' },
     { name: 'Half-Yearly', frequency: 'September/October', weightage: '20%', color: '#FF8C42' },
     { name: 'Preliminary Exam', frequency: 'January', weightage: '-', color: '#9B59B6' },
     { name: 'SSC Board Exam', frequency: 'March (Std 10th)', weightage: '100%', color: '#6b3a2a' }
-  ];
-
-  const stats = [
-    { value: '95%', label: 'SSC Result', icon: <FaChartLine />, color: '#321b14' },
-    { value: '25+', label: 'Experienced Teachers', icon: <FaUserGraduate />, color: '#321b14' },
-    { value: '500+', label: 'Students', icon: <FaUsers />, color: '#321b14' },
-    { value: '15+', label: 'Years of Excellence', icon: <FaAward />, color: '#321b14' }
   ];
 
   return (
@@ -77,15 +56,6 @@ const SecondaryPage = () => {
               <br /><span className="hero-subtitle">5th - 10th Standard</span>
             </h1>
             <p className="hero-desc">Preparing students for SSC Board examinations with conceptual understanding, analytical thinking, and exam readiness.</p>
-            <div className="hero-stats">
-              {stats.map((stat, idx) => (
-                <div className="stat-card" key={idx}>
-                  <div className="stat-icon" style={{ color: stat.color }}>{stat.icon}</div>
-                  <h3>{stat.value}</h3>
-                  <p>{stat.label}</p>
-                </div>
-              ))}
-            </div>
           </div>
           <div className="hero-image-wrapper">
             <div className="hero-image">
@@ -214,33 +184,6 @@ const SecondaryPage = () => {
                 <p>{item.desc}</p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Daily Routine Section */}
-      <section className="routine-section">
-        <div className="container">
-          <div className="section-header">
-            <span className="section-tag">Schedule</span>
-            <h2>Daily Routine</h2>
-            <p>Structured timetable for effective learning</p>
-          </div>
-          <div className="routine-wrapper">
-            <div className="routine-timeline">
-              {routine.map((item, idx) => (
-                <div className="timeline-item" key={idx}>
-                  <div className="timeline-icon">{item.icon}</div>
-                  <div className="timeline-content">
-                    <span className="timeline-time">{item.time}</span>
-                    <span className="timeline-activity">{item.activity}</span>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className="routine-image">
-              <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=500&h=400&fit=crop" alt="School Routine" />
-            </div>
           </div>
         </div>
       </section>
@@ -897,6 +840,19 @@ const SecondaryPage = () => {
         .achievement-icon {
           font-size: 2.5rem;
           margin-bottom: 1rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          line-height: 1;
+          opacity: 1 !important;
+        }
+
+        .achievement-icon svg {
+          display: block;
+          width: 1em;
+          height: 1em;
+          color: inherit !important;
+          fill: currentColor;
         }
 
         .achievement-year {

@@ -307,14 +307,6 @@ const pageContent = {
       details: ['Routes and availability may be confirmed through the school office.', 'Parents are encouraged to contact the school for current transport details.'],
       highlights: ['Route guidance', 'Timely travel', 'Parent coordination', 'Office support'],
     },
-    hostel: {
-      label: 'Hostel',
-      title: 'Residential support information for families.',
-      image: '/assets/images/h1.png',
-      lead: 'The hostel information page helps parents understand available residential support and related school guidance.',
-      details: ['Families can contact the school office to confirm current hostel availability, process, rules, and facilities.', 'The focus remains student safety, discipline, and academic routine.'],
-      highlights: ['Residential guidance', 'Safety focus', 'Routine support', 'Office information'],
-    },
     medical: {
       label: 'Medical Facility',
       title: 'Student wellbeing and first-aid support.',

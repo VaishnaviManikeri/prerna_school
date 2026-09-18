@@ -8,12 +8,8 @@ import {
   FaGraduationCap,
   FaBriefcase,
   FaLaptopCode,
-  FaUniversity,
   FaCheckCircle,
   FaArrowRight,
-  FaUserGraduate,
-  FaSchool,
-  FaAward,
   FaBullseye,
   FaStar,
 } from "react-icons/fa";
@@ -71,29 +67,6 @@ const HigherSecondaryPage = () => {
     },
   };
 
-  const stats = [
-    {
-      value: "98%",
-      label: "HSC Result",
-      icon: <FaAward />,
-    },
-    {
-      value: "20+",
-      label: "Expert Faculty",
-      icon: <FaUserGraduate />,
-    },
-    {
-      value: "500+",
-      label: "Students",
-      icon: <FaSchool />,
-    },
-    {
-      value: "15+",
-      label: "Years Excellence",
-      icon: <FaUniversity />,
-    },
-  ];
-
   return (
     <div className="higher-page">
       {/* HERO SECTION */}
@@ -120,15 +93,6 @@ const HigherSecondaryPage = () => {
               and career-focused learning for 11th & 12th standard.
             </p>
 
-            <div className="hero-stats">
-              {stats.map((item, index) => (
-                <div className="stat-card" key={index}>
-                  <div className="stat-icon">{item.icon}</div>
-                  <h3>{item.value}</h3>
-                  <p>{item.label}</p>
-                </div>
-              ))}
-            </div>
           </div>
 
           <div className="hero-image">

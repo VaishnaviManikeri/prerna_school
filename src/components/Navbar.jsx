@@ -144,7 +144,6 @@ const Navbar = () => {
                 <li><Link to="/facilities/lab">Laboratories</Link></li>
                 <li><Link to="/facilities/sports-facility">Sports Facilities</Link></li>
                 <li><Link to="/facilities/transport">Transport</Link></li>
-                <li><Link to="/facilities/hostel">Hostel</Link></li>
                 <li><Link to="/facilities/medical">Medical Facility</Link></li>
               </ul>
             </li>
@@ -248,7 +247,6 @@ const Navbar = () => {
                   <li><Link to="/facilities/lab" onClick={handleLinkClick}>Laboratories</Link></li>
                   <li><Link to="/facilities/sports-facility" onClick={handleLinkClick}>Sports Facilities</Link></li>
                   <li><Link to="/facilities/transport" onClick={handleLinkClick}>Transport</Link></li>
-                  <li><Link to="/facilities/hostel" onClick={handleLinkClick}>Hostel</Link></li>
                   <li><Link to="/facilities/medical" onClick={handleLinkClick}>Medical Facility</Link></li>
                 </ul>
               )}

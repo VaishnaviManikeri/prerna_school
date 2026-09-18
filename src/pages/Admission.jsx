@@ -66,6 +66,7 @@ const Admission = () => {
   const heroStudentImage = "https://i.pinimg.com/736x/2e/30/09/2e3009f9968227684ca57abf35cf74c4.jpg";
   const defaultStudentImage = "https://i.pinimg.com/736x/4c/88/65/4c886557098440715f785f1e776c10e2.jpg";
   const campusImage = "https://images.unsplash.com/photo-1562774053-701939374585?w=500&h=350&fit=crop";
+  const campusMapImage = "/assets/images/school.png";
 
   return (
     <div className="admission-container">
@@ -160,7 +161,7 @@ const Admission = () => {
               </div>
               <div className="about-secondary-image">
                 <img 
-                  src={campusImage} 
+                  src={campusImage}
                   alt="Campus at Thergaon, Pune" 
                   className="campus-img" 
                   onError={(e) => { e.target.onerror = null; e.target.src = "https://placehold.co/350x250/2C3E50/FFFFFF?text=Prerna+Campus"; }} 
@@ -356,7 +357,7 @@ const Admission = () => {
             <div className="map-container">
               <div className="map-card">
                 <img 
-                  src={campusImage} 
+                  src={campusMapImage} 
                   alt="Campus Location Map - Laxminagar Thergaon Pune" 
                   className="map-img" 
                   onError={(e) => { e.target.onerror = null; e.target.src = "/assets/images/school.png"; }} 
