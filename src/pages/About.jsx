@@ -202,9 +202,6 @@ const About = () => {
 
       <section className="about-principal" id="principal-message">
         <div className="about-container about-principal-card">
-          <div className="about-principal-image">
-            <img src="/assets/m/principle.png" alt="Principal of Prerana Shikshan Sanstha" />
-          </div>
           <div className="about-principal-copy">
             <FaQuoteLeft className="about-quote-icon" />
             <span className="about-section-label">Principal's Message</span>

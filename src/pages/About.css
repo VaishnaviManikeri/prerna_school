@@ -379,7 +379,7 @@
 
 .about-principal-card {
   display: grid;
-  grid-template-columns: 360px 1fr;
+  grid-template-columns: 1fr;
   gap: 3rem;
   align-items: center;
   background: linear-gradient(135deg, #24120e, #321b14);
@@ -387,14 +387,6 @@
   padding: 3rem;
   color: white;
   box-shadow: 0 22px 50px rgba(16, 42, 76, 0.22);
-}
-
-.about-principal-image img {
-  width: 100%;
-  aspect-ratio: 1;
-  object-fit: cover;
-  border-radius: 8px;
-  border: 6px solid rgba(255, 255, 255, 0.18);
 }
 
 .about-principal-copy h2,
@@ -565,10 +557,6 @@
     padding: 2rem;
   }
 
-  .about-principal-image {
-    max-width: 340px;
-  }
-
   .about-facility-grid {
     grid-template-columns: repeat(2, minmax(220px, 1fr));
   }
@@ -626,10 +614,6 @@
 
   .about-principal-card {
     padding: 1.25rem;
-  }
-
-  .about-principal-image {
-    max-width: 100%;
   }
 }
 

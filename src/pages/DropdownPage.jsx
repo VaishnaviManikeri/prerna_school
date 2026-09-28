@@ -357,9 +357,6 @@ const DropdownPage = () => {
         <section className="principal-message-main">
           <div className="dropdown-container principal-message-layout">
             <aside className="principal-message-aside">
-              <div className="principal-photo-frame">
-                <img src="/assets/m/principle.png" alt="Principal of Prerana Shikshan Sanstha" />
-              </div>
               <div className="principal-quote-card">
                 <FaBookOpen aria-hidden="true" />
                 <blockquote>“Education inspires knowledge, builds character, and empowers every child to create a brighter future.”</blockquote>
