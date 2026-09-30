@@ -142,12 +142,12 @@ const Home = () => {
 
   // Sample data arrays
   const facilities = [
-    { icon: <FaLaptop />, title: "Smart Classrooms", desc: "Digital learning with interactive boards" },
-    { icon: <FaVial />, title: "Science Labs", desc: "Fully equipped Physics, Chem, Bio labs" },
-    { icon: <FaBookOpen />, title: "Library", desc: "10,000+ books & e-resources" },
-    { icon: <FaBasketballBall />, title: "Sports Complex", desc: "Indoor & outdoor games" },
-    { icon: <FaBus />, title: "Transport", desc: "Safe GPS-enabled buses" },
-    { icon: <FaUtensils />, title: "Canteen", desc: "Nutritious meals & hygiene" },
+    { icon: <FaBuilding />, title: "सुसज्ज इमारत", desc: "स्वतंत्र कार्यक्रम सभागृहासह प्रशस्त परिसर" },
+    { icon: <FaBasketballBall />, title: "क्रीडा सुविधा", desc: "अत्याधुनिक टर्फ मैदान व प्रशस्त क्रीडांगण" },
+    { icon: <FaVial />, title: "प्रयोगशाळा", desc: "दोन संगणक प्रयोगशाळा आणि STEM Lab" },
+    { icon: <FaLaptop />, title: "Digital Classrooms", desc: "तीन डिजिटल वर्गखोल्यांमधून शिक्षण" },
+    { icon: <FaBookOpen />, title: "ग्रंथालय व क्रीडा साहित्य", desc: "वाचन आणि क्रीडा उपक्रमांसाठी सुविधा" },
+    { icon: <FaUsers />, title: "विद्यार्थी विकास", desc: "आरोग्य, आपत्ती व्यवस्थापन व पर्यावरणपूरक उपक्रम" },
   ];
 
   const testimonials = [
@@ -183,7 +183,7 @@ const Home = () => {
               <div className="hero-content">
                 <span className="school-badge">Admissions Open 2026–27</span>
                 <h1>Inspiring young minds to learn, lead, and succeed.</h1>
-                <p>Prerana Primary, Secondary & Tukaram Gujar Jr. College provides value-based education, caring guidance, and opportunities for every child to grow with confidence.</p>
+                <p>प्रेरणा बालक, प्राथमिक, माध्यमिक व तुकाराम गुजर ज्युनियर कॉलेज provides value-based education, caring guidance, and opportunities for every child to grow with confidence.</p>
                 <Link to="/about" className="hero-learn-link">Discover our school <FaArrowRight /></Link>
               </div>
             </div>

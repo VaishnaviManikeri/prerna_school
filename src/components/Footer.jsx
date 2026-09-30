@@ -18,7 +18,7 @@ const Footer = () => {
               <div>
                 <h3 className="footer-title">प्रेरणा शिक्षण संस्था</h3>
                 <p className="footer-subtitle">
-                  Prerana Primary, Secondary & Tukaram Gujar Jr. College
+                  प्रेरणा बालक, प्राथमिक, माध्यमिक व तुकाराम गुजर ज्युनियर कॉलेज
                 </p>
               </div>
             </div>

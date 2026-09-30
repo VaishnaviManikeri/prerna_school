@@ -272,7 +272,7 @@ const pageContent = {
       title: 'थेरगाव परिसरातील विद्यालयाच्या आधुनिक सुविधा.',
       image: '/assets/images/i1.png',
       lead: 'थेरगाव परिसरातील विद्यालयामध्ये विद्यार्थ्यांना ज्ञान, तंत्रज्ञान, प्रयोगशीलता आणि क्रीडा यांचा प्रत्यक्ष अनुभव देणाऱ्या विविध आधुनिक सुविधा उपलब्ध आहेत.',
-      details: ['प्रशस्त व सुसज्ज इमारत, अत्याधुनिक टर्फ मैदान, प्रशस्त क्रीडांगण, दोन संगणक प्रयोगशाळा, STEM Lab, तीन Digital Classrooms आणि स्वतंत्र कार्यक्रम सभागृह उपलब्ध आहे.', 'ग्रंथालय, क्रीडा साहित्य, डिजिटल शिक्षण सुविधा, आरोग्यविषयक सुविधा व उपक्रम, आपत्ती व्यवस्थापन प्रशिक्षण आणि पर्यावरणपूरक उपक्रमांमुळे विद्यार्थ्यांचा सर्वांगीण विकास साधला जातो.'],
+      details: [],
       highlights: ['प्रशस्त व सुसज्ज इमारत', 'अत्याधुनिक Turf Ground', 'प्रशस्त क्रीडांगण', 'दोन संगणक प्रयोगशाळा', 'STEM Lab', 'तीन Digital Classrooms', 'स्वतंत्र कार्यक्रम सभागृह', 'ग्रंथालय', 'क्रीडा साहित्य', 'डिजिटल शिक्षण सुविधा', 'आरोग्यविषयक सुविधा', 'आपत्ती व्यवस्थापन प्रशिक्षण', 'पर्यावरणपूरक उपक्रम'],
     },
     'smart-class': {
@@ -383,7 +383,7 @@ const DropdownPage = () => {
               <div className="principal-signature">
                 <span>With best wishes,</span>
                 <strong>प्राचार्य शिवले जे. के. | J. K. Shivle</strong>
-                <span>Prerana Highschool &amp; Tukaram Gujar Junior College</span>
+                <span>प्रेरणा बालक, प्राथमिक, माध्यमिक व तुकाराम गुजर ज्युनियर कॉलेज</span>
                 <span>Secondary &amp; Higher Secondary Section</span>
                 <span>Laxminagar, Thergaon, Pune 411033</span>
               </div>
@@ -439,7 +439,7 @@ const DropdownPage = () => {
             <span className="mission-vision-label">Our Purpose &amp; Direction</span>
             <h1>Mission &amp; Vision</h1>
             <p>ज्ञान <i>•</i> संस्कार <i>•</i> प्रगती</p>
-            <small>Prerana Primary, Secondary &amp; Tukaram Gujar Jr. College</small>
+            <small>प्रेरणा बालक, प्राथमिक, माध्यमिक व तुकाराम गुजर ज्युनियर कॉलेज</small>
           </div>
         </section>
 
@@ -512,7 +512,7 @@ const DropdownPage = () => {
           <div className="dropdown-container commitment-inner">
             <span>Our Commitment</span>
             <h2>Every Child. Every Dream. Every Opportunity.</h2>
-            <p>At Prerana Primary, Secondary &amp; Tukaram Gujar Jr. College, we are committed to nurturing every learner with knowledge, values, confidence, and opportunities so they can build a meaningful and successful future.</p>
+            <p>At प्रेरणा बालक, प्राथमिक, माध्यमिक व तुकाराम गुजर ज्युनियर कॉलेज, we are committed to nurturing every learner with knowledge, values, confidence, and opportunities so they can build a meaningful and successful future.</p>
           </div>
         </section>
       </div>
@@ -645,7 +645,6 @@ const DropdownPage = () => {
             <div className="infrastructure-heading">
               <span className="dropdown-section-label">Campus Infrastructure</span>
               <h2 id="infrastructure-heading">Infrastructure in Our School</h2>
-              <p>Purposeful spaces and essential facilities create a safe, engaging, and student-friendly learning environment.</p>
             </div>
 
             <div className="infrastructure-grid">

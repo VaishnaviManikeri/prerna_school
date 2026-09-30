@@ -14,7 +14,7 @@ const CommonCTA = () => {
           <span className="common-cta-kicker">A place to learn, belong, and grow</span>
           <h2 id="common-cta-title">Build a confident future with Prerana.</h2>
           <p>
-            Prerana Primary, Secondary &amp; Tukaram Gujar Jr. College offers a
+            प्रेरणा बालक, प्राथमिक, माध्यमिक व तुकाराम गुजर ज्युनियर कॉलेज offers a
             continuous learning journey supported by dedicated teachers,
             strong values, and a caring school community.
           </p>

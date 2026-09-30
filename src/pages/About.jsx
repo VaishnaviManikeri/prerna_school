@@ -60,7 +60,7 @@ const About = () => {
             <span className="about-kicker">About Our Institution</span>
             <h1>प्रेरणा शिक्षण संस्था</h1>
             <p>
-              Prerana Valak, Primary, Secondary & Tukaram Gujar Jr. College,
+              प्रेरणा बालक, प्राथमिक, माध्यमिक व तुकाराम गुजर ज्युनियर कॉलेज,
               Laxminagar, Thergaon, Pune - 33.
             </p>
           </div>

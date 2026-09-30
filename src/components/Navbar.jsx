@@ -70,14 +70,16 @@ const Navbar = () => {
           {/* Logo Section */}
           <Link to="/" className="navbar-logo" onClick={handleLinkClick}>
             <img src="/assets/m/l.jpeg" alt="Prerana Logo" className="logo-img" />
-            <div className="logo-text">
+          </Link>
+
+          <div className="navbar-center">
+            <div className="navbar-brand-text">
               <span className="logo-institute-name">प्रेरणा शिक्षण संस्था</span>
-              <span className="logo-institute-address">लक्ष्मणनगर, थेरगाव, पुणे – ४११०३३</span>
+              <span className="logo-institute-subtitle">प्रेरणा बालक, प्राथमिक, माध्यमिक व तुकाराम गुजर ज्युनियर कॉलेज</span>
               <span className="logo-title">
                 <span>“विद्या धनं श्रेष्ठम्”</span>
               </span>
             </div>
-          </Link>
 
           {/* Desktop Menu - Gallery and Notices removed from here */}
           <ul className="nav-menu">
@@ -156,6 +158,7 @@ const Navbar = () => {
               <Link to="/contact" className={`nav-link ${isActive('/contact') ? 'active' : ''}`}>Contact Us</Link>
             </li>
           </ul>
+          </div>
 
           {/* Mobile Menu Icon */}
           <button

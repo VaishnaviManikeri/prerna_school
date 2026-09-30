@@ -39,7 +39,7 @@ const SecondaryPage = () => {
   const examData = [
     { name: 'Unit Tests', frequency: 'Monthly', weightage: '20%', color: '#FF6B6B' },
     { name: 'Quarterly Exam', frequency: 'Every 3 months', weightage: '30%', color: '#8a5a44' },
-    { name: 'Half-Yearly', frequency: 'September/October', weightage: '20%', color: '#FF8C42' },
+    { name: 'Half-Yearly', frequency: 'September / October', weightage: '20%', color: '#FF8C42' },
     { name: 'Preliminary Exam', frequency: 'January', weightage: '-', color: '#9B59B6' },
     { name: 'SSC Board Exam', frequency: 'March (Std 10th)', weightage: '100%', color: '#6b3a2a' }
   ];
@@ -89,11 +89,6 @@ const SecondaryPage = () => {
             <article className="secondary-overview-card secondary-overview-marathi">
               <span className="secondary-overview-language">मराठी</span>
               <h3>गुणवत्तापूर्ण शिक्षण आणि सर्वांगीण विकास</h3>
-              <p>
-                विद्यार्थ्यांसाठी आधुनिक डिजिटल क्लासरूम, दोन संगणक प्रयोगशाळा,
-                STEM Lab, ग्रंथालय, टर्फ मैदान, प्रशस्त क्रीडांगण आणि विविध
-                शैक्षणिक सुविधा उपलब्ध आहेत.
-              </p>
               <div className="secondary-overview-facilities">
                 <span>Digital Classrooms</span>
                 <span>2 Computer Labs</span>
@@ -750,48 +745,70 @@ const SecondaryPage = () => {
         .exam-grid {
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-          gap: 1.5rem;
+          gap: 1rem;
+          align-items: stretch;
         }
 
         .exam-card {
-          background: #f8fafc;
+          min-height: 250px;
+          background: #fffdf8;
           padding: 1.5rem;
-          border-radius: 20px;
-          text-align: center;
-          transition: all 0.3s;
+          border: 1px solid #eee4d4;
+          border-radius: 8px;
+          text-align: left;
+          transition: transform 0.2s ease, box-shadow 0.2s ease;
           border-bottom: 4px solid;
           display: flex;
           flex-direction: column;
-          align-items: center;
         }
 
         .exam-card:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+          transform: translateY(-3px);
+          box-shadow: 0 12px 24px rgba(50, 27, 20, 0.1);
         }
 
         .exam-icon {
-          font-size: 2rem;
+          display: grid;
+          place-items: center;
+          width: 2.75rem;
+          height: 2.75rem;
           margin-bottom: 1rem;
+          border-radius: 8px;
+          background: #fff0e8;
+          font-size: 1.4rem;
         }
 
         .exam-card h3 {
           font-size: 1.1rem;
           color: #1e293b;
-          margin-bottom: 1rem;
+          width: 100%;
+          min-height: 2.75rem;
+          margin: 0 0 0.75rem;
+          line-height: 1.3;
         }
 
         .exam-detail {
-          display: flex;
-          justify-content: space-between;
+          display: grid;
+          grid-template-columns: max-content minmax(0, 1fr);
+          align-items: start;
+          gap: 0.5rem;
           width: 100%;
-          padding: 0.3rem 0;
-          font-size: 0.85rem;
+          padding: 0.65rem 0;
+          border-top: 1px solid #eee7da;
+          font-size: 0.875rem;
+          line-height: 1.4;
+        }
+
+        .exam-detail > span:last-child {
+          min-width: 0;
+          text-align: right;
+          overflow-wrap: break-word;
         }
 
         .exam-label {
           font-weight: 600;
           color: #64748b;
+          white-space: nowrap;
         }
 
         .exam-weight {
